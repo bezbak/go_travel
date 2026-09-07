@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), Arial, sans-serif;
+  --font-display: var(--font-montserrat), var(--font-inter), Arial, sans-serif;
+}
+
+:root {
+  --travel-green: #669a17;
+  --travel-green-dark: #56880f;
+  --travel-dark: #171717;
+  --travel-muted: #71717a;
+  --travel-border: #e8e5df;
+  --travel-warm: #f8f6ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--travel-dark);
+  font-family: var(--font-sans);
+  text-rendering: geometricPrecision;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.topographic-pattern {
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='180' height='120' viewBox='0 0 180 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23669a17' stroke-opacity='.075' stroke-width='1'%3E%3Cpath d='M-20 38c32-30 62-30 91 0 25 26 53 26 84 0 16-14 31-19 45-15'/%3E%3Cpath d='M-27 64c37-31 72-31 106 0 25 23 51 23 78 0 17-15 34-21 52-18'/%3E%3Cpath d='M-16 91c26-23 53-23 80 0 20 17 42 17 66 0 24-18 48-22 74-13'/%3E%3Cpath d='M18 16c18-12 36-12 54 0 17 11 34 11 52 0 18-12 36-14 54-6'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 260px 174px;
+}
+
+.soft-section-fade {
+  mask-image: linear-gradient(90deg, #000 0%, #000 56%, transparent 100%);
+}

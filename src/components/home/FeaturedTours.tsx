@@ -1,0 +1,37 @@
+import { useTranslations } from "next-intl";
+
+import { TourCard } from "@/components/tours/TourCard";
+import { ButtonLink } from "@/components/ui/Button";
+import { Section } from "@/components/ui/Section";
+import { getFeaturedTours } from "@/data/tours";
+
+export function FeaturedTours() {
+  const t = useTranslations("featuredTours");
+  const tours = getFeaturedTours(3);
+
+  return (
+    <Section
+      action={
+        <ButtonLink href="/tours" internal size="sm" variant="dark">
+          {t("cta")}
+        </ButtonLink>
+      }
+      align="left"
+      className="bg-[#faf8f2]"
+      description={t("description")}
+      eyebrow={t("eyebrow")}
+      id="featured-tours"
+      title={
+        <>
+          {t("titleDark")} <span className="text-[#669a17]">{t("titleGreen")}</span>
+        </>
+      }
+    >
+      <div className="grid gap-[22px] sm:grid-cols-2 xl:grid-cols-3">
+        {tours.map((tour) => (
+          <TourCard key={tour.slug} tour={tour} />
+        ))}
+      </div>
+    </Section>
+  );
+}

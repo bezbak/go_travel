@@ -1,0 +1,1055 @@
+{
+  "metadata": {
+    "title": "go_kyrgyzstan.travel - Kyrgyzstan & Central Asia Tours",
+    "description": "Explore Kyrgyzstan and Central Asia with curated group and private tours, local guides, mountain lakes, yurt camps and nomadic traditions.",
+    "siteName": "go_kyrgyzstan.travel",
+    "ogAlt": "Yurts on a green Kyrgyz mountain plateau"
+  },
+  "brand": {
+    "name": "GO KYRGYZSTAN",
+    "logoText": "go",
+    "tagline": "Authentic. Wild. Unforgettable.",
+    "homeAria": "Go Kyrgyzstan home"
+  },
+  "navigation": {
+    "tours": "TOURS",
+    "destinations": "DESTINATIONS",
+    "about": "ABOUT US",
+    "faq": "FAQ",
+    "contact": "CONTACT"
+  },
+  "header": {
+    "book": "BOOK NOW",
+    "phoneAria": "Call Go Kyrgyzstan",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "menuTitle": "Menu"
+  },
+  "languageSwitcher": {
+    "ariaLabel": "Select language",
+    "short": { "en": "EN", "kg": "KG", "ru": "RU", "fr": "FR" },
+    "names": {
+      "en": "English",
+      "kg": "Kyrgyz",
+      "ru": "Russian",
+      "fr": "French"
+    }
+  },
+  "common": {
+    "breadcrumbHome": "Home",
+    "breadcrumbLabel": "Breadcrumb",
+    "from": "From",
+    "perPerson": "per person",
+    "viewTour": "View tour",
+    "duration": "Duration",
+    "groupSize": "Group size",
+    "difficulty": "Difficulty",
+    "bestSeason": "Best season",
+    "deal": "Special offer",
+    "altitudeLabel": "Altitude",
+    "days": "{count, plural, one {# day} other {# days}}",
+    "daysNights": "{days} days / {nights} nights",
+    "dayNumber": "Day {number}",
+    "maxPeople": "Max {count} travellers",
+    "altitude": "{value, number} m",
+    "tourCount": "{count, plural, =0 {No tours yet} one {# tour} other {# tours}}",
+    "ratingOutOfFive": "Rated {rating} out of 5",
+    "difficultyLevel": {
+      "easy": "Easy",
+      "moderate": "Moderate",
+      "challenging": "Challenging"
+    },
+    "style": {
+      "group": "Small group",
+      "private": "Private tour",
+      "expedition": "Expedition"
+    },
+    "seasons": {
+      "spring": "Spring",
+      "summer": "Summer",
+      "autumn": "Autumn",
+      "winter": "Winter"
+    },
+    "countries": {
+      "germany": "Germany",
+      "uk": "United Kingdom",
+      "italy": "Italy",
+      "france": "France"
+    }
+  },
+  "imageAlts": {
+    "heroYurts": "White yurts on a green Kyrgyz highland plateau with mountains behind",
+    "yurtsSunset": "Yurts at sunset on a Kyrgyz alpine plain",
+    "alpineLake": "Turquoise alpine lake surrounded by Kyrgyz mountains",
+    "yurtNight": "Yurt camp glowing under a starry night sky",
+    "kelSuu": "Turquoise Kel-Suu Lake between steep cliffs",
+    "songKol": "Song-Kol Lake with yurts and snowy mountains",
+    "kyzartHorses": "Horse riders crossing an alpine meadow near Kyzart",
+    "kilemche": "Green Kilemche valley and summer jailoo pasture",
+    "bishkekSunset": "Bishkek street at sunset with mountains in the distance",
+    "bishkekRoad": "Minibus on a winding mountain road towards Bishkek"
+  },
+  "hero": {
+    "titleLine1": "EXPLORE THE",
+    "titleLine2": "HEART OF",
+    "titleLine3": "KYRGYZSTAN",
+    "body": "Six unforgettable days through majestic mountains, pristine lakes and nomadic traditions.",
+    "primaryCta": "EXPLORE TOURS",
+    "secondaryCta": "VIEW ITINERARY",
+    "imageAlt": "White yurts on a green Kyrgyz highland plateau with mountains behind"
+  },
+  "benefits": {
+    "items": [
+      { "title": "SMALL GROUP TOURS", "description": "Never more than 14 travellers" },
+      { "title": "LOCAL GUIDES", "description": "Experienced & friendly" },
+      { "title": "COMFORTABLE STAY", "description": "Yurt camps & guesthouses" },
+      { "title": "BEST PRICE GUARANTEE", "description": "No hidden fees" }
+    ]
+  },
+  "featuredTours": {
+    "eyebrow": "HANDPICKED ROUTES",
+    "titleDark": "OUR MOST LOVED",
+    "titleGreen": "TOURS",
+    "description": "Three itineraries that show what Kyrgyzstan does best: high pastures, glacier lakes and nights in a yurt.",
+    "cta": "SEE ALL TOURS"
+  },
+  "tourProgram": {
+    "titleDark": "TOUR",
+    "titleGreen": "PROGRAM",
+    "subtitle": "Discover the beauty of Kyrgyzstan day by day",
+    "cta": "VIEW FULL ITINERARY",
+    "secondaryCta": "BROWSE ALL TOURS"
+  },
+  "whyTravel": {
+    "titleDark": "WHY TRAVEL",
+    "titleGreen": "WITH US?",
+    "items": [
+      {
+        "title": "AUTHENTIC EXPERIENCES",
+        "description": "Immerse in local culture and traditions."
+      },
+      {
+        "title": "EXPERT LOCAL TEAM",
+        "description": "Passionate guides who know Kyrgyzstan best."
+      },
+      {
+        "title": "SMALL GROUP TOURS",
+        "description": "Personalized service and unforgettable moments."
+      },
+      {
+        "title": "SUSTAINABLE TRAVEL",
+        "description": "We support local communities and nature."
+      }
+    ]
+  },
+  "destinationsSection": {
+    "eyebrow": "WHERE WE TRAVEL",
+    "titleDark": "OUR",
+    "titleGreen": "DESTINATIONS",
+    "description": "From the boulevards of Bishkek to a lake at 3,500 metres that almost nobody reaches.",
+    "cta": "ALL DESTINATIONS"
+  },
+  "testimonialsSection": {
+    "eyebrow": "TRAVELLER STORIES",
+    "titleDark": "WHAT OUR GUESTS",
+    "titleGreen": "SAY",
+    "description": "Reviews collected after every departure — the good, and the things we then fixed."
+  },
+  "testimonials": {
+    "lena": {
+      "quote": "The pace was perfect. Long enough in each valley to actually feel it, and our guide translated far more than words — he explained why things are done the way they are."
+    },
+    "tom": {
+      "quote": "Kel-Suu is genuinely remote and the team treated it that way: proper vehicles, spare fuel, a real plan for the weather. I never once felt improvised."
+    },
+    "sofia": {
+      "quote": "I slept in a yurt for three nights and would happily have stayed a week. The family we stayed with made us part of the evening, not an audience for it."
+    },
+    "hugo": {
+      "quote": "Well organised and honest about what each day involves. The only thing I would change is asking for one more day at the lake."
+    }
+  },
+  "gallery": {
+    "title": "GALLERY"
+  },
+  "newsletter": {
+    "eyebrow": "GET TRAVEL INSPIRATION",
+    "title": "STRAIGHT TO YOUR INBOX",
+    "description": "Subscribe to our newsletter and be the first to know about new tours and special offers.",
+    "placeholder": "Your email address",
+    "submit": "SUBSCRIBE",
+    "loading": "SENDING",
+    "success": "Thanks, travel inspiration is on its way.",
+    "invalid": "Please enter a valid email address.",
+    "error": "Something went wrong. Please try again.",
+    "inputLabel": "Email address",
+    "iconLabel": "Newsletter"
+  },
+  "footer": {
+    "blurb": "A Bishkek-based team building small-group and private journeys across Kyrgyzstan and Central Asia since 2014.",
+    "copyright": "© 2026 Go Kyrgyzstan. All rights reserved.",
+    "exploreTitle": "EXPLORE",
+    "companyTitle": "COMPANY",
+    "informationTitle": "INFORMATION",
+    "company": {
+      "about": "About us",
+      "team": "Our team",
+      "reviews": "Reviews",
+      "contact": "Contact"
+    },
+    "information": {
+      "faq": "FAQ",
+      "booking": "Booking terms",
+      "privacy": "Privacy policy",
+      "terms": "Terms & conditions"
+    },
+    "social": {
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "youtube": "YouTube"
+    }
+  },
+  "toursPage": {
+    "meta": {
+      "title": "Tours in Kyrgyzstan - group, private and expedition trips",
+      "description": "Browse every Go Kyrgyzstan itinerary: 4 to 9 day trips to Song-Kol, Kel-Suu, Issyk-Kul and the Pamir Highway, with prices, dates and day-by-day plans."
+    },
+    "heroEyebrow": "ALL ITINERARIES",
+    "heroTitle": "OUR TOURS",
+    "heroDescription": "Every route we run, with real prices and real departure dates. Filter by region, length or how hard you want to work for the view.",
+    "filtersTitle": "FILTER TOURS",
+    "filters": {
+      "destination": "Destination",
+      "anyDestination": "All destinations",
+      "duration": "Duration",
+      "anyDuration": "Any length",
+      "durationOptions": {
+        "short": "Up to 4 days",
+        "medium": "5 to 7 days",
+        "long": "8 days or more"
+      },
+      "difficulty": "Difficulty",
+      "anyDifficulty": "Any difficulty",
+      "style": "Tour style",
+      "anyStyle": "Any style",
+      "sort": "Sort by",
+      "sortOptions": {
+        "recommended": "Recommended",
+        "priceAsc": "Price: low to high",
+        "priceDesc": "Price: high to low",
+        "durationAsc": "Shortest first"
+      }
+    },
+    "resultCount": "{count, plural, =0 {No tours match your filters} one {# tour matches} other {# tours match}}",
+    "clearFilters": "Clear filters",
+    "emptyTitle": "NOTHING MATCHES YET",
+    "emptyBody": "Try widening one of the filters, or tell us what you have in mind and we will build the route around it."
+  },
+  "tourDetail": {
+    "meta": {
+      "title": "{name} - Kyrgyzstan tour"
+    },
+    "departuresTitle": "Upcoming departures",
+    "seatsLeft": "{count, plural, one {# seat left} other {# seats left}}",
+    "available": "Places available",
+    "almostFull": "Almost full",
+    "requestBooking": "REQUEST BOOKING",
+    "askOnWhatsapp": "ASK ON WHATSAPP",
+    "overviewTitle": "ABOUT THIS TOUR",
+    "itineraryTitle": "DAY BY DAY",
+    "itineraryDescription": "Open any day to see where you sleep, how far you travel and what the day actually feels like.",
+    "inclusionsTitle": "WHAT IS INCLUDED",
+    "includedTitle": "Included in the price",
+    "excludedTitle": "Not included",
+    "goodToKnowTitle": "GOOD TO KNOW",
+    "galleryTitle": "PHOTOS FROM THE ROUTE",
+    "inquiryTitle": "REQUEST THIS TOUR",
+    "inquiryDescription": "Send us a note and we will reply within one working day with availability and the exact plan.",
+    "regionsTitle": "Regions on this route",
+    "priceNote": "Prices start at {price} per person in a shared twin room or yurt. Single supplements and private departures on request.",
+    "relatedTitle": "YOU MIGHT ALSO LIKE",
+    "relatedDescription": "Other routes that cover similar ground or pair well as an extension."
+  },
+  "destinationsPage": {
+    "meta": {
+      "title": "Destinations in Kyrgyzstan - lakes, jailoos and Silk Road cities",
+      "description": "Song-Kol, Kel-Suu, Issyk-Kul, Jeti-Oguz, Bishkek and the Pamir Highway: what each region is like, when to go and which tours reach it."
+    },
+    "heroEyebrow": "REGION BY REGION",
+    "heroTitle": "DESTINATIONS",
+    "heroDescription": "Six regions that between them cover almost everything people come to Kyrgyzstan for."
+  },
+  "destinationDetail": {
+    "meta": {
+      "title": "{name} - travel guide"
+    },
+    "eyebrow": "DESTINATION GUIDE",
+    "driveLabel": "From Bishkek",
+    "driveValue": "{hours} h by road",
+    "driveBase": "Starting point",
+    "highlightsTitle": "WHY GO",
+    "planCta": "PLAN A TRIP HERE",
+    "toursTitle": "TOURS THAT VISIT {name}",
+    "toursDescription": "Every itinerary below spends at least one full day in this region."
+  },
+  "about": {
+    "meta": {
+      "title": "About Go Kyrgyzstan - a local team in Bishkek",
+      "description": "Who we are, how we build our routes, and why we work with the families whose pastures and guesthouses we visit."
+    },
+    "heroEyebrow": "WHO WE ARE",
+    "heroTitle": "A LOCAL TEAM, NOT A CALL CENTRE",
+    "heroDescription": "We live in Bishkek, we drive these roads every season, and we know which pass is still under snow in June.",
+    "storyTitle": "OUR STORY",
+    "story": [
+      "Go Kyrgyzstan started in 2014 with one minibus, two guides and a stubborn belief that the country deserved better than a checklist of viewpoints. The first season we ran four departures. Most of the people on them were friends of friends.",
+      "Twelve years later we run around a hundred departures a year, and the working method has not really changed. We drive every new route ourselves before it goes on sale. We stay with the same families in Kyzart and at Song-Kol, which is why they hold beds for us in August when everything is full.",
+      "We keep groups small because a jailoo with fourteen visitors is a visit and a jailoo with forty is a spectacle. It costs us margin and it is the single decision we are least willing to change."
+    ],
+    "storyCta": "SEE OUR TOURS",
+    "stats": {
+      "years": "Years running tours",
+      "travellers": "Travellers hosted",
+      "tours": "Routes we operate",
+      "rating": "Average review score"
+    },
+    "valuesTitle": "HOW WE WORK",
+    "valuesDescription": "Four things we decided early and have not traded away since.",
+    "values": [
+      {
+        "title": "ROUTES WE HAVE DRIVEN",
+        "description": "Nothing goes on sale until someone from the team has done the whole thing, in the same season, in the same vehicle."
+      },
+      {
+        "title": "MONEY THAT STAYS LOCAL",
+        "description": "Guides, drivers, cooks and yurt families are paid directly and at rates set with them, not against them."
+      },
+      {
+        "title": "HONEST DAY PLANS",
+        "description": "If a day is eight hours of driving we write eight hours of driving. Surprises belong in the landscape, not the schedule."
+      },
+      {
+        "title": "LIGHT ON THE PASTURE",
+        "description": "Small groups, no single-use plastic in camp, and we carry out everything we carry in."
+      }
+    ],
+    "teamTitle": "THE PEOPLE YOU WILL MEET",
+    "teamDescription": "The team that plans your trip is the team that runs it.",
+    "team": {
+      "aizhan": {
+        "role": "Founder & route planner",
+        "bio": "Grew up in Naryn, studied tourism in Bishkek, and has personally driven every route on this site at least twice."
+      },
+      "ulan": {
+        "role": "Lead mountain guide",
+        "bio": "Certified mountain guide and horseman. Fifteen seasons on the jailoos between Kyzart and Song-Kol."
+      },
+      "marat": {
+        "role": "Expedition driver",
+        "bio": "Keeps the 4x4 fleet alive on roads that eat suspension. Knows every fuel stop between Bishkek and Osh."
+      },
+      "elena": {
+        "role": "Guest relations",
+        "bio": "Answers your emails, arranges the border permits, and remembers who is vegetarian before anyone asks."
+      }
+    }
+  },
+  "contactPage": {
+    "meta": {
+      "title": "Contact Go Kyrgyzstan - plan your trip",
+      "description": "Talk to our Bishkek office about dates, private departures and custom routes. We reply to every enquiry within one working day."
+    },
+    "heroEyebrow": "GET IN TOUCH",
+    "heroTitle": "PLAN YOUR TRIP",
+    "heroDescription": "Tell us roughly when you want to travel and what you want out of it. We will send back a plan, not a brochure.",
+    "detailsTitle": "TALK TO US",
+    "detailsBody": "Our office is in central Bishkek. In high season the fastest answer usually comes on WhatsApp, because half the team is on the road.",
+    "phoneLabel": "Phone",
+    "whatsappLabel": "WhatsApp",
+    "emailLabel": "Email",
+    "officeLabel": "Office",
+    "hoursLabel": "Opening hours",
+    "hoursValue": "Mon-Fri 09:00-18:00, Sat 10:00-15:00 (GMT+6)",
+    "mapTitle": "Map of the Go Kyrgyzstan office in Bishkek",
+    "formTitle": "SEND AN ENQUIRY",
+    "formBody": "The more you tell us about dates, group size and pace, the more useful our first reply will be.",
+    "generalEnquiry": "General enquiry",
+    "stepsTitle": "HOW BOOKING WORKS",
+    "stepsDescription": "Four steps from first message to standing on a pass at 3,000 metres.",
+    "steps": {
+      "choose": {
+        "title": "1. TELL US THE PLAN",
+        "description": "Pick a departure or describe what you want. We check availability and send a day-by-day proposal."
+      },
+      "confirm": {
+        "title": "2. CONFIRM THE TRIP",
+        "description": "A 20% deposit holds your places. The balance is due 30 days before departure."
+      },
+      "prepare": {
+        "title": "3. GET READY",
+        "description": "You receive a packing list, permit paperwork and your guide's number two weeks out."
+      },
+      "travel": {
+        "title": "4. TRAVEL",
+        "description": "We meet you at the airport and take it from there. Someone in Bishkek is reachable the whole time."
+      }
+    }
+  },
+  "inquiry": {
+    "fields": {
+      "name": "Your name",
+      "email": "Email",
+      "phone": "Phone or WhatsApp",
+      "date": "Preferred start date",
+      "tour": "Tour",
+      "people": "Travellers",
+      "message": "Your message",
+      "messagePlaceholder": "Tell us about your dates, group and anything you especially want to see."
+    },
+    "submit": "SEND ENQUIRY",
+    "sending": "SENDING",
+    "successTitle": "ENQUIRY SENT",
+    "successBody": "Thanks — we have your message and will reply within one working day, usually sooner.",
+    "sendAnother": "SEND ANOTHER",
+    "privacyNote": "We only use your details to answer this enquiry.",
+    "errors": {
+      "name": "Please tell us your name.",
+      "email": "Please enter a valid email address.",
+      "message": "A sentence or two is enough — please add a little more.",
+      "summary": "Some fields still need attention."
+    }
+  },
+  "faq": {
+    "meta": {
+      "title": "FAQ - visas, fitness, yurts and payment",
+      "description": "Answers to the questions we get most often about travelling in Kyrgyzstan: visas, altitude, what a yurt night is really like, payment and custom trips."
+    },
+    "heroEyebrow": "BEFORE YOU BOOK",
+    "heroTitle": "FREQUENT QUESTIONS",
+    "heroDescription": "The things people ask us most, answered properly rather than reassuringly.",
+    "items": {
+      "visa": {
+        "question": "Do I need a visa for Kyrgyzstan?",
+        "answer": "Citizens of most EU countries, the UK, the US, Canada, Japan and around sixty others can enter visa-free for up to 60 days. Everyone else can usually apply for an e-visa online in a few days. Check your own passport before booking flights, and tell us if you need an invitation letter — we issue them free of charge."
+      },
+      "fitness": {
+        "question": "How fit do I need to be?",
+        "answer": "For our easy tours, if you can walk for two hours on uneven ground you will be fine. Moderate tours add half-day hikes and several hours in the saddle. Expeditions mean long days in a vehicle at altitude and camping above 3,000 metres. Each tour page states the level, and we would rather move you to a different route than have you struggle."
+      },
+      "accommodation": {
+        "question": "What is a night in a yurt actually like?",
+        "answer": "You sleep on thick felt mattresses on the floor, usually four to six people per yurt, under heavy quilts. There is a wood stove, no electricity beyond a solar lamp, and a long-drop toilet a short walk away. It gets genuinely cold after dark even in July. Most people describe it as the best night of the trip."
+      },
+      "food": {
+        "question": "Can you handle vegetarian or other diets?",
+        "answer": "Yes, and it helps enormously to know in advance. Kyrgyz cooking is meat-heavy, so in remote camps a vegetarian menu has to be planned and shopped for in Bishkek. Vegan, gluten-free and allergy requirements are all workable with notice. Tell us when you book, not on the first morning."
+      },
+      "payment": {
+        "question": "How do I pay, and what if I cancel?",
+        "answer": "A 20% deposit confirms your place, payable by bank transfer or card. The balance is due 30 days before departure. Cancel more than 30 days out and you lose only the deposit; between 30 and 14 days it is 50%; inside 14 days the trip is non-refundable. We strongly recommend travel insurance that covers cancellation."
+      },
+      "solo": {
+        "question": "Can I join as a solo traveller?",
+        "answer": "About a third of our guests travel alone. You will be placed in shared accommodation with someone of the same gender at no extra cost, or you can pay a single supplement for your own room in guesthouses. Yurts are always shared — that is the nature of a yurt."
+      },
+      "weather": {
+        "question": "When is the best time to travel?",
+        "answer": "The high pastures are open from mid-June to mid-September; before that the passes hold snow and the yurt camps are not yet up. Issyk-Kul and the lower valleys work from May to October. Winter tours run January to February for skiing and eagle hunting. July and August are warmest and busiest; early September is our own favourite."
+      },
+      "custom": {
+        "question": "Can you build a private trip for us?",
+        "answer": "Yes — roughly half of what we run is private. Send us your dates, group size and interests and we will come back with a day-by-day plan and a price. Private trips can start any day of the week and go at whatever pace suits you."
+      }
+    },
+    "ctaTitle": "STILL WONDERING ABOUT SOMETHING?",
+    "ctaBody": "Ask us directly. A real person in Bishkek reads every message and answers within a working day.",
+    "ctaPrimary": "CONTACT US",
+    "ctaSecondary": "BROWSE TOURS"
+  },
+  "legal": {
+    "meta": {
+      "title": "Booking terms, privacy and conditions",
+      "description": "Booking and payment terms, cancellation policy, privacy notice and general conditions for Go Kyrgyzstan tours."
+    },
+    "heroEyebrow": "THE SMALL PRINT",
+    "heroTitle": "TERMS & POLICIES",
+    "heroDescription": "Booking conditions, how we handle your data, and what you can expect from us if something goes wrong.",
+    "navLabel": "Sections on this page",
+    "updated": "Last updated: 1 March 2026. This is sample text for a demonstration site.",
+    "sections": {
+      "booking": {
+        "title": "Booking terms",
+        "body": [
+          "A booking is confirmed once we have received your deposit of 20% of the total tour price and sent you a written confirmation. Until that confirmation arrives, places are held but not guaranteed.",
+          "The remaining balance is due 30 days before departure. For bookings made inside 30 days, the full amount is payable at the time of booking.",
+          "Cancellations more than 30 days before departure forfeit the deposit only. Between 30 and 14 days, 50% of the tour price is retained. Within 14 days of departure, no refund is available. We recommend travel insurance covering cancellation for any reason.",
+          "We may cancel a group departure if fewer than four travellers have booked, in which case you are offered an alternative date, a different tour, or a full refund. We will not cancel for this reason later than 21 days before departure.",
+          "Mountain routes are subject to weather, road conditions and permit availability. Where a route has to change we will always provide an equivalent alternative and cover the cost of doing so."
+        ]
+      },
+      "privacy": {
+        "title": "Privacy policy",
+        "body": [
+          "We collect only the information needed to plan and run your trip: name, contact details, passport data where a permit requires it, and any dietary or medical information you choose to share.",
+          "Passport and permit data is shared with the relevant Kyrgyz authorities and with border-zone permit offices, and with nobody else. Dietary and medical notes are shared with your guide and cook.",
+          "We do not sell your data, and we do not pass your email address to third-party marketing services. Newsletter subscription is separate from booking and can be cancelled from any email we send.",
+          "You can ask us at any time for a copy of the data we hold about you, or ask us to delete it, by writing to the address on our contact page. We keep booking records for seven years for accounting purposes."
+        ]
+      },
+      "terms": {
+        "title": "Terms & conditions",
+        "body": [
+          "Travel insurance covering medical treatment, evacuation and repatriation is mandatory on all our tours. We may ask to see your policy number before departure.",
+          "You are responsible for holding a valid passport and any visa required for your nationality. We are happy to issue invitation letters but cannot be held responsible for refused entry.",
+          "Our guides may adjust or shorten an activity where they judge it unsafe. Their decision on the mountain is final, and no refund is due for an activity changed on safety grounds.",
+          "Prices are quoted in euros and are guaranteed once your deposit is received. Prices for future seasons may change until a booking is confirmed.",
+          "This is a demonstration website. The company details, prices and dates shown here are sample data and do not constitute a contractual offer."
+        ]
+      }
+    }
+  },
+  "notFound": {
+    "title": "THIS ROUTE DOES NOT EXIST",
+    "body": "The page you are looking for has moved or never existed. The mountains, however, are exactly where we left them.",
+    "home": "GO HOME",
+    "tours": "BROWSE TOURS",
+    "contact": "CONTACT US"
+  },
+  "destinations": {
+    "song-kol": {
+      "name": "Song-Kol",
+      "summary": "A freshwater lake at 3,016 m ringed by summer pastures, where herding families raise their yurts from June to September.",
+      "bestTime": "Mid-June to mid-September",
+      "body": [
+        "Song-Kol is the postcard version of nomadic Kyrgyzstan, and unusually for a postcard it is still true. For three months a year the shoreline fills with yurts as families drive their herds up from the valleys; by October it is empty again and the passes are closed.",
+        "There are no hotels, no shops and no mobile signal worth the name. You sleep in a family yurt, eat what the camp cooks, and go to bed when the stove burns down. The lake sits in a shallow bowl, so sunset light runs across the whole basin at once.",
+        "Getting there is part of it. The route over the Kalmak-Ashuu pass climbs in tight switchbacks with the lake appearing all at once at the top — which is why we always drive it in that direction."
+      ],
+      "highlights": [
+        "Three months a year of working summer pasture, not a staged camp",
+        "Horse riding straight from the yurt door across open grassland",
+        "Some of the darkest night skies in Central Asia",
+        "The Kalmak-Ashuu pass approach, best driven eastbound"
+      ]
+    },
+    "kel-suu": {
+      "name": "Kel-Suu",
+      "summary": "A hidden glacier lake at 3,514 m in the border zone near China, reachable only by 4x4 and a permit.",
+      "bestTime": "July to early September",
+      "body": [
+        "Kel-Suu is the reason people come back to Kyrgyzstan a second time. The lake fills a narrow gorge between vertical rock walls, and its level rises and falls with underground drainage — some years it is a long fjord, some years a chain of pools.",
+        "It sits inside a restricted border zone, so every visitor needs a permit arranged in advance. That, plus a rough track that defeats ordinary vehicles, keeps visitor numbers to a few hundred a season.",
+        "Camp is on the Kurumduk plain an hour below the lake, at around 3,300 m. Nights are cold in any month, and the weather can turn in twenty minutes — which is why we build a spare day into every Kel-Suu itinerary."
+      ],
+      "highlights": [
+        "Sheer rock walls dropping straight into turquoise water",
+        "A border-zone permit means genuine solitude",
+        "High camp on the Kurumduk plain under enormous skies",
+        "Almost no infrastructure — this is real expedition travel"
+      ]
+    },
+    "issyk-kul": {
+      "name": "Issyk-Kul",
+      "summary": "The world's second-largest alpine lake, warm enough to swim in and framed by the snow of the Tien Shan.",
+      "bestTime": "May to October",
+      "body": [
+        "Issyk-Kul never freezes, which is what its name means, and it is salty enough to float in. The lake is 180 km long, so the two shores feel like different countries: the north is resorts and beaches, the south is canyons, hot springs and small villages.",
+        "We spend our time on the south shore. It puts you within an hour of Jeti-Oguz, Skazka canyon and the Barskoon valley, and the mountain wall behind the villages rises to over 4,000 m.",
+        "It is also the easiest region in the country to travel in. Roads are paved, guesthouses are comfortable, and it works from May through October — long before and after the high pastures open."
+      ],
+      "highlights": [
+        "Swimming in a warm alpine lake with snow peaks behind you",
+        "Skazka canyon at sunset, when the rock turns red",
+        "Barskoon waterfalls and the road up towards the Kumtor plateau",
+        "Petroglyphs and open-air museums along the northern shore"
+      ]
+    },
+    "jeti-oguz": {
+      "name": "Jeti-Oguz",
+      "summary": "Red sandstone cliffs above a green valley of spruce forest, hot springs and easy walking.",
+      "bestTime": "May to October",
+      "body": [
+        "Jeti-Oguz means Seven Bulls, after the row of red sandstone fins that stands above the valley mouth. It is the single most photographed rock formation in Kyrgyzstan and, unusually, it lives up to the photographs.",
+        "Behind the cliffs the valley opens into spruce forest and summer pasture. A gentle two-hour walk takes you to the Valley of Flowers, and a longer day reaches the meadows below the Teleti pass.",
+        "The valley is close enough to Karakol to visit in a morning, which makes it a good acclimatisation day before anything higher."
+      ],
+      "highlights": [
+        "The Seven Bulls and Broken Heart rock formations",
+        "Easy forest walking at 2,200 m, ideal for acclimatising",
+        "Hot springs in the village below the cliffs",
+        "Summer yurt camps on the meadows further up the valley"
+      ]
+    },
+    "bishkek": {
+      "name": "Bishkek",
+      "summary": "A green, low-rise Soviet-planned capital at the foot of the mountains, and the start of nearly every trip.",
+      "bestTime": "April to October",
+      "body": [
+        "Bishkek is not why anyone flies to Kyrgyzstan, but it is a better city than its reputation. It was laid out with wide boulevards and irrigation channels under every line of trees, so even in August it stays shaded and walkable.",
+        "The Osh bazaar is the honest introduction to the country: felt, spices, horse tack and a wall of dried fruit. Ala-Too square and the surrounding museums give you the political history in an afternoon.",
+        "It is also where the mountains start. The Ala-Archa gorge is forty minutes from the city centre and climbs to glaciers at 4,000 m — the standard first-day acclimatisation walk on most of our tours."
+      ],
+      "highlights": [
+        "Osh bazaar, best visited early on a weekday morning",
+        "Ala-Archa national park, 40 minutes from the centre",
+        "Soviet-era architecture and the Ala-Too square changing of the guard",
+        "The best coffee and last hot shower before the mountains"
+      ]
+    },
+    "osh-and-pamir": {
+      "name": "Osh & the Pamir",
+      "summary": "The oldest city in the country and the start of the Pamir Highway, climbing to passes above 4,200 m.",
+      "bestTime": "June to September",
+      "body": [
+        "Osh has been inhabited for three thousand years and still feels like a Silk Road city — the bazaar runs along the river, and Suleiman-Too rises straight out of the middle of town as a UNESCO-listed pilgrimage site.",
+        "South of the city the Pamir Highway begins its climb. The road crosses the Taldyk pass at 3,615 m and the Kyzyl-Art at 4,280 m, running through high desert plateau with peaks of the Trans-Alay range to the south.",
+        "This is the most demanding region we work in. Altitude is constant, fuel and repairs are scarce, and the weather at 4,000 m does what it likes. It is also the most spectacular drive in Central Asia."
+      ],
+      "highlights": [
+        "Suleiman-Too, a UNESCO site rising out of central Osh",
+        "The Taldyk and Kyzyl-Art passes on the Pamir Highway",
+        "Lenin Peak base camp and the Achik-Tash meadows",
+        "High desert plateau scenery you will not find further north"
+      ]
+    }
+  },
+  "tours": {
+    "heart-of-kyrgyzstan": {
+      "name": "Heart of Kyrgyzstan",
+      "tagline": "Six days from the capital to a border-zone lake, taking in the country's best-known jailoos on the way.",
+      "summary": "Bishkek, Song-Kol and Kel-Suu in one loop — horse riding, two nights in yurts and two of the most striking lakes in Central Asia.",
+      "overview": [
+        "This is the route we would send a first-time visitor on. In six days it covers the three things Kyrgyzstan does better than anywhere else: high summer pasture with families still living on it, a road that climbs through switchbacks to a lake at 3,000 metres, and a border-zone gorge that almost nobody reaches.",
+        "The pace is deliberate. Two nights at altitude in yurts, a day in the saddle if you want it, and one long driving day to reach Kel-Suu and get back. Everything else is short hops with time to stop. You will not be rushed off a viewpoint to make a schedule.",
+        "Groups are capped at twelve, and we run this route from late May to early October. Outside those months the Kalmak-Ashuu pass is under snow and the yurt camps are down in the valleys."
+      ],
+      "highlights": [
+        "Two nights in working family yurt camps, not tourist replicas",
+        "Horse riding across the Kilemche jailoo with a local herder",
+        "The Kalmak-Ashuu switchbacks down to Song-Kol",
+        "A full day at Kel-Suu inside the restricted border zone",
+        "All permits, park fees and border paperwork handled for you"
+      ],
+      "days": [
+        {
+          "title": "Arrival in Bishkek",
+          "description": "Airport pickup at any hour and a rest at the hotel. Afternoon walking tour of Ala-Too square, the Osh bazaar and the old Soviet quarter, then a welcome dinner where you meet your guide and the rest of the group."
+        },
+        {
+          "title": "Bishkek to Kyzart",
+          "description": "Four hours south over the Too-Ashuu pass, with the tunnel at 3,180 m and a long descent into the Suusamyr valley. We reach the village of Kyzart by mid-afternoon and stay in a family guesthouse — your last hot shower for two days."
+        },
+        {
+          "title": "Kyzart to Kilemche jailoo",
+          "description": "The day most people remember. Ride or walk over the Kyzart pass onto the Kilemche summer pasture, roughly five hours with a picnic on the way. Horses and a herder come with us; the support vehicle carries your main bag to camp."
+        },
+        {
+          "title": "Song-Kol and on to Naryn",
+          "description": "Morning at the lake, then the descent through the Kalmak-Ashuu switchbacks — the view opens all at once at the top of the pass. Afternoon drive to Naryn along the river, arriving in time for dinner at a town guesthouse."
+        },
+        {
+          "title": "Kel-Suu day trip",
+          "description": "The long one: an early start, four hours of rough track through the border zone, and the last hour on foot to the lake itself. Several hours at Kel-Suu before returning to camp on the Kurumduk plain for a night under canvas at 3,300 m."
+        },
+        {
+          "title": "Back to Bishkek",
+          "description": "A long but scenic drive north through the Naryn gorge and the Boom canyon, with stops at the Burana tower and for lunch on the way. Hotel by early evening, with airport transfers whenever your flight leaves."
+        }
+      ],
+      "included": [
+        "All transport in a private minibus or 4x4 with driver",
+        "Five nights: two hotels, one guesthouse, two yurt camps",
+        "All breakfasts, four lunches and five dinners",
+        "English, Russian, French or German speaking guide throughout",
+        "Horses and herder for the Kilemche crossing",
+        "Kel-Suu border-zone permit and all park entrance fees",
+        "Airport transfers on arrival and departure"
+      ],
+      "excluded": [
+        "International flights to and from Bishkek",
+        "Travel insurance, which is mandatory on this tour",
+        "Lunches and dinners in Bishkek and Naryn on free evenings",
+        "Single supplement in hotels and guesthouses (€120)",
+        "Tips for your guide and driver"
+      ],
+      "notes": [
+        {
+          "title": "Altitude",
+          "description": "You sleep at 3,016 m at Song-Kol and 3,300 m near Kel-Suu. Mild headaches on the first night are common; the itinerary is built to gain height gradually."
+        },
+        {
+          "title": "What to pack",
+          "description": "Nights drop close to freezing even in July. Bring a warm layer, a windproof jacket, and shoes you do not mind getting wet. We supply sleeping bags for the camp nights."
+        },
+        {
+          "title": "Connectivity",
+          "description": "No mobile signal at Song-Kol or Kel-Suu. Your guide carries a satellite messenger and the Bishkek office is reachable through it at any hour."
+        }
+      ]
+    },
+    "song-kol-nomad-life": {
+      "name": "Song-Kol Nomad Life",
+      "tagline": "Four days, two of them on a summer pasture at 3,000 metres with the families who work it.",
+      "summary": "The short version of the classic Kyrgyz trip: over the Too-Ashuu pass, two nights in yurts at Song-Kol, and back with time for an evening in Bishkek.",
+      "overview": [
+        "Not everyone has a fortnight. This route takes the single best experience in the country — living on a jailoo for two days — and builds the shortest honest trip around it.",
+        "You stay with the same two families we have worked with since 2016, on the southern shore where the camps are furthest apart. Days are unstructured on purpose: ride, walk the shoreline, help bring the herd in, or do nothing at all at 3,000 metres.",
+        "It is our easiest tour. There is no hard walking, the driving days are four to five hours, and the only real demand is the altitude and the cold after dark."
+      ],
+      "highlights": [
+        "Two full nights in a family yurt camp on the lake shore",
+        "Horse riding on the open pasture, from an hour to a full day",
+        "Learning to make kymyz and shyrdak felt with the family",
+        "Sunrise over the lake from the ridge behind camp",
+        "Small groups of no more than ten travellers"
+      ],
+      "days": [
+        {
+          "title": "Bishkek and the Chuy valley",
+          "description": "Arrival, hotel check-in and an afternoon orientation walk through central Bishkek. If you land early we drive out to the Ala-Archa gorge for a first look at the mountains and some gentle acclimatisation."
+        },
+        {
+          "title": "Over the pass to Song-Kol",
+          "description": "South through the Too-Ashuu tunnel and the Suusamyr valley, then the climb to the lake in the afternoon. Arrive at camp in time to watch the herds come in, followed by dinner in the family yurt."
+        },
+        {
+          "title": "A day on the jailoo",
+          "description": "No fixed programme. Ride out with the herder, walk the shoreline, try your hand at felt-making, or sit with a book. In the evening there is usually music, and always more food than anyone expects."
+        },
+        {
+          "title": "Return to Bishkek",
+          "description": "Early breakfast and the drive back down the Kalmak-Ashuu switchbacks, with a stop at the Burana tower on the way. In Bishkek by late afternoon, with airport transfers to suit your flight."
+        }
+      ],
+      "included": [
+        "Private transport with driver for the whole route",
+        "Three nights: one Bishkek hotel, two nights in yurt camps",
+        "All breakfasts, two lunches and three dinners",
+        "Guide throughout, in English, Russian or French",
+        "One guided horse ride at Song-Kol",
+        "Sleeping bags and mattresses for the camp nights",
+        "Airport transfers on arrival and departure"
+      ],
+      "excluded": [
+        "International flights",
+        "Travel insurance, which is mandatory",
+        "Meals in Bishkek beyond breakfast",
+        "Extra riding hours beyond the included ride (€12 per hour)",
+        "Tips for the guide, driver and host family"
+      ],
+      "notes": [
+        {
+          "title": "Sleeping in a yurt",
+          "description": "Four to six people share a yurt on felt mattresses under heavy quilts. Toilets are long-drop, a short walk from camp, and there is no shower for two days."
+        },
+        {
+          "title": "Altitude",
+          "description": "Song-Kol is at 3,016 m. The drive gains height slowly enough that most people are fine, but take it easy on the first afternoon."
+        },
+        {
+          "title": "Season",
+          "description": "This route only runs from mid-June to mid-September. Outside those dates the camps are packed away and the pass is closed."
+        }
+      ]
+    },
+    "kel-suu-expedition": {
+      "name": "Kel-Suu Expedition",
+      "tagline": "Seven days and a border permit to reach one of the least-visited lakes in Central Asia.",
+      "summary": "A proper expedition to Kel-Suu with high camps, 4x4 travel and a spare day built in for weather. Maximum eight travellers.",
+      "overview": [
+        "Kel-Suu is not a day trip done properly. This route gives it the time it deserves: three nights above 3,000 metres, two full days at the lake, and a contingency day because the weather at that altitude decides the schedule, not us.",
+        "We travel in two 4x4 vehicles carrying spare fuel, and camp with proper expedition tents rather than relying on yurts that may not be standing. Everything above Naryn is off the grid.",
+        "This is the hardest tour we run. It is not technical — there is no climbing and no via ferrata — but it is cold, remote and consistently high, and the nearest hospital is a long drive away. We cap it at eight people and we ask about your fitness before confirming."
+      ],
+      "highlights": [
+        "Two full days at Kel-Suu instead of a rushed few hours",
+        "A contingency day so bad weather does not cost you the lake",
+        "High camp on the Kurumduk plain at 3,300 m",
+        "Song-Kol and the Naryn gorge on the way in",
+        "Two 4x4 vehicles, spare fuel and a satellite messenger throughout"
+      ],
+      "days": [
+        {
+          "title": "Bishkek briefing",
+          "description": "Arrival, hotel, and an afternoon expedition briefing: kit check, permit paperwork, and a walk through the plan day by day. Welcome dinner with the guide and driver who will be with you all week."
+        },
+        {
+          "title": "South to Kochkor",
+          "description": "Out of the Chuy valley through the Boom canyon and along the western tip of Issyk-Kul. Afternoon in Kochkor with the felt-makers cooperative, then a guesthouse night at 1,800 m to start gaining height."
+        },
+        {
+          "title": "Up to Song-Kol",
+          "description": "The climb to the lake by the western approach, arriving early enough to walk the shore. First night at 3,016 m in a yurt camp — this is the acclimatisation night that makes the rest of the week work."
+        },
+        {
+          "title": "Song-Kol to Naryn",
+          "description": "Down the Kalmak-Ashuu switchbacks and east along the Naryn river. Afternoon resupply in Naryn town, final permit checks, and a comfortable guesthouse night before the road turns rough."
+        },
+        {
+          "title": "Into the border zone",
+          "description": "Permits checked at the Ak-Muz post, then four hours of track across high steppe to the Kurumduk plain. Camp is pitched at 3,300 m with the afternoon free to walk up the ridge behind it."
+        },
+        {
+          "title": "Kel-Suu",
+          "description": "The full day at the lake: an hour on foot from the vehicle drop, then as long as the weather allows on the shoreline and the ridges above it. Back at camp for a second night at altitude."
+        },
+        {
+          "title": "The long road back",
+          "description": "Out of the border zone and north through Naryn and the Boom canyon to Bishkek — around nine hours with stops. Hotel and a final dinner, with airport transfers whenever you need them."
+        }
+      ],
+      "included": [
+        "Two 4x4 vehicles with experienced drivers and spare fuel",
+        "Six nights: two hotels, two guesthouses, one yurt camp, two nights camping",
+        "All meals from day one dinner to day seven lunch",
+        "Expedition guide and camp cook",
+        "Expedition tents, sleeping mats and four-season sleeping bags",
+        "Kel-Suu border-zone permits and all park fees",
+        "Satellite messenger and a full first-aid kit"
+      ],
+      "excluded": [
+        "International flights",
+        "Travel insurance including evacuation cover — mandatory and checked",
+        "Meals in Bishkek on the first and last evenings",
+        "Single tent supplement (€180)",
+        "Personal equipment and tips"
+      ],
+      "notes": [
+        {
+          "title": "Fitness and altitude",
+          "description": "Three nights above 3,000 m and daily walking at altitude. You should be comfortable on a four-hour hike at home before booking. We build in an acclimatisation night at Song-Kol."
+        },
+        {
+          "title": "Permits",
+          "description": "The Kel-Suu border zone requires a permit issued 45 days in advance. We need your passport scan at booking, and last-minute joiners cannot be added."
+        },
+        {
+          "title": "Weather",
+          "description": "Snow is possible at Kel-Suu in any month. The spare day exists for exactly this reason, and your guide will use it rather than push into bad conditions."
+        }
+      ]
+    },
+    "issyk-kul-and-jeti-oguz": {
+      "name": "Issyk-Kul & Jeti-Oguz",
+      "tagline": "Five relaxed days around the world's second-largest alpine lake and the red cliffs above it.",
+      "summary": "Warm-water swimming, red sandstone canyons and easy forest walks — our gentlest route, and the one that works from May to October.",
+      "overview": [
+        "The south shore of Issyk-Kul is where Kyrgyz families go on holiday, and there is a reason. The lake is warm enough to swim in from June, the mountain wall behind it tops 4,000 metres, and the canyons between the villages are as photogenic as anything higher up.",
+        "This route stays low. Nothing here is above 2,500 metres, every night is in a comfortable guesthouse with a proper shower, and the longest walk is three hours on a good path. It suits families, mixed-fitness groups and anyone travelling early or late in the season.",
+        "It also pairs well as an extension. If you have already done a jailoo trip, five days here is the soft landing — and Karakol has the best food in the country."
+      ],
+      "highlights": [
+        "Swimming in Issyk-Kul with snow peaks on the far shore",
+        "Skazka canyon in the last hour of light",
+        "The Seven Bulls cliffs and an easy walk up the Jeti-Oguz valley",
+        "Karakol: the Dungan mosque, the wooden cathedral and Sunday animal market",
+        "Comfortable guesthouses every night — no camping on this route"
+      ],
+      "days": [
+        {
+          "title": "Bishkek to the lake",
+          "description": "Pickup in Bishkek and east through the Boom canyon, reaching the northern shore by lunchtime. Afternoon at the Cholpon-Ata petroglyph field and open-air museum, then on to a south-shore guesthouse for dinner."
+        },
+        {
+          "title": "Skazka canyon and the shore",
+          "description": "A morning swim, then the Skazka fairytale canyon — a short walk through eroded red sandstone that looks different every hour of the day. Afternoon free on the beach or on the water."
+        },
+        {
+          "title": "Jeti-Oguz",
+          "description": "The Seven Bulls and Broken Heart formations, then a gentle three-hour walk up the valley through spruce forest to the Valley of Flowers. Hot springs in the village afterwards, and a guesthouse night in Karakol."
+        },
+        {
+          "title": "Karakol and Barskoon",
+          "description": "Morning in Karakol: the Dungan mosque, the wooden Orthodox cathedral and the bazaar. Afternoon in the Barskoon valley with its waterfalls and the mountain road towards the Kumtor plateau."
+        },
+        {
+          "title": "Back along the north shore",
+          "description": "A last swim, then the drive west along the northern shore with a stop at the Burana tower and its Karakhanid minaret. Bishkek by late afternoon, with airport transfers as needed."
+        }
+      ],
+      "included": [
+        "Private minibus with driver for the whole route",
+        "Four nights in guesthouses with private bathrooms",
+        "All breakfasts and three dinners",
+        "Guide throughout, in English, Russian, French or German",
+        "All entrance fees to canyons, museums and the petroglyph field",
+        "Airport transfers on arrival and departure"
+      ],
+      "excluded": [
+        "International flights",
+        "Travel insurance",
+        "Lunches throughout and two dinners in Karakol",
+        "Single room supplement (€95)",
+        "Hot spring entry and optional water sports"
+      ],
+      "notes": [
+        {
+          "title": "Season",
+          "description": "This route runs from early May to late October. The lake is warm enough for comfortable swimming from mid-June, though locals start much earlier."
+        },
+        {
+          "title": "Pace",
+          "description": "The easiest tour we offer. The longest walk is three hours on a good path with 250 m of ascent, and there is no altitude to speak of."
+        },
+        {
+          "title": "Families",
+          "description": "This is the route we recommend with children over six. Let us know ages at booking and we will adjust the walking days."
+        }
+      ]
+    },
+    "silk-road-osh-and-pamir": {
+      "name": "Silk Road: Osh & the Pamir",
+      "tagline": "Nine days from Bishkek across the country to Osh, then up onto the Pamir Highway.",
+      "summary": "The full traverse: Song-Kol, the Naryn gorge, three-thousand-year-old Osh and the passes of the Pamir Highway above 4,000 metres.",
+      "overview": [
+        "This is the long one. Nine days crossing Kyrgyzstan from the Chuy valley in the north to the Trans-Alay range on the Tajik border, taking in the summer pastures, the Silk Road cities and the highest road in Central Asia.",
+        "The second half is genuine high-altitude travel. The Taldyk pass tops 3,600 metres and the Kyzyl-Art reaches 4,280, with two nights spent above 3,500 in the Achik-Tash meadows below Lenin Peak. Fuel, water and repairs are all scarce up there and we carry our own.",
+        "We run it with a maximum of eight travellers in two vehicles, from mid-June to late September. It is demanding, it involves several long driving days, and it is the most spectacular thing we do."
+      ],
+      "highlights": [
+        "A full traverse of the country, north shore to southern border",
+        "Suleiman-Too and the Osh bazaar, three millennia of Silk Road city",
+        "The Taldyk (3,615 m) and Kyzyl-Art (4,280 m) passes",
+        "Two nights at Lenin Peak base camp in the Achik-Tash meadows",
+        "Song-Kol and the Naryn gorge on the northern leg"
+      ],
+      "days": [
+        {
+          "title": "Bishkek",
+          "description": "Arrival and hotel check-in, afternoon city tour taking in Ala-Too square, the Osh bazaar and the state museum. Expedition briefing and welcome dinner with your guide and the two drivers."
+        },
+        {
+          "title": "To Song-Kol",
+          "description": "South over the Too-Ashuu pass and through the Suusamyr valley, climbing to the lake in the afternoon. First night at 3,016 m in a family yurt camp, deliberately early in the trip to start acclimatising."
+        },
+        {
+          "title": "Song-Kol to Naryn",
+          "description": "Down the switchbacks and east along the river to Naryn, the last real town before the south. Afternoon resupply, a walk through the bazaar and a comfortable guesthouse night."
+        },
+        {
+          "title": "Naryn to Kazarman",
+          "description": "A rough and beautiful day crossing two passes on an unpaved road that closes with the first snow. Around seven hours of driving through empty country, ending in the small town of Kazarman."
+        },
+        {
+          "title": "Kazarman to Osh",
+          "description": "Over the Kaldamo pass and down into the Fergana valley, where the climate changes completely — cotton, apricots and forty degrees. Arrive in Osh in the late afternoon for a hotel night and dinner in the old town."
+        },
+        {
+          "title": "Osh",
+          "description": "A full day in the oldest city in the country: Suleiman-Too at first light, the Jayma bazaar along the river, and the afternoon free. This is the last day at low altitude before the highway."
+        },
+        {
+          "title": "Onto the Pamir Highway",
+          "description": "South out of Osh and up. The Taldyk pass at 3,615 m opens onto the Alay valley with the whole Trans-Alay range on the southern horizon. Camp in the Achik-Tash meadows at 3,600 m."
+        },
+        {
+          "title": "Lenin Peak base camp",
+          "description": "A day walking from camp towards the base of Lenin Peak, gaining a few hundred metres to a viewpoint over the glacier. An optional longer route reaches 4,100 m. Second night at Achik-Tash."
+        },
+        {
+          "title": "Return to Osh",
+          "description": "Back over the Taldyk to Osh, arriving in the early afternoon. Domestic flight or overnight transfer to Bishkek can be arranged, and airport transfers are included either way."
+        }
+      ],
+      "included": [
+        "Two 4x4 vehicles with drivers, spare fuel and full recovery kit",
+        "Eight nights: three hotels, two guesthouses, one yurt camp, two nights camping",
+        "All meals except three in Osh and Bishkek",
+        "Expedition guide and cook throughout",
+        "Tents, mats and four-season sleeping bags for the high camps",
+        "All park fees and Achik-Tash camping permits",
+        "Airport transfers and Osh to Bishkek transfer or flight booking"
+      ],
+      "excluded": [
+        "International flights",
+        "Travel insurance with evacuation cover — mandatory and checked",
+        "The Osh to Bishkek domestic flight itself (around €65)",
+        "Single tent or room supplement (€240)",
+        "Tips and personal equipment"
+      ],
+      "notes": [
+        {
+          "title": "Long driving days",
+          "description": "Three days involve seven hours or more on rough roads. This is unavoidable on a country traverse and we would rather you knew before booking."
+        },
+        {
+          "title": "Altitude",
+          "description": "Two nights at 3,600 m after a week of gradual gain. Anyone with a heart or lung condition should discuss the route with a doctor first."
+        },
+        {
+          "title": "Border zone",
+          "description": "The Alay valley sits close to the Tajik border and passports are checked at several posts. Carry the original with you, not a copy."
+        }
+      ]
+    },
+    "winter-eagle-hunters": {
+      "name": "Winter: Eagle Hunters & Snow",
+      "tagline": "Five winter days on the shores of a lake that never freezes, with hunters and their golden eagles.",
+      "summary": "A private winter route: eagle hunting demonstrations on fresh snow, empty canyons and skiing above Karakol.",
+      "overview": [
+        "Kyrgyzstan in winter is a different country. The lake stays open, the crowds are gone entirely, and the canyons that are merely photogenic in August become extraordinary under snow.",
+        "The heart of this trip is two days with a family of berkutchi — eagle hunters — near Bokonbaevo on the southern shore. This is not a staged show for coach parties. You spend a morning with the birds, watch them work on open ground, and eat lunch in the family house afterwards.",
+        "We run it as a private tour only, for two to six people, in January and February. Days are short, temperatures sit between minus five and minus twenty, and every night is in a heated guesthouse."
+      ],
+      "highlights": [
+        "Two days with a berkutchi family and their golden eagles",
+        "Skazka and Barskoon canyons under snow, with no other visitors",
+        "Two days skiing at the Karakol resort, lift passes included",
+        "Frozen waterfalls in the Jeti-Oguz valley",
+        "Private departures for two to six people, any date in season"
+      ],
+      "days": [
+        {
+          "title": "Bishkek in winter",
+          "description": "Airport pickup and transfer to the hotel. Short city walk if the weather allows, a kit check for the cold, and dinner with your guide to run through the week."
+        },
+        {
+          "title": "To the south shore",
+          "description": "East through the Boom canyon to Issyk-Kul, which is open water even at minus fifteen. Afternoon arrival in Bokonbaevo and a first meeting with the hunting family and their birds."
+        },
+        {
+          "title": "Eagle hunting",
+          "description": "A full morning on the hillsides above the village watching the eagles work, with time to talk to the hunters about training and the season. Afternoon at Skazka canyon, which is at its best under snow."
+        },
+        {
+          "title": "Karakol and the slopes",
+          "description": "Transfer east to Karakol and a day on the mountain. The resort tops out at 3,040 m and the tree skiing is genuinely good. Non-skiers spend the day at the Jeti-Oguz frozen waterfalls instead."
+        },
+        {
+          "title": "Return to Bishkek",
+          "description": "A last morning in Karakol for the Dungan mosque and the animal market if it is a Sunday, then the drive back along the northern shore. Bishkek by evening, airport transfer whenever you fly."
+        }
+      ],
+      "included": [
+        "Private 4x4 with winter tyres and driver",
+        "Four nights in heated guesthouses with private bathrooms",
+        "All breakfasts and four dinners",
+        "Private guide throughout in English, Russian or French",
+        "Two sessions with the eagle hunting family",
+        "Karakol lift pass and ski or snowboard rental for one day",
+        "Airport transfers on arrival and departure"
+      ],
+      "excluded": [
+        "International flights",
+        "Travel insurance including winter sports cover",
+        "Lunches throughout",
+        "Additional ski days (€55 including lift pass and rental)",
+        "Tips for your guide, driver and the hunting family"
+      ],
+      "notes": [
+        {
+          "title": "Cold",
+          "description": "Expect minus five by day and minus twenty at night. Bring proper insulated boots and a down jacket; we can lend you the rest if you would rather not buy it."
+        },
+        {
+          "title": "The eagles",
+          "description": "These are working birds hunting on open ground, and wildlife does not perform on demand. What you always get is time with the hunters; what you see the birds catch is up to the day."
+        },
+        {
+          "title": "Private only",
+          "description": "This route runs as a private departure for two to six people. Prices are per person based on four travelling — ask us for a quote for other group sizes."
+        }
+      ]
+    }
+  }
+}
