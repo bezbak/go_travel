@@ -26,7 +26,7 @@ export function DestinationsPreview() {
         </>
       }
     >
-      <div className="grid gap-[20px] sm:grid-cols-2 xl:grid-cols-3">
+      <div className="grid grid-cols-2 gap-[var(--grid-gap)] xl:grid-cols-3">
         {destinations.slice(0, 6).map((destination) => (
           <DestinationCard key={destination.slug} destination={destination} />
         ))}

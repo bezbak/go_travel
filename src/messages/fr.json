@@ -205,8 +205,7 @@
     },
     "social": {
       "instagram": "Instagram",
-      "facebook": "Facebook",
-      "youtube": "YouTube"
+      "whatsapp": "WhatsApp"
     }
   },
   "toursPage": {
@@ -416,7 +415,8 @@
       "name": "Merci d'indiquer votre nom.",
       "email": "Merci de saisir une adresse e-mail valide.",
       "message": "Une ou deux phrases suffisent — merci d'en dire un peu plus.",
-      "summary": "Certains champs demandent encore votre attention."
+      "summary": "Certains champs demandent encore votre attention.",
+      "request": "Nous n'avons pas pu envoyer votre demande. Merci de réessayer ou de nous écrire sur WhatsApp."
     }
   },
   "faq": {

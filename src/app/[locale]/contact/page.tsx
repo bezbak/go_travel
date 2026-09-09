@@ -67,7 +67,7 @@ function ContactPageContent() {
       />
 
       <Section align="left" className="bg-[#faf8f2]" id="contact-form">
-        <div className="grid items-start gap-[32px] xl:grid-cols-[0.85fr_1.15fr]">
+        <div className="grid grid-cols-1 items-start gap-[clamp(18px,2.4vw,32px)] md:grid-cols-[0.85fr_1.15fr]">
           <div className="grid gap-[14px]">
             <h2 className="font-display text-[26px] font-black uppercase leading-[1.08] text-[#171717] 2xl:text-[32px]">
               {t("contactPage.detailsTitle")}
@@ -149,7 +149,7 @@ function ContactPageContent() {
         id="booking-steps"
         title={t("contactPage.stepsTitle")}
       >
-        <ol className="grid gap-[22px] sm:grid-cols-2 xl:grid-cols-4">
+        <ol className="grid grid-cols-2 gap-[var(--grid-gap)] xl:grid-cols-4">
           {bookingSteps.map((step, index) => (
             <li
               key={step}

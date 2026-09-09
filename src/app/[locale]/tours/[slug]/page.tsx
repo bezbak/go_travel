@@ -122,24 +122,24 @@ function TourDetailContent({ tour }: { tour: Tour }) {
 
       <section className="border-b border-[#e8e5df] bg-white py-[24px]">
         <Container compact>
-          <dl className="grid grid-cols-2 gap-[18px] sm:grid-cols-4">
+          <dl className="grid grid-cols-4 gap-[var(--grid-gap)]">
             <Fact
-              icon={<Clock aria-hidden="true" className="size-[18px]" />}
+              icon={<Clock aria-hidden="true" className="size-[clamp(13px,1.4vw,18px)]" />}
               label={t("common.duration")}
               value={t("common.daysNights", { days, nights: days - 1 })}
             />
             <Fact
-              icon={<Users aria-hidden="true" className="size-[18px]" />}
+              icon={<Users aria-hidden="true" className="size-[clamp(13px,1.4vw,18px)]" />}
               label={t("common.groupSize")}
               value={t("common.maxPeople", { count: tour.groupSizeMax })}
             />
             <Fact
-              icon={<Mountain aria-hidden="true" className="size-[18px]" />}
+              icon={<Mountain aria-hidden="true" className="size-[clamp(13px,1.4vw,18px)]" />}
               label={t("common.difficulty")}
               value={t(`common.difficultyLevel.${tour.difficulty}`)}
             />
             <Fact
-              icon={<Star aria-hidden="true" className="size-[18px]" />}
+              icon={<Star aria-hidden="true" className="size-[clamp(13px,1.4vw,18px)]" />}
               label={t("common.bestSeason")}
               value={tour.seasons
                 .map((season) => t(`common.seasons.${season}`))
@@ -150,7 +150,7 @@ function TourDetailContent({ tour }: { tour: Tour }) {
       </section>
 
       <div className="bg-[#faf8f2] py-[48px] 2xl:py-[64px]">
-        <Container compact className="grid items-start gap-[36px] xl:grid-cols-[1fr_390px] 2xl:gap-[48px]">
+        <Container compact className="grid grid-cols-1 items-start gap-[clamp(18px,2.6vw,48px)] lg:grid-cols-[1fr_minmax(280px,390px)]">
           <div className="min-w-0">
             <ContentBlock title={t("tourDetail.overviewTitle")}>
               <div className="grid gap-[14px]">
@@ -165,7 +165,7 @@ function TourDetailContent({ tour }: { tour: Tour }) {
               </div>
 
               {highlights.length > 0 ? (
-                <ul className="mt-[22px] grid gap-[10px] sm:grid-cols-2">
+                <ul className="mt-[22px] grid grid-cols-2 gap-[10px]">
                   {highlights.map((highlight, index) => (
                     <li key={index} className="flex items-start gap-2.5">
                       <span className="mt-0.5 grid size-[20px] shrink-0 place-items-center rounded-full bg-[#6a9d17] text-white">
@@ -188,7 +188,7 @@ function TourDetailContent({ tour }: { tour: Tour }) {
             </ContentBlock>
 
             <ContentBlock title={t("tourDetail.inclusionsTitle")}>
-              <div className="grid gap-[22px] sm:grid-cols-2">
+              <div className="grid grid-cols-2 gap-[var(--grid-gap)]">
                 <InclusionList
                   items={included}
                   title={t("tourDetail.includedTitle")}
@@ -204,7 +204,7 @@ function TourDetailContent({ tour }: { tour: Tour }) {
 
             {notes.length > 0 ? (
               <ContentBlock title={t("tourDetail.goodToKnowTitle")}>
-                <div className="grid gap-[14px] sm:grid-cols-2">
+                <div className="grid grid-cols-2 gap-[var(--grid-gap)]">
                   {notes.map((note, index) => (
                     <div
                       key={index}
@@ -284,15 +284,15 @@ function Fact({
   value: string;
 }) {
   return (
-    <div className="flex items-center gap-3">
-      <span className="grid size-[40px] shrink-0 place-items-center rounded-full bg-[#eef2e6] text-[#6a9d17]">
+    <div className="flex flex-col items-center gap-2 text-center sm:flex-row sm:gap-3 sm:text-left">
+      <span className="grid size-[clamp(28px,3vw,40px)] shrink-0 place-items-center rounded-full bg-[#eef2e6] text-[#6a9d17]">
         {icon}
       </span>
       <div className="min-w-0">
-        <dt className="text-[11px] font-semibold uppercase tracking-[0.04em] text-[#8a8a8a]">
+        <dt className="text-[length:var(--fs-3xs)] font-semibold uppercase tracking-[0.04em] text-[#8a8a8a]">
           {label}
         </dt>
-        <dd className="mt-0.5 font-display text-[13px] font-black uppercase leading-tight text-[#171717]">
+        <dd className="mt-0.5 font-display text-[length:var(--fs-3xs)] font-black uppercase leading-tight text-[#171717]">
           {value}
         </dd>
       </div>

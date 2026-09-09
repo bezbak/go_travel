@@ -28,7 +28,7 @@ export function Testimonials({ id = "reviews", className }: TestimonialsProps) {
         </>
       }
     >
-      <div className="grid gap-[20px] sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-2 gap-[var(--grid-gap)] xl:grid-cols-4">
         {testimonials.map((testimonial) => (
           <figure
             key={testimonial.key}

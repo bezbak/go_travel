@@ -65,7 +65,7 @@ export function MobileMenu({ navItems, brand, labels }: MobileMenuProps) {
   }, [open]);
 
   return (
-    <div className="lg:hidden">
+    <div className="xl:hidden">
       <button
         aria-expanded={open}
         aria-label={open ? labels.closeMenu : labels.openMenu}

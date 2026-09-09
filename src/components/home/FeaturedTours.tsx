@@ -27,7 +27,7 @@ export function FeaturedTours() {
         </>
       }
     >
-      <div className="grid gap-[22px] sm:grid-cols-2 xl:grid-cols-3">
+      <div className="grid grid-cols-2 gap-[var(--grid-gap)] xl:grid-cols-3">
         {tours.map((tour) => (
           <TourCard key={tour.slug} tour={tour} />
         ))}

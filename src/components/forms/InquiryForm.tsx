@@ -1,7 +1,7 @@
 "use client";
 
 import { Check } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useId, useState, type FormEvent } from "react";
 
 import { Button } from "@/components/ui/Button";
@@ -28,9 +28,11 @@ export function InquiryForm({
   className
 }: InquiryFormProps) {
   const t = useTranslations("inquiry");
+  const locale = useLocale();
   const formId = useId();
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<FieldErrors>({});
+  const [requestFailed, setRequestFailed] = useState(false);
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -44,6 +46,7 @@ export function InquiryForm({
   function update(field: keyof typeof values, value: string) {
     setValues((current) => ({ ...current, [field]: value }));
     setErrors((current) => ({ ...current, [field]: undefined }));
+    setRequestFailed(false);
 
     if (status !== "idle") {
       setStatus("idle");
@@ -54,6 +57,8 @@ export function InquiryForm({
     event.preventDefault();
 
     const nextErrors: FieldErrors = {};
+
+    setRequestFailed(false);
 
     if (values.name.trim().length < 2) {
       nextErrors.name = t("errors.name");
@@ -76,8 +81,29 @@ export function InquiryForm({
 
     setStatus("loading");
 
-    // No backend yet — the request is simulated so the flow can be demoed.
-    await new Promise((resolve) => setTimeout(resolve, 700));
+    // Leads go to the amoCRM web form through our own route, which keeps the
+    // form id and hash server-side and avoids the cross-origin call.
+    try {
+      const response = await fetch("/api/inquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...values,
+          tourLabel:
+            tourOptions?.find((option) => option.value === values.tour)?.label ?? "",
+          locale,
+          page: window.location.href
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`Inquiry failed with status ${response.status}`);
+      }
+    } catch {
+      setRequestFailed(true);
+      setStatus("error");
+      return;
+    }
 
     setValues((current) => ({
       ...current,
@@ -129,7 +155,7 @@ export function InquiryForm({
       noValidate
       onSubmit={handleSubmit}
     >
-      <div className="grid gap-[16px] sm:grid-cols-2">
+      <div className="grid grid-cols-2 gap-[clamp(9px,1.3vw,16px)]">
         <Field
           error={errors.name}
           id={`${formId}-name`}
@@ -163,7 +189,7 @@ export function InquiryForm({
         />
 
         {tourOptions && tourOptions.length > 0 ? (
-          <div className="grid gap-1.5">
+          <div className="grid min-w-0 gap-1.5">
             <label className={labelClass} htmlFor={`${formId}-tour`}>
               {t("fields.tour")}
             </label>
@@ -182,7 +208,7 @@ export function InquiryForm({
           </div>
         ) : null}
 
-        <div className="grid gap-1.5">
+        <div className="grid min-w-0 gap-1.5">
           <label className={labelClass} htmlFor={`${formId}-people`}>
             {t("fields.people")}
           </label>
@@ -228,23 +254,31 @@ export function InquiryForm({
         <Button disabled={status === "loading"} type="submit">
           {status === "loading" ? t("sending") : t("submit")}
         </Button>
-        <p className="text-[12px] font-medium text-[#7a7a7a]">{t("privacyNote")}</p>
+        <p className="text-[length:var(--fs-3xs)] font-medium text-[#7a7a7a]">{t("privacyNote")}</p>
       </div>
 
+      {requestFailed ? (
+        <p className={cn(errorClass, "mt-[14px]")}>{t("errors.request")}</p>
+      ) : null}
+
       <p aria-live="polite" className="sr-only">
-        {status === "error" ? t("errors.summary") : ""}
+        {status === "error"
+          ? requestFailed
+            ? t("errors.request")
+            : t("errors.summary")
+          : ""}
       </p>
     </form>
   );
 }
 
 const labelClass =
-  "font-display text-[11px] font-extrabold uppercase tracking-[0.04em] text-[#7a7a7a]";
+  "font-display text-[length:var(--fs-3xs)] font-extrabold uppercase tracking-[0.04em] text-[#7a7a7a]";
 
 const inputClass =
-  "h-[48px] w-full rounded-[10px] border border-[#ded9cd] bg-[#faf8f2] px-3 text-[13px] font-medium text-[#171717] transition duration-200 placeholder:text-[#a3a3a3] focus:border-[#6a9d17] focus:bg-white focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-[#6a9d17]";
+  "h-[clamp(38px,4vw,48px)] w-full min-w-0 rounded-[10px] border border-[#ded9cd] bg-[#faf8f2] px-3 text-[length:var(--fs-2xs)] font-medium text-[#171717] transition duration-200 placeholder:text-[#a3a3a3] focus:border-[#6a9d17] focus:bg-white focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-[#6a9d17]";
 
-const errorClass = "text-[12px] font-semibold text-[#c0392b]";
+const errorClass = "text-[length:var(--fs-3xs)] font-semibold text-[#c0392b]";
 
 type FieldProps = {
   id: string;
@@ -266,7 +300,7 @@ function Field({
   error
 }: FieldProps) {
   return (
-    <div className="grid gap-1.5">
+    <div className="grid min-w-0 gap-1.5">
       <label className={labelClass} htmlFor={id}>
         {label}
         {required ? (

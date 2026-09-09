@@ -205,8 +205,7 @@
     },
     "social": {
       "instagram": "Instagram",
-      "facebook": "Facebook",
-      "youtube": "YouTube"
+      "whatsapp": "WhatsApp"
     }
   },
   "toursPage": {
@@ -416,7 +415,8 @@
       "name": "Please tell us your name.",
       "email": "Please enter a valid email address.",
       "message": "A sentence or two is enough — please add a little more.",
-      "summary": "Some fields still need attention."
+      "summary": "Some fields still need attention.",
+      "request": "We could not send your enquiry just now. Please try again, or write to us on WhatsApp."
     }
   },
   "faq": {

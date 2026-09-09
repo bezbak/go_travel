@@ -19,25 +19,25 @@ export function TourProgram() {
   return (
     <section
       aria-labelledby="tour-program-title"
-      className="bg-white py-[62px] 2xl:py-[66px]"
+      className="bg-white py-[var(--section-py)]"
       id="tours"
     >
       <Container compact>
         <div className="text-center">
           <h2
-            className="font-display text-[32px] font-black uppercase leading-none tracking-[0] text-[#171717] sm:text-[42px] 2xl:text-[48px]"
+            className="font-display text-[length:var(--h2-lg)] font-black uppercase leading-none tracking-[0] text-[#171717]"
             id="tour-program-title"
           >
             {t("tourProgram.titleDark")}{" "}
             <span className="text-[#669a17]">{t("tourProgram.titleGreen")}</span>
           </h2>
-          <p className="mt-[12px] text-[13px] font-medium text-[#71717a] 2xl:text-[14px]">
+          <p className="mt-[12px] text-[length:var(--fs-xs)] font-medium text-[#71717a]">
             {t("tourProgram.subtitle")}
           </p>
         </div>
 
-        <div className="no-scrollbar -mx-5 mt-[34px] overflow-x-auto px-5 sm:-mx-8 sm:px-8 xl:mx-0 xl:overflow-visible xl:px-0 2xl:mt-[38px]">
-          <div className="grid grid-flow-col auto-cols-[244px] gap-[18px] xl:grid-flow-row xl:auto-cols-auto xl:grid-cols-6 xl:gap-[14px] 2xl:gap-[20px]">
+        <div className="mt-[clamp(20px,2.6vw,38px)]">
+          <div className="grid grid-cols-3 gap-[var(--grid-gap)] xl:grid-cols-6">
             {days.map((day, index) => (
               <TourDayCard
                 key={`${homeTour.slug}-${index}`}
@@ -53,7 +53,7 @@ export function TourProgram() {
           </div>
         </div>
 
-        <div className="mt-[38px] flex flex-wrap justify-center gap-[14px]">
+        <div className="mt-[clamp(22px,2.6vw,38px)] flex flex-wrap justify-center gap-[clamp(8px,1vw,14px)]">
           <ButtonLink href={`/tours/${homeTour.slug}`} internal size="md">
             {t("tourProgram.cta")}
           </ButtonLink>

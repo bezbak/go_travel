@@ -77,7 +77,7 @@ function AboutPageContent() {
       />
 
       <Section align="left" className="bg-white" id="story" title={t("about.storyTitle")}>
-        <div className="grid items-center gap-[36px] lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="grid grid-cols-[1.05fr_0.95fr] items-center gap-[clamp(14px,2.6vw,36px)]">
           <div className="grid gap-[14px]">
             {story.map((paragraph, index) => (
               <p
@@ -106,13 +106,13 @@ function AboutPageContent() {
 
       <section className="topographic-pattern bg-[#f3efe5] py-[42px]">
         <Container compact>
-          <dl className="grid grid-cols-2 gap-[24px] lg:grid-cols-4">
+          <dl className="grid grid-cols-4 gap-[var(--grid-gap)]">
             {companyStats.map((stat) => (
               <div key={stat.key} className="text-center">
-                <dt className="order-2 mt-2 block text-[12px] font-semibold uppercase tracking-[0.04em] text-[#6f6f6f]">
+                <dt className="order-2 mt-2 block text-[length:var(--fs-3xs)] font-semibold uppercase tracking-[0.04em] text-[#6f6f6f]">
                   {t(`about.stats.${stat.key}`)}
                 </dt>
-                <dd className="order-1 font-display text-[34px] font-black leading-none text-[#669a17] 2xl:text-[42px]">
+                <dd className="order-1 font-display text-[clamp(19px,3.2vw,42px)] font-black leading-none text-[#669a17]">
                   {stat.value}
                 </dd>
               </div>
@@ -127,22 +127,22 @@ function AboutPageContent() {
         id="values"
         title={t("about.valuesTitle")}
       >
-        <div className="grid gap-[22px] sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-2 gap-[var(--grid-gap)] xl:grid-cols-4">
           {values.map((value, index) => {
             const Icon = valueIcons[index % valueIcons.length];
 
             return (
               <div
                 key={value.title}
-                className="rounded-[18px] border border-[#e7e2d9] bg-[#faf8f2] p-[24px]"
+                className="rounded-[18px] border border-[#e7e2d9] bg-[#faf8f2] p-[clamp(12px,1.6vw,24px)]"
               >
-                <span className="grid size-[46px] place-items-center rounded-full bg-[#6a9d17] text-white shadow-[0_10px_24px_rgba(106,157,23,0.18)]">
-                  <Icon aria-hidden="true" className="size-[22px]" strokeWidth={2.2} />
+                <span className="grid size-[clamp(30px,3.2vw,46px)] place-items-center rounded-full bg-[#6a9d17] text-white shadow-[0_10px_24px_rgba(106,157,23,0.18)]">
+                  <Icon aria-hidden="true" className="size-[clamp(15px,1.5vw,22px)]" strokeWidth={2.2} />
                 </span>
-                <h3 className="mt-[16px] font-display text-[15px] font-black uppercase leading-tight text-[#171717]">
+                <h3 className="mt-[16px] font-display text-[length:var(--fs-2xs)] font-black uppercase leading-tight text-[#171717]">
                   {value.title}
                 </h3>
-                <p className="mt-[8px] text-[13px] font-medium leading-[1.6] text-[#5f5f5f]">
+                <p className="mt-[8px] text-[length:var(--fs-2xs)] font-medium leading-[1.6] text-[#5f5f5f]">
                   {value.description}
                 </p>
               </div>
@@ -157,22 +157,22 @@ function AboutPageContent() {
         id="team"
         title={t("about.teamTitle")}
       >
-        <div className="grid gap-[22px] sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-2 gap-[var(--grid-gap)] xl:grid-cols-4">
           {team.map((member) => (
             <figure
               key={member.key}
               className="overflow-hidden rounded-[18px] border border-[#e7e2d9] bg-white"
             >
-              <div className="relative h-[220px] bg-[#e7e2d9]">
+              <div className="relative h-[clamp(108px,15vw,220px)] bg-[#e7e2d9]">
                 <Image
                   fill
                   alt={t(member.image.altKey)}
                   className="object-cover"
-                  sizes="(min-width: 1280px) 300px, (min-width: 640px) 46vw, 90vw"
+                  sizes="(min-width: 1280px) 25vw, 50vw"
                   src={member.image.src}
                 />
               </div>
-              <figcaption className="p-[20px]">
+              <figcaption className="p-[clamp(10px,1.4vw,20px)]">
                 <p className="font-display text-[15px] font-black uppercase leading-tight text-[#171717]">
                   {member.name}
                 </p>

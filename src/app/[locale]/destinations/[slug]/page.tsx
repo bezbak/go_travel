@@ -112,14 +112,14 @@ function DestinationDetailContent({
 
       <section className="border-b border-[#e8e5df] bg-white py-[24px]">
         <Container compact>
-          <dl className="grid grid-cols-1 gap-[18px] sm:grid-cols-3">
+          <dl className="grid grid-cols-3 gap-[var(--grid-gap)]">
             <Fact
-              icon={<Mountain aria-hidden="true" className="size-[18px]" />}
+              icon={<Mountain aria-hidden="true" className="size-[clamp(13px,1.4vw,18px)]" />}
               label={t("common.altitudeLabel")}
               value={t("common.altitude", { value: destination.altitudeM })}
             />
             <Fact
-              icon={<Car aria-hidden="true" className="size-[18px]" />}
+              icon={<Car aria-hidden="true" className="size-[clamp(13px,1.4vw,18px)]" />}
               label={t("destinationDetail.driveLabel")}
               value={
                 destination.driveHours === 0
@@ -130,7 +130,7 @@ function DestinationDetailContent({
               }
             />
             <Fact
-              icon={<CalendarRange aria-hidden="true" className="size-[18px]" />}
+              icon={<CalendarRange aria-hidden="true" className="size-[clamp(13px,1.4vw,18px)]" />}
               label={t("common.bestSeason")}
               value={t(`destinations.${destination.slug}.bestTime`)}
             />
@@ -139,7 +139,7 @@ function DestinationDetailContent({
       </section>
 
       <Section className="bg-[#faf8f2]" id="destination-intro">
-        <div className="grid items-start gap-[34px] xl:grid-cols-[1.15fr_0.85fr]">
+        <div className="grid grid-cols-1 items-start gap-[clamp(18px,2.6vw,34px)] md:grid-cols-[1.15fr_0.85fr]">
           <div className="grid gap-[14px]">
             {body.map((paragraph, index) => (
               <p
@@ -185,7 +185,7 @@ function DestinationDetailContent({
           id="destination-tours"
           title={t("destinationDetail.toursTitle", { name })}
         >
-          <div className="grid gap-[22px] sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid grid-cols-2 gap-[var(--grid-gap)] xl:grid-cols-3">
             {relatedTours.map((tour) => (
               <TourCard key={tour.slug} tour={tour} />
             ))}
@@ -206,15 +206,15 @@ function Fact({
   value: string;
 }) {
   return (
-    <div className="flex items-center gap-3">
-      <span className="grid size-[40px] shrink-0 place-items-center rounded-full bg-[#eef2e6] text-[#6a9d17]">
+    <div className="flex flex-col items-center gap-2 text-center sm:flex-row sm:gap-3 sm:text-left">
+      <span className="grid size-[clamp(28px,3vw,40px)] shrink-0 place-items-center rounded-full bg-[#eef2e6] text-[#6a9d17]">
         {icon}
       </span>
       <div className="min-w-0">
-        <dt className="text-[11px] font-semibold uppercase tracking-[0.04em] text-[#8a8a8a]">
+        <dt className="text-[length:var(--fs-3xs)] font-semibold uppercase tracking-[0.04em] text-[#8a8a8a]">
           {label}
         </dt>
-        <dd className="mt-0.5 font-display text-[13px] font-black uppercase leading-tight text-[#171717]">
+        <dd className="mt-0.5 font-display text-[length:var(--fs-3xs)] font-black uppercase leading-tight text-[#171717]">
           {value}
         </dd>
       </div>

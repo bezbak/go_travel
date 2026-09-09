@@ -1,7 +1,8 @@
-import { Camera, Mail, MapPin, Phone, Play, ThumbsUp } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { ComponentType } from "react";
 
+import { InstagramIcon, WhatsappIcon } from "@/components/ui/BrandIcons";
 import { Container } from "@/components/ui/Container";
 import { footerCompanyNav, footerInformationNav, mainNav } from "@/data/navigation";
 import { contact, social } from "@/data/site";
@@ -10,17 +11,16 @@ import { Link } from "@/i18n/navigation";
 import { Logo } from "./Logo";
 
 const socialIcons: Record<string, ComponentType<{ className?: string }>> = {
-  instagram: Camera,
-  facebook: ThumbsUp,
-  youtube: Play
+  instagram: InstagramIcon,
+  whatsapp: WhatsappIcon
 };
 
 export function Footer() {
   const t = useTranslations();
 
   return (
-    <footer className="bg-[#181818] pt-[52px] pb-[34px] text-white">
-      <Container className="grid gap-12 lg:grid-cols-[1.4fr_0.7fr_0.8fr_1fr] lg:items-start">
+    <footer className="bg-[#181818] pt-[clamp(30px,3.4vw,52px)] pb-[34px] text-white">
+      <Container className="grid grid-cols-2 items-start gap-[clamp(20px,3vw,48px)] lg:grid-cols-[1.4fr_0.7fr_0.8fr_1fr]">
         <div className="grid gap-5">
           <Logo
             homeAria={t("brand.homeAria")}
@@ -29,7 +29,7 @@ export function Footer() {
             name={t("brand.name")}
             small
           />
-          <p className="max-w-[320px] text-[13px] font-medium leading-[1.6] text-white/58">
+          <p className="max-w-[320px] text-[length:var(--fs-2xs)] font-medium leading-[1.6] text-white/58">
             {t("footer.blurb")}
           </p>
           <div className="flex gap-3">
@@ -76,7 +76,7 @@ export function Footer() {
             title={t("footer.informationTitle")}
           />
 
-          <ul className="grid gap-3 text-[13px] font-medium text-white/68">
+          <ul className="grid gap-3 text-[length:var(--fs-2xs)] font-medium text-white/68">
             <li className="flex items-start gap-2.5">
               <MapPin aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-[#8fbc4a]" />
               <span>
@@ -110,7 +110,7 @@ export function Footer() {
       </Container>
 
       <Container className="mt-10 border-t border-white/10 pt-6">
-        <p className="text-[12px] font-medium text-white/52">
+        <p className="text-[length:var(--fs-3xs)] font-medium text-white/52">
           {t("footer.copyright")}
         </p>
       </Container>
@@ -127,14 +127,14 @@ function FooterColumn({
 }) {
   return (
     <div>
-      <h2 className="font-display text-[11px] font-black uppercase tracking-[0.06em] text-white">
+      <h2 className="font-display text-[length:var(--fs-3xs)] font-black uppercase tracking-[0.06em] text-white">
         {title}
       </h2>
       <ul className="mt-4 grid gap-2.5">
         {links.map((link) => (
           <li key={link.href}>
             <Link
-              className="text-[13px] font-medium text-white/68 transition duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#669a17]"
+              className="text-[length:var(--fs-2xs)] font-medium text-white/68 transition duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#669a17]"
               href={link.href}
             >
               {link.label}

@@ -21,7 +21,7 @@ export function PhotoGrid({ images, className, layout = "feature" }: PhotoGridPr
   return (
     <div
       className={cn(
-        "grid gap-[14px] sm:grid-cols-2 lg:grid-cols-4",
+        "grid grid-cols-2 gap-[var(--grid-gap)] lg:grid-cols-4",
         className
       )}
     >

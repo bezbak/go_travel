@@ -3,8 +3,8 @@ import { images, type ImageAsset } from "./images";
 export const contact = {
   phone: "+996 555 123 456",
   phoneHref: "tel:+996555123456",
-  whatsapp: "+996 555 123 456",
-  whatsappHref: "https://wa.me/996555123456",
+  whatsapp: "+996 556 18 212",
+  whatsappHref: "https://api.whatsapp.com/send/?phone=99655618212",
   email: "hello@go-kyrgyzstan.travel",
   emailHref: "mailto:hello@go-kyrgyzstan.travel",
   addressLines: ["Chuy Avenue 148, office 12", "Bishkek 720000, Kyrgyzstan"],
@@ -12,9 +12,8 @@ export const contact = {
 };
 
 export const social = [
-  { key: "instagram", href: "https://instagram.com" },
-  { key: "facebook", href: "https://facebook.com" },
-  { key: "youtube", href: "https://youtube.com" }
+  { key: "instagram", href: "https://www.instagram.com/go_kyrgyzstan.travel" },
+  { key: "whatsapp", href: "https://api.whatsapp.com/send/?phone=99655618212" }
 ] as const;
 
 /** Values are pre-formatted so they read the same in every locale. */

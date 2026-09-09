@@ -56,7 +56,7 @@ export function Header({ variant = "overlay" }: HeaderProps) {
           : "absolute inset-x-0 top-0"
       )}
     >
-      <Container className="flex h-[76px] items-center justify-between gap-5 lg:h-[86px]">
+      <Container className="flex h-[clamp(60px,5.6vw,86px)] items-center justify-between gap-5">
         <Logo {...brand} />
 
         <nav
@@ -73,7 +73,7 @@ export function Header({ variant = "overlay" }: HeaderProps) {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-[22px] lg:flex">
+        <div className="hidden items-center gap-[22px] xl:flex">
           <LanguageSwitcher
             ariaLabel={t("languageSwitcher.ariaLabel")}
             labels={languageShort}
@@ -81,7 +81,7 @@ export function Header({ variant = "overlay" }: HeaderProps) {
           />
           <a
             aria-label={t("header.phoneAria")}
-            className="hidden items-center gap-2 whitespace-nowrap font-display text-[12px] font-bold text-[#151515] transition duration-200 hover:text-[#669a17] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a9d17] xl:flex"
+            className="flex items-center gap-2 whitespace-nowrap font-display text-[12px] font-bold text-[#151515] transition duration-200 hover:text-[#669a17] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a9d17]"
             href={contact.phoneHref}
           >
             <Phone aria-hidden="true" className="size-[14px]" strokeWidth={2.4} />
@@ -96,7 +96,7 @@ export function Header({ variant = "overlay" }: HeaderProps) {
           </ButtonLink>
         </div>
 
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-2 xl:hidden">
           <LanguageSwitcher
             ariaLabel={t("languageSwitcher.ariaLabel")}
             labels={languageShort}

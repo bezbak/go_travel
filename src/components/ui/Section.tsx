@@ -36,31 +36,31 @@ export function Section({
   return (
     <section
       aria-labelledby={title ? headingId : undefined}
-      className={cn("py-[58px] 2xl:py-[76px]", className)}
+      className={cn("py-[var(--section-py)]", className)}
       id={id}
     >
       <Container compact className={containerClassName}>
         {title ? (
           <div
             className={cn(
-              "flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between",
-              align === "center" && "sm:flex-col sm:items-center sm:text-center"
+              "flex flex-row flex-wrap items-end justify-between gap-[clamp(12px,2vw,20px)]",
+              align === "center" && "flex-col items-center text-center"
             )}
           >
             <div className={cn("max-w-[720px]", align === "center" && "mx-auto")}>
               {eyebrow ? (
-                <p className="font-display text-[12px] font-black uppercase tracking-[0.08em] text-[#669a17]">
+                <p className="font-display text-[length:var(--fs-2xs)] font-black uppercase tracking-[0.08em] text-[#669a17]">
                   {eyebrow}
                 </p>
               ) : null}
               <h2
-                className="mt-[10px] font-display text-[30px] font-black uppercase leading-[1.05] tracking-[0] text-[#171717] sm:text-[38px] 2xl:text-[44px]"
+                className="mt-[10px] font-display text-[length:var(--h2)] font-black uppercase leading-[1.05] tracking-[0] text-[#171717]"
                 id={headingId}
               >
                 {title}
               </h2>
               {description ? (
-                <p className="mt-[12px] text-[14px] font-medium leading-[1.65] text-[#5f5f5f] 2xl:text-[15px]">
+                <p className="mt-[12px] text-[length:var(--fs-sm)] font-medium leading-[1.65] text-[#5f5f5f]">
                   {description}
                 </p>
               ) : null}
@@ -69,7 +69,7 @@ export function Section({
           </div>
         ) : null}
 
-        <div className={cn(title ? "mt-[34px] 2xl:mt-[46px]" : undefined)}>
+        <div className={cn(title ? "mt-[clamp(20px,3vw,46px)]" : undefined)}>
           {children}
         </div>
       </Container>

@@ -102,7 +102,7 @@ export function ToursExplorer({ tours }: ToursExplorerProps) {
           </h2>
         </div>
 
-        <div className="mt-[16px] grid gap-[14px] sm:grid-cols-2 xl:grid-cols-5">
+        <div className="mt-[16px] grid grid-cols-2 gap-[var(--grid-gap)] xl:grid-cols-5">
           <FilterSelect
             id="filter-destination"
             label={t("toursPage.filters.destination")}
@@ -185,7 +185,7 @@ export function ToursExplorer({ tours }: ToursExplorerProps) {
       </div>
 
       {filtered.length > 0 ? (
-        <div className="mt-[22px] grid gap-[22px] sm:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-[22px] grid grid-cols-2 gap-[var(--grid-gap)] xl:grid-cols-3">
           {filtered.map((tour) => (
             <TourCard key={tour.slug} tour={tour} />
           ))}

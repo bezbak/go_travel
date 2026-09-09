@@ -24,7 +24,7 @@ export function RelatedTours({ tour }: RelatedToursProps) {
       id="related-tours"
       title={t("relatedTitle")}
     >
-      <div className="grid gap-[22px] sm:grid-cols-2 xl:grid-cols-3">
+      <div className="grid grid-cols-2 gap-[var(--grid-gap)] xl:grid-cols-3">
         {related.map((item) => (
           <TourCard key={item.slug} tour={item} />
         ))}

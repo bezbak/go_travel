@@ -64,7 +64,7 @@ function DestinationsPageContent() {
       />
 
       <Section className="bg-[#faf8f2]" id="all-destinations">
-        <div className="grid gap-[22px] sm:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-2 gap-[var(--grid-gap)] xl:grid-cols-3">
           {destinations.map((destination) => (
             <DestinationCard key={destination.slug} destination={destination} />
           ))}

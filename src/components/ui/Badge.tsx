@@ -22,7 +22,7 @@ export function Badge({ children, tone = "green", className }: BadgeProps) {
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-[12px] py-[5px] font-display text-[10px] font-black uppercase leading-none tracking-[0.04em] 2xl:text-[11px]",
+        "inline-flex max-w-full items-center gap-1.5 truncate rounded-full px-[clamp(6px,0.9vw,12px)] py-[5px] font-display text-[length:var(--fs-3xs)] font-black uppercase leading-none tracking-[0.04em]",
         tones[tone],
         className
       )}

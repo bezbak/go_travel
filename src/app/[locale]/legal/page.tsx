@@ -66,7 +66,7 @@ function LegalPageContent() {
 
       <div className="bg-[#faf8f2] py-[52px] 2xl:py-[68px]">
         <Container compact>
-          <div className="grid gap-[32px] lg:grid-cols-[220px_1fr] lg:gap-[48px]">
+          <div className="grid grid-cols-1 gap-[clamp(18px,2.6vw,48px)] md:grid-cols-[minmax(140px,220px)_1fr]">
             <nav aria-label={t("legal.navLabel")} className="lg:sticky lg:top-[110px] lg:self-start">
               <ul className="grid gap-2">
                 {sections.map((section) => (

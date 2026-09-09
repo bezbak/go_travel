@@ -34,7 +34,7 @@ export function TourItinerary({ tour }: TourItineraryProps) {
         </span>
       ),
       content: (
-        <div className="grid gap-[18px] sm:grid-cols-[200px_1fr] sm:items-start">
+        <div className="grid grid-cols-[minmax(96px,200px)_1fr] items-start gap-[var(--grid-gap)]">
           <div className="relative h-[140px] overflow-hidden rounded-[12px] bg-[#ece8de] sm:h-[132px]">
             <Image
               fill
