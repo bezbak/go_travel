@@ -2,6 +2,7 @@
 
 import { Menu, Phone, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 import { ButtonLink } from "@/components/ui/Button";
 import { contact } from "@/data/site";
@@ -80,66 +81,74 @@ export function MobileMenu({ navItems, brand, labels }: MobileMenuProps) {
         )}
       </button>
 
-      {open ? (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-[#fbfaf5] px-5 py-5">
-          <div className="flex items-center justify-between gap-4">
-            <Logo {...brand} small />
-            <div className="flex items-center gap-2">
-              <LanguageSwitcher
-                ariaLabel={labels.languageAria}
-                labels={labels.languageShort}
-                names={labels.languageNames}
-              />
-              <button
-                aria-label={labels.closeMenu}
-                className="grid size-[40px] place-items-center rounded-full border border-black/10 bg-white text-[#181818] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6a9d17] sm:size-[44px]"
-                type="button"
-                onClick={() => setOpen(false)}
-              >
-                <X aria-hidden="true" className="size-5" strokeWidth={2.5} />
-              </button>
-            </div>
-          </div>
+      {/*
+        * The overlay is portalled to the body: the solid header carries
+        * `backdrop-blur`, which makes it the containing block for fixed
+        * descendants, so an in-place overlay collapses to the header's height.
+        */}
+      {open
+        ? createPortal(
+            <div className="fixed inset-0 z-50 overflow-y-auto bg-[#fbfaf5] px-5 py-5">
+              <div className="flex items-center justify-between gap-4">
+                <Logo {...brand} small />
+                <div className="flex items-center gap-2">
+                  <LanguageSwitcher
+                    ariaLabel={labels.languageAria}
+                    labels={labels.languageShort}
+                    names={labels.languageNames}
+                  />
+                  <button
+                    aria-label={labels.closeMenu}
+                    className="grid size-[40px] place-items-center rounded-full border border-black/10 bg-white text-[#181818] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6a9d17] sm:size-[44px]"
+                    type="button"
+                    onClick={() => setOpen(false)}
+                  >
+                    <X aria-hidden="true" className="size-5" strokeWidth={2.5} />
+                  </button>
+                </div>
+              </div>
 
-          <div className="mt-12">
-            <p className="font-display text-[12px] font-extrabold uppercase text-[#669a17]">
-              {labels.menuTitle}
-            </p>
-            <nav aria-label={labels.menuTitle} className="mt-5 grid gap-1">
-              {navItems.map((item) => (
-                <NavLink
-                  key={item.href}
-                  className="border-b border-[#e8e5df] py-4 font-display text-[26px] font-black uppercase leading-none text-[#181818] transition duration-200 hover:text-[#669a17] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6a9d17]"
-                  href={item.href}
-                  label={item.label}
-                  onNavigate={() => setOpen(false)}
-                />
-              ))}
-            </nav>
+              <div className="mt-12">
+                <p className="font-display text-[12px] font-extrabold uppercase text-[#669a17]">
+                  {labels.menuTitle}
+                </p>
+                <nav aria-label={labels.menuTitle} className="mt-5 grid gap-1">
+                  {navItems.map((item) => (
+                    <NavLink
+                      key={item.href}
+                      className="border-b border-[#e8e5df] py-4 font-display text-[26px] font-black uppercase leading-none text-[#181818] transition duration-200 hover:text-[#669a17] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6a9d17]"
+                      href={item.href}
+                      label={item.label}
+                      onNavigate={() => setOpen(false)}
+                    />
+                  ))}
+                </nav>
 
-            <div className="mt-10 grid gap-4 pb-6">
-              <a
-                aria-label={labels.phoneAria}
-                className="flex items-center gap-3 font-display text-[14px] font-bold text-[#181818]"
-                href={contact.phoneHref}
-              >
-                <span className="grid size-10 place-items-center rounded-full bg-[#669a17] text-white">
-                  <Phone aria-hidden="true" className="size-4" />
-                </span>
-                {labels.phone}
-              </a>
-              <ButtonLink
-                className="w-full"
-                href="/contact"
-                internal
-                onClick={() => setOpen(false)}
-              >
-                {labels.book}
-              </ButtonLink>
-            </div>
-          </div>
-        </div>
-      ) : null}
+                <div className="mt-10 grid gap-4 pb-6">
+                  <a
+                    aria-label={labels.phoneAria}
+                    className="flex items-center gap-3 font-display text-[14px] font-bold text-[#181818]"
+                    href={contact.phoneHref}
+                  >
+                    <span className="grid size-10 place-items-center rounded-full bg-[#669a17] text-white">
+                      <Phone aria-hidden="true" className="size-4" />
+                    </span>
+                    {labels.phone}
+                  </a>
+                  <ButtonLink
+                    className="w-full"
+                    href="/contact"
+                    internal
+                    onClick={() => setOpen(false)}
+                  >
+                    {labels.book}
+                  </ButtonLink>
+                </div>
+              </div>
+            </div>,
+            document.body
+          )
+        : null}
     </div>
   );
 }
