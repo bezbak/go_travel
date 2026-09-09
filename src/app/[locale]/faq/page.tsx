@@ -80,7 +80,7 @@ function FaqPageContent() {
         <div className="mx-auto max-w-[900px]">
           <Accordion allowMultiple items={items} />
 
-          <div className="mt-[32px] rounded-[18px] border border-[#e7e2d9] bg-white p-[28px] text-center">
+          <div className="mt-[32px] rounded-[18px] border border-[#e7e2d9] bg-white p-[28px] text-center cursor-pointer">
             <h2 className="font-display text-[20px] font-black uppercase leading-tight text-[#171717]">
               {t("faq.ctaTitle")}
             </h2>
