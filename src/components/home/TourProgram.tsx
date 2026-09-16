@@ -2,19 +2,17 @@ import { useTranslations } from "next-intl";
 
 import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { homeTour } from "@/data/tours";
-import { rawList } from "@/lib/messages";
+import type { Tour } from "@/lib/api";
 
 import { TourDayCard } from "./TourDayCard";
 
-type ItineraryDay = {
-  title: string;
-  description: string;
+type TourProgramProps = {
+  tour: Tour;
 };
 
-export function TourProgram() {
+export function TourProgram({ tour }: TourProgramProps) {
   const t = useTranslations();
-  const days = rawList<ItineraryDay>(t, `tours.${homeTour.slug}.days`);
+  const days = tour.itinerary;
 
   return (
     <section
@@ -38,15 +36,12 @@ export function TourProgram() {
 
         <div className="mt-[clamp(20px,2.6vw,38px)]">
           <div className="grid grid-cols-3 gap-[var(--grid-gap)] xl:grid-cols-6">
-            {days.map((day, index) => (
+            {days.map((day) => (
               <TourDayCard
-                key={`${homeTour.slug}-${index}`}
-                dayNumber={index + 1}
+                key={day.number}
+                dayNumber={day.number}
                 description={day.description}
-                image={
-                  homeTour.dayImages[index] ??
-                  homeTour.dayImages[homeTour.dayImages.length - 1]
-                }
+                image={day.image}
                 title={day.title}
               />
             ))}
@@ -54,7 +49,7 @@ export function TourProgram() {
         </div>
 
         <div className="mt-[clamp(22px,2.6vw,38px)] flex flex-wrap justify-center gap-[clamp(8px,1vw,14px)]">
-          <ButtonLink href={`/tours/${homeTour.slug}`} internal size="md">
+          <ButtonLink href={`/tours/${tour.slug}`} internal size="md">
             {t("tourProgram.cta")}
           </ButtonLink>
           <ButtonLink href="/tours" internal size="md" variant="outline">

@@ -6,9 +6,15 @@ import { PageHero } from "@/components/layout/PageHero";
 import { PageShell } from "@/components/layout/PageShell";
 import { ToursExplorer } from "@/components/tours/ToursExplorer";
 import { Container } from "@/components/ui/Container";
-import { images } from "@/data/images";
-import { tours } from "@/data/tours";
 import { routing, type Locale } from "@/i18n/routing";
+import {
+  getDestinations,
+  getPhotos,
+  getTours,
+  type DestinationSummary,
+  type PhotoLibrary,
+  type TourSummary
+} from "@/lib/api";
 import { pageMetadata } from "@/lib/metadata";
 
 type ToursPageProps = {
@@ -24,7 +30,11 @@ export async function generateMetadata({
 }: ToursPageProps): Promise<Metadata> {
   const { locale: requested } = await params;
   const locale = resolveLocale(requested);
-  const t = await getTranslations({ locale });
+  const [t, photos] = await Promise.all([
+    getTranslations({ locale }),
+    getPhotos(locale)
+  ]);
+  const cover = photos.songKol;
 
   return pageMetadata({
     locale,
@@ -32,22 +42,37 @@ export async function generateMetadata({
     title: t("toursPage.meta.title"),
     description: t("toursPage.meta.description"),
     siteName: t("metadata.siteName"),
-    image: { src: images.songKol.src, alt: t(images.songKol.altKey) }
+    image: cover ? { src: cover.src, alt: cover.alt } : undefined
   });
 }
 
 export default async function ToursPage({ params }: ToursPageProps) {
-  const { locale } = await params;
-  setRequestLocale(locale);
+  const { locale: requested } = await params;
+  setRequestLocale(requested);
+  const locale = resolveLocale(requested);
+
+  const [tours, destinations, photos] = await Promise.all([
+    getTours(locale),
+    getDestinations(locale),
+    getPhotos(locale)
+  ]);
 
   return (
     <PageShell>
-      <ToursPageContent />
+      <ToursPageContent destinations={destinations} photos={photos} tours={tours} />
     </PageShell>
   );
 }
 
-function ToursPageContent() {
+function ToursPageContent({
+  tours,
+  destinations,
+  photos
+}: {
+  tours: TourSummary[];
+  destinations: DestinationSummary[];
+  photos: PhotoLibrary;
+}) {
   const t = useTranslations();
 
   return (
@@ -60,14 +85,14 @@ function ToursPageContent() {
         crumbsLabel={t("common.breadcrumbLabel")}
         description={t("toursPage.heroDescription")}
         eyebrow={t("toursPage.heroEyebrow")}
-        image={images.songKol}
-        imageAlt={t(images.songKol.altKey)}
+        image={photos.songKol ?? null}
+        imageAlt={photos.songKol?.alt ?? ""}
         title={t("toursPage.heroTitle")}
       />
 
       <div className="bg-[#faf8f2] py-[46px] 2xl:py-[62px]">
         <Container compact>
-          <ToursExplorer tours={tours} />
+          <ToursExplorer destinations={destinations} tours={tours} />
         </Container>
       </div>
     </>

@@ -3,16 +3,16 @@ import { useLocale, useTranslations } from "next-intl";
 
 import { Badge } from "@/components/ui/Badge";
 import { ButtonLink } from "@/components/ui/Button";
-import { contact } from "@/data/site";
-import { tourDuration, type Tour } from "@/data/tours";
 import type { Locale } from "@/i18n/routing";
+import type { SiteContent, Tour } from "@/lib/api";
 import { formatDate, formatPrice } from "@/lib/format";
 
 type TourBookingCardProps = {
   tour: Tour;
+  contact: NonNullable<SiteContent["contact"]>;
 };
 
-export function TourBookingCard({ tour }: TourBookingCardProps) {
+export function TourBookingCard({ tour, contact }: TourBookingCardProps) {
   const t = useTranslations();
   const locale = useLocale() as Locale;
 
@@ -32,7 +32,7 @@ export function TourBookingCard({ tour }: TourBookingCardProps) {
         ) : null}
       </p>
       <p className="mt-1 text-[12px] font-medium text-[#7a7a7a]">
-        {t("common.perPerson")} · {t("common.days", { count: tourDuration(tour) })}
+        {t("common.perPerson")} · {t("common.days", { count: tour.days })}
       </p>
 
       <div className="mt-[20px] border-t border-[#eeebe3] pt-[18px]">

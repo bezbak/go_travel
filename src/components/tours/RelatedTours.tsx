@@ -1,17 +1,17 @@
 import { useTranslations } from "next-intl";
 
 import { Section } from "@/components/ui/Section";
-import { getRelatedTours, type Tour } from "@/data/tours";
+import type { TourSummary } from "@/lib/api";
 
 import { TourCard } from "./TourCard";
 
 type RelatedToursProps = {
-  tour: Tour;
+  tours: TourSummary[];
 };
 
-export function RelatedTours({ tour }: RelatedToursProps) {
+export function RelatedTours({ tours }: RelatedToursProps) {
   const t = useTranslations("tourDetail");
-  const related = getRelatedTours(tour, 3);
+  const related = tours;
 
   if (related.length === 0) {
     return null;

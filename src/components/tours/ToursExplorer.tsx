@@ -5,8 +5,7 @@ import { useTranslations } from "next-intl";
 import { useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
-import { destinationSlugs } from "@/data/destinations";
-import { tourDuration, type Tour } from "@/data/tours";
+import type { DestinationSummary, TourSummary } from "@/lib/api";
 
 import { TourCard } from "./TourCard";
 
@@ -39,10 +38,11 @@ function matchesDuration(days: number, bucket: string): boolean {
 }
 
 type ToursExplorerProps = {
-  tours: Tour[];
+  tours: TourSummary[];
+  destinations: DestinationSummary[];
 };
 
-export function ToursExplorer({ tours }: ToursExplorerProps) {
+export function ToursExplorer({ tours, destinations }: ToursExplorerProps) {
   const t = useTranslations();
   const [destination, setDestination] = useState<string>(ANY);
   const [difficulty, setDifficulty] = useState<string>(ANY);
@@ -52,7 +52,10 @@ export function ToursExplorer({ tours }: ToursExplorerProps) {
 
   const filtered = useMemo(() => {
     const result = tours.filter((tour) => {
-      if (destination !== ANY && !tour.destinations.includes(destination)) {
+      if (
+        destination !== ANY &&
+        !tour.destinations.some((region) => region.slug === destination)
+      ) {
         return false;
       }
 
@@ -64,7 +67,7 @@ export function ToursExplorer({ tours }: ToursExplorerProps) {
         return false;
       }
 
-      return matchesDuration(tourDuration(tour), duration);
+      return matchesDuration(tour.days, duration);
     });
 
     const sorted = [...result];
@@ -74,7 +77,7 @@ export function ToursExplorer({ tours }: ToursExplorerProps) {
     } else if (sort === "priceDesc") {
       sorted.sort((a, b) => b.priceEur - a.priceEur);
     } else if (sort === "durationAsc") {
-      sorted.sort((a, b) => tourDuration(a) - tourDuration(b));
+      sorted.sort((a, b) => a.days - b.days);
     } else {
       sorted.sort((a, b) => Number(b.featured) - Number(a.featured) || b.rating - a.rating);
     }
@@ -108,9 +111,9 @@ export function ToursExplorer({ tours }: ToursExplorerProps) {
             label={t("toursPage.filters.destination")}
             options={[
               { value: ANY, label: t("toursPage.filters.anyDestination") },
-              ...destinationSlugs.map((slug) => ({
-                value: slug,
-                label: t(`destinations.${slug}.name`)
+              ...destinations.map((item) => ({
+                value: item.slug,
+                label: item.name
               }))
             ]}
             value={destination}

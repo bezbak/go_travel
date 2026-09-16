@@ -5,8 +5,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageHero } from "@/components/layout/PageHero";
 import { PageShell } from "@/components/layout/PageShell";
 import { Container } from "@/components/ui/Container";
-import { images } from "@/data/images";
 import { routing } from "@/i18n/routing";
+import { getPhotos, type PhotoLibrary } from "@/lib/api";
 import { rawList } from "@/lib/messages";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -23,7 +23,11 @@ export async function generateMetadata({
   const locale = hasLocale(routing.locales, requested)
     ? requested
     : routing.defaultLocale;
-  const t = await getTranslations({ locale });
+  const [t, photos] = await Promise.all([
+    getTranslations({ locale }),
+    getPhotos(locale)
+  ]);
+  const cover = photos.bishkekRoad;
 
   return pageMetadata({
     locale,
@@ -31,22 +35,27 @@ export async function generateMetadata({
     title: t("legal.meta.title"),
     description: t("legal.meta.description"),
     siteName: t("metadata.siteName"),
-    image: { src: images.bishkekRoad.src, alt: t(images.bishkekRoad.altKey) }
+    image: cover ? { src: cover.src, alt: cover.alt } : undefined
   });
 }
 
 export default async function LegalPage({ params }: LegalPageProps) {
-  const { locale } = await params;
-  setRequestLocale(locale);
+  const { locale: requested } = await params;
+  setRequestLocale(requested);
+  const locale = hasLocale(routing.locales, requested)
+    ? requested
+    : routing.defaultLocale;
+
+  const photos = await getPhotos(locale);
 
   return (
     <PageShell>
-      <LegalPageContent />
+      <LegalPageContent photos={photos} />
     </PageShell>
   );
 }
 
-function LegalPageContent() {
+function LegalPageContent({ photos }: { photos: PhotoLibrary }) {
   const t = useTranslations();
 
   return (
@@ -59,8 +68,8 @@ function LegalPageContent() {
         crumbsLabel={t("common.breadcrumbLabel")}
         description={t("legal.heroDescription")}
         eyebrow={t("legal.heroEyebrow")}
-        image={images.bishkekRoad}
-        imageAlt={t(images.bishkekRoad.altKey)}
+        image={photos.bishkekRoad ?? null}
+        imageAlt={photos.bishkekRoad?.alt ?? ""}
         title={t("legal.heroTitle")}
       />
 

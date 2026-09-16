@@ -10,9 +10,14 @@ import { PageShell } from "@/components/layout/PageShell";
 import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
-import { images } from "@/data/images";
-import { companyStats, team } from "@/data/site";
 import { routing } from "@/i18n/routing";
+import {
+  getPhotos,
+  getSiteContent,
+  getTours,
+  type PhotoLibrary,
+  type SiteContent
+} from "@/lib/api";
 import { rawList } from "@/lib/messages";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -29,7 +34,11 @@ export async function generateMetadata({
   const locale = hasLocale(routing.locales, requested)
     ? requested
     : routing.defaultLocale;
-  const t = await getTranslations({ locale });
+  const [t, photos] = await Promise.all([
+    getTranslations({ locale }),
+    getPhotos(locale)
+  ]);
+  const cover = photos.heroYurts;
 
   return pageMetadata({
     locale,
@@ -37,23 +46,39 @@ export async function generateMetadata({
     title: t("about.meta.title"),
     description: t("about.meta.description"),
     siteName: t("metadata.siteName"),
-    image: { src: images.heroYurts.src, alt: t(images.heroYurts.altKey) }
+    image: cover ? { src: cover.src, alt: cover.alt } : undefined
   });
 }
 
 export default async function AboutPage({ params }: AboutPageProps) {
-  const { locale } = await params;
-  setRequestLocale(locale);
+  const { locale: requested } = await params;
+  setRequestLocale(requested);
+  const locale = hasLocale(routing.locales, requested)
+    ? requested
+    : routing.defaultLocale;
+
+  const [site, photos, tours] = await Promise.all([
+    getSiteContent(locale),
+    getPhotos(locale),
+    getTours(locale)
+  ]);
+  const tourNames = Object.fromEntries(tours.map((tour) => [tour.slug, tour.name]));
 
   return (
     <PageShell>
-      <AboutPageContent />
-      <Testimonials />
+      <AboutPageContent photos={photos} site={site} />
+      <Testimonials testimonials={site.testimonials} tourNames={tourNames} />
     </PageShell>
   );
 }
 
-function AboutPageContent() {
+function AboutPageContent({
+  site,
+  photos
+}: {
+  site: SiteContent;
+  photos: PhotoLibrary;
+}) {
   const t = useTranslations();
   const story = rawList<string>(t, "about.story");
   const values = rawList<{ title: string; description: string }>(
@@ -71,8 +96,8 @@ function AboutPageContent() {
         crumbsLabel={t("common.breadcrumbLabel")}
         description={t("about.heroDescription")}
         eyebrow={t("about.heroEyebrow")}
-        image={images.heroYurts}
-        imageAlt={t(images.heroYurts.altKey)}
+        image={photos.heroYurts ?? null}
+        imageAlt={photos.heroYurts?.alt ?? ""}
         title={t("about.heroTitle")}
       />
 
@@ -95,10 +120,10 @@ function AboutPageContent() {
           <div className="relative h-[300px] overflow-hidden rounded-[18px] bg-[#e7e2d9] lg:h-[400px]">
             <Image
               fill
-              alt={t(images.kyzartHorses.altKey)}
+              alt={photos.kyzartHorses?.alt ?? ""}
               className="object-cover"
               sizes="(min-width: 1024px) 46vw, 90vw"
-              src={images.kyzartHorses.src}
+              src={photos.kyzartHorses?.src ?? ""}
             />
           </div>
         </div>
@@ -107,13 +132,13 @@ function AboutPageContent() {
       <section className="topographic-pattern bg-[#f3efe5] py-[42px]">
         <Container compact>
           <dl className="grid grid-cols-4 gap-[var(--grid-gap)]">
-            {companyStats.map((stat) => (
-              <div key={stat.key} className="text-center">
+            {(["years", "travellers", "tours", "rating"] as const).map((key) => (
+              <div key={key} className="text-center">
                 <dt className="order-2 mt-2 block text-[length:var(--fs-3xs)] font-semibold uppercase tracking-[0.04em] text-[#6f6f6f]">
-                  {t(`about.stats.${stat.key}`)}
+                  {t(`about.stats.${key}`)}
                 </dt>
                 <dd className="order-1 font-display text-[clamp(19px,3.2vw,42px)] font-black leading-none text-[#669a17]">
-                  {stat.value}
+                  {site.stats?.[key]}
                 </dd>
               </div>
             ))}
@@ -158,7 +183,7 @@ function AboutPageContent() {
         title={t("about.teamTitle")}
       >
         <div className="grid grid-cols-2 gap-[var(--grid-gap)] xl:grid-cols-4">
-          {team.map((member) => (
+          {site.team.map((member) => (
             <figure
               key={member.key}
               className="overflow-hidden rounded-[18px] border border-[#e7e2d9] bg-white"
@@ -166,10 +191,10 @@ function AboutPageContent() {
               <div className="relative h-[clamp(108px,15vw,220px)] bg-[#e7e2d9]">
                 <Image
                   fill
-                  alt={t(member.image.altKey)}
+                  alt={member.image?.alt ?? ""}
                   className="object-cover"
                   sizes="(min-width: 1280px) 25vw, 50vw"
-                  src={member.image.src}
+                  src={member.image?.src ?? ""}
                 />
               </div>
               <figcaption className="p-[clamp(10px,1.4vw,20px)]">
@@ -177,10 +202,10 @@ function AboutPageContent() {
                   {member.name}
                 </p>
                 <p className="mt-1 text-[12px] font-bold uppercase tracking-[0.04em] text-[#669a17]">
-                  {t(`about.team.${member.key}.role`)}
+                  {member.role}
                 </p>
                 <p className="mt-[10px] text-[13px] font-medium leading-[1.6] text-[#5f5f5f]">
-                  {t(`about.team.${member.key}.bio`)}
+                  {member.bio}
                 </p>
               </figcaption>
             </figure>

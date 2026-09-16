@@ -4,8 +4,8 @@ import { useTranslations } from "next-intl";
 import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { mainNav } from "@/data/navigation";
-import { contact } from "@/data/site";
 import type { Locale } from "@/i18n/routing";
+import type { SiteContent } from "@/lib/api";
 import { cn } from "@/lib/utils";
 
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -14,6 +14,7 @@ import { MobileMenu, type NavItem } from "./MobileMenu";
 import { NavLink } from "./NavLink";
 
 type HeaderProps = {
+  contact: SiteContent["contact"];
   /**
    * `overlay` floats the header on top of the home hero; `solid` gives inner
    * pages an opaque bar that still sits above the page hero image.
@@ -21,7 +22,7 @@ type HeaderProps = {
   variant?: "overlay" | "solid";
 };
 
-export function Header({ variant = "overlay" }: HeaderProps) {
+export function Header({ contact, variant = "overlay" }: HeaderProps) {
   const t = useTranslations();
   const navItems: NavItem[] = mainNav.map((item) => ({
     href: item.href,
@@ -82,10 +83,10 @@ export function Header({ variant = "overlay" }: HeaderProps) {
           <a
             aria-label={t("header.phoneAria")}
             className="flex items-center gap-2 whitespace-nowrap font-display text-[12px] font-bold text-[#151515] transition duration-200 hover:text-[#669a17] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a9d17]"
-            href={contact.phoneHref}
+            href={contact?.phoneHref ?? "#"}
           >
             <Phone aria-hidden="true" className="size-[14px]" strokeWidth={2.4} />
-            <span>{contact.phone}</span>
+            <span>{contact?.phone}</span>
           </a>
           <ButtonLink
             className="h-[50px] rounded-[13px] px-[30px] 2xl:h-[54px] 2xl:px-[35px]"
@@ -104,9 +105,10 @@ export function Header({ variant = "overlay" }: HeaderProps) {
           />
           <MobileMenu
             brand={brand}
+            phoneHref={contact?.phoneHref ?? "#"}
             labels={{
               book: t("header.book"),
-              phone: contact.phone,
+              phone: contact?.phone ?? "",
               phoneAria: t("header.phoneAria"),
               openMenu: t("header.openMenu"),
               closeMenu: t("header.closeMenu"),

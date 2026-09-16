@@ -14,21 +14,27 @@ import { TourItinerary } from "@/components/tours/TourItinerary";
 import { Badge } from "@/components/ui/Badge";
 import { Container } from "@/components/ui/Container";
 import { PhotoGrid } from "@/components/ui/PhotoGrid";
-import { getTour, tourDuration, tourSlugs, tours, type Tour } from "@/data/tours";
 import { Link } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
+import {
+  getBuildSlugs,
+  getSiteContent,
+  getTour,
+  getTours,
+  type SiteContent,
+  type Tour,
+  type TourSummary
+} from "@/lib/api";
 import { formatPrice, formatRating } from "@/lib/format";
-import { rawList } from "@/lib/messages";
 import { pageMetadata } from "@/lib/metadata";
 
 type TourDetailPageProps = {
   params: Promise<{ locale: string; slug: string }>;
 };
 
-type Note = { title: string; description: string };
-
-export function generateStaticParams() {
-  return tourSlugs.map((slug) => ({ slug }));
+export async function generateStaticParams() {
+  const slugs = await getBuildSlugs("tours");
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -38,7 +44,7 @@ export async function generateMetadata({
   const locale = hasLocale(routing.locales, requested)
     ? requested
     : routing.defaultLocale;
-  const tour = getTour(slug);
+  const tour = await getTour(locale, slug);
 
   if (!tour) {
     return {};
@@ -49,41 +55,63 @@ export async function generateMetadata({
   return pageMetadata({
     locale,
     path: `/tours/${tour.slug}`,
-    title: t("tourDetail.meta.title", { name: t(`tours.${tour.slug}.name`) }),
-    description: t(`tours.${tour.slug}.summary`),
+    title: t("tourDetail.meta.title", { name: tour.name }),
+    description: tour.summary,
     siteName: t("metadata.siteName"),
-    image: { src: tour.heroImage.src, alt: t(tour.heroImage.altKey) }
+    image: tour.heroImage
+      ? { src: tour.heroImage.src, alt: tour.heroImage.alt }
+      : undefined
   });
 }
 
 export default async function TourDetailPage({ params }: TourDetailPageProps) {
-  const { locale, slug } = await params;
-  setRequestLocale(locale);
+  const { locale: requested, slug } = await params;
+  setRequestLocale(requested);
+  const locale = hasLocale(routing.locales, requested)
+    ? requested
+    : routing.defaultLocale;
 
-  const tour = getTour(slug);
+  const [tour, allTours, site] = await Promise.all([
+    getTour(locale, slug),
+    getTours(locale),
+    getSiteContent(locale)
+  ]);
 
   if (!tour) {
     notFound();
   }
 
+  const regionSlugs = new Set(tour.destinations.map((region) => region.slug));
+  const related = allTours
+    .filter(
+      (item) =>
+        item.slug !== tour.slug &&
+        item.destinations.some((region) => regionSlugs.has(region.slug))
+    )
+    .slice(0, 3);
+
   return (
     <PageShell>
-      <TourDetailContent tour={tour} />
-      <RelatedTours tour={tour} />
+      <TourDetailContent contact={site.contact} tour={tour} tours={allTours} />
+      <RelatedTours tours={related} />
     </PageShell>
   );
 }
 
-function TourDetailContent({ tour }: { tour: Tour }) {
+function TourDetailContent({
+  tour,
+  tours,
+  contact
+}: {
+  tour: Tour;
+  tours: TourSummary[];
+  contact: SiteContent["contact"];
+}) {
   const t = useTranslations();
   const locale = useLocale() as Locale;
-  const name = t(`tours.${tour.slug}.name`);
-  const days = tourDuration(tour);
-  const overview = rawList<string>(t, `tours.${tour.slug}.overview`);
-  const highlights = rawList<string>(t, `tours.${tour.slug}.highlights`);
-  const included = rawList<string>(t, `tours.${tour.slug}.included`);
-  const excluded = rawList<string>(t, `tours.${tour.slug}.excluded`);
-  const notes = rawList<Note>(t, `tours.${tour.slug}.notes`);
+  const name = tour.name;
+  const days = tour.days;
+  const { overview, highlights, included, excluded, notes } = tour;
 
   return (
     <>
@@ -94,10 +122,10 @@ function TourDetailContent({ tour }: { tour: Tour }) {
           { label: name }
         ]}
         crumbsLabel={t("common.breadcrumbLabel")}
-        description={t(`tours.${tour.slug}.tagline`)}
-        eyebrow={t(`destinations.${tour.destinations[0]}.name`)}
+        description={tour.tagline}
+        eyebrow={tour.destinations[0]?.name}
         image={tour.heroImage}
-        imageAlt={t(tour.heroImage.altKey)}
+        imageAlt={tour.heroImage?.alt ?? ""}
         size="lg"
         title={name}
       >
@@ -235,27 +263,27 @@ function TourDetailContent({ tour }: { tour: Tour }) {
                 defaultTour={tour.slug}
                 tourOptions={tours.map((option) => ({
                   value: option.slug,
-                  label: t(`tours.${option.slug}.name`)
+                  label: option.name
                 }))}
               />
             </ContentBlock>
           </div>
 
           <aside className="xl:sticky xl:top-[104px]">
-            <TourBookingCard tour={tour} />
+            {contact ? <TourBookingCard contact={contact} tour={tour} /> : null}
 
             <div className="mt-[18px] rounded-[18px] border border-[#e7e2d9] bg-white p-[22px]">
               <h3 className="font-display text-[12px] font-black uppercase tracking-[0.04em] text-[#171717]">
                 {t("tourDetail.regionsTitle")}
               </h3>
               <ul className="mt-[12px] grid gap-2">
-                {tour.destinations.map((slug) => (
-                  <li key={slug}>
+                {tour.destinations.map((region) => (
+                  <li key={region.slug}>
                     <Link
                       className="flex items-center justify-between gap-3 rounded-[10px] border border-[#eeebe3] bg-[#faf8f2] px-[13px] py-[10px] text-[13px] font-bold text-[#171717] transition duration-200 hover:border-[#c9dda3] hover:text-[#669a17] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6a9d17]"
-                      href={`/destinations/${slug}`}
+                      href={`/destinations/${region.slug}`}
                     >
-                      {t(`destinations.${slug}.name`)}
+                      {region.name}
                       <span aria-hidden="true">→</span>
                     </Link>
                   </li>

@@ -2,19 +2,17 @@ import { ArrowUpRight, Mountain } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import type { Destination } from "@/data/destinations";
-import { getToursByDestination } from "@/data/tours";
 import { Link } from "@/i18n/navigation";
+import type { DestinationSummary } from "@/lib/api";
 import { cn } from "@/lib/utils";
 
 type DestinationCardProps = {
-  destination: Destination;
+  destination: DestinationSummary;
   className?: string;
 };
 
 export function DestinationCard({ destination, className }: DestinationCardProps) {
   const t = useTranslations();
-  const tourCount = getToursByDestination(destination.slug).length;
 
   return (
     <article
@@ -25,10 +23,10 @@ export function DestinationCard({ destination, className }: DestinationCardProps
     >
       <Image
         fill
-        alt={t(destination.cardImage.altKey)}
+        alt={destination.cardImage?.alt ?? ""}
         className="-z-10 object-cover transition duration-500 group-hover:scale-[1.06]"
         sizes="(min-width: 1280px) 33vw, 50vw"
-        src={destination.cardImage.src}
+        src={destination.cardImage?.src ?? ""}
       />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(10,10,10,0.1)_0%,rgba(10,10,10,0.35)_52%,rgba(10,10,10,0.86)_100%)]" />
 
@@ -42,17 +40,17 @@ export function DestinationCard({ destination, className }: DestinationCardProps
           className="transition duration-200 after:absolute after:inset-0 after:content-[''] hover:text-[#bede82] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#bede82]"
           href={`/destinations/${destination.slug}`}
         >
-          {t(`destinations.${destination.slug}.name`)}
+          {destination.name}
         </Link>
       </h3>
 
       <p className="mt-[8px] line-clamp-2 text-[length:var(--fs-2xs)] font-medium leading-[1.55] text-white/80">
-        {t(`destinations.${destination.slug}.summary`)}
+        {destination.summary}
       </p>
 
       <div className="mt-[clamp(9px,1.2vw,14px)] flex items-center justify-between gap-2 border-t border-white/15 pt-[clamp(8px,1vw,13px)]">
         <span className="text-[length:var(--fs-3xs)] font-bold text-white/85">
-          {t("common.tourCount", { count: tourCount })}
+          {t("common.tourCount", { count: destination.tourCount })}
         </span>
         <span
           aria-hidden="true"

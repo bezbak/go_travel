@@ -3,11 +3,14 @@ import { useTranslations } from "next-intl";
 import { TourCard } from "@/components/tours/TourCard";
 import { ButtonLink } from "@/components/ui/Button";
 import { Section } from "@/components/ui/Section";
-import { getFeaturedTours } from "@/data/tours";
+import type { TourSummary } from "@/lib/api";
 
-export function FeaturedTours() {
+type FeaturedToursProps = {
+  tours: TourSummary[];
+};
+
+export function FeaturedTours({ tours }: FeaturedToursProps) {
   const t = useTranslations("featuredTours");
-  const tours = getFeaturedTours(3);
 
   return (
     <Section

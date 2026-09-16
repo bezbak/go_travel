@@ -7,9 +7,13 @@ import { PageShell } from "@/components/layout/PageShell";
 import { Accordion, type AccordionItem } from "@/components/ui/Accordion";
 import { ButtonLink } from "@/components/ui/Button";
 import { Section } from "@/components/ui/Section";
-import { images } from "@/data/images";
-import { faqKeys } from "@/data/site";
 import { routing } from "@/i18n/routing";
+import {
+  getPhotos,
+  getSiteContent,
+  type PhotoLibrary,
+  type SiteContent
+} from "@/lib/api";
 import { pageMetadata } from "@/lib/metadata";
 
 type FaqPageProps = {
@@ -21,7 +25,11 @@ export async function generateMetadata({ params }: FaqPageProps): Promise<Metada
   const locale = hasLocale(routing.locales, requested)
     ? requested
     : routing.defaultLocale;
-  const t = await getTranslations({ locale });
+  const [t, photos] = await Promise.all([
+    getTranslations({ locale }),
+    getPhotos(locale)
+  ]);
+  const cover = photos.yurtsSunset;
 
   return pageMetadata({
     locale,
@@ -29,34 +37,48 @@ export async function generateMetadata({ params }: FaqPageProps): Promise<Metada
     title: t("faq.meta.title"),
     description: t("faq.meta.description"),
     siteName: t("metadata.siteName"),
-    image: { src: images.yurtsSunset.src, alt: t(images.yurtsSunset.altKey) }
+    image: cover ? { src: cover.src, alt: cover.alt } : undefined
   });
 }
 
 export default async function FaqPage({ params }: FaqPageProps) {
-  const { locale } = await params;
-  setRequestLocale(locale);
+  const { locale: requested } = await params;
+  setRequestLocale(requested);
+  const locale = hasLocale(routing.locales, requested)
+    ? requested
+    : routing.defaultLocale;
+
+  const [site, photos] = await Promise.all([
+    getSiteContent(locale),
+    getPhotos(locale)
+  ]);
 
   return (
     <PageShell>
-      <FaqPageContent />
+      <FaqPageContent faq={site.faq} photos={photos} />
     </PageShell>
   );
 }
 
-function FaqPageContent() {
+function FaqPageContent({
+  faq,
+  photos
+}: {
+  faq: SiteContent["faq"];
+  photos: PhotoLibrary;
+}) {
   const t = useTranslations();
 
-  const items: AccordionItem[] = faqKeys.map((key) => ({
-    id: key,
+  const items: AccordionItem[] = faq.map((entry) => ({
+    id: entry.key,
     header: (
       <span className="font-display text-[14px] font-black uppercase leading-tight tracking-[0] text-[#171717] sm:text-[16px]">
-        {t(`faq.items.${key}.question`)}
+        {entry.question}
       </span>
     ),
     content: (
       <p className="text-[13px] font-medium leading-[1.7] text-[#4f4f4f] 2xl:text-[14px]">
-        {t(`faq.items.${key}.answer`)}
+        {entry.answer}
       </p>
     )
   }));
@@ -71,8 +93,8 @@ function FaqPageContent() {
         crumbsLabel={t("common.breadcrumbLabel")}
         description={t("faq.heroDescription")}
         eyebrow={t("faq.heroEyebrow")}
-        image={images.yurtsSunset}
-        imageAlt={t(images.yurtsSunset.altKey)}
+        image={photos.yurtsSunset ?? null}
+        imageAlt={photos.yurtsSunset?.alt ?? ""}
         title={t("faq.heroTitle")}
       />
 

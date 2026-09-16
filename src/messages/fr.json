@@ -2,8 +2,7 @@
   "metadata": {
     "title": "go_kyrgyzstan.travel - circuits au Kirghizistan et en Asie centrale",
     "description": "Découvrez le Kirghizistan et l'Asie centrale : circuits en petit groupe ou privés, guides locaux, lacs de montagne, campements de yourtes et traditions nomades.",
-    "siteName": "go_kyrgyzstan.travel",
-    "ogAlt": "Yourtes sur un plateau de montagne verdoyant au Kirghizistan"
+    "siteName": "go_kyrgyzstan.travel"
   },
   "brand": {
     "name": "GO KYRGYZSTAN",
@@ -27,7 +26,12 @@
   },
   "languageSwitcher": {
     "ariaLabel": "Choisir la langue",
-    "short": { "en": "EN", "kg": "KG", "ru": "RU", "fr": "FR" },
+    "short": {
+      "en": "EN",
+      "kg": "KG",
+      "ru": "RU",
+      "fr": "FR"
+    },
     "names": {
       "en": "Anglais",
       "kg": "Kirghize",
@@ -69,25 +73,7 @@
       "summer": "Été",
       "autumn": "Automne",
       "winter": "Hiver"
-    },
-    "countries": {
-      "germany": "Allemagne",
-      "uk": "Royaume-Uni",
-      "italy": "Italie",
-      "france": "France"
     }
-  },
-  "imageAlts": {
-    "heroYurts": "Yourtes blanches sur un haut plateau verdoyant du Kirghizistan, montagnes en arrière-plan",
-    "yurtsSunset": "Yourtes au coucher du soleil sur une plaine d'altitude kirghize",
-    "alpineLake": "Lac d'altitude turquoise entouré des montagnes du Kirghizistan",
-    "yurtNight": "Campement de yourtes sous un ciel étoilé",
-    "kelSuu": "Le lac turquoise de Kel-Suu entre des falaises abruptes",
-    "songKol": "Le lac Song-Kol avec des yourtes et des montagnes enneigées",
-    "kyzartHorses": "Cavaliers traversant un pâturage de montagne près de Kyzart",
-    "kilemche": "La vallée verdoyante de Kilemche et son alpage d'été",
-    "bishkekSunset": "Une rue de Bichkek au coucher du soleil, montagnes au loin",
-    "bishkekRoad": "Minibus sur une route de montagne en direction de Bichkek"
   },
   "hero": {
     "titleLine1": "DÉCOUVREZ LE",
@@ -95,15 +81,26 @@
     "titleLine3": "KIRGHIZISTAN",
     "body": "Six jours inoubliables entre montagnes majestueuses, lacs préservés et traditions nomades.",
     "primaryCta": "VOIR LES CIRCUITS",
-    "secondaryCta": "VOIR LE PROGRAMME",
-    "imageAlt": "Yourtes blanches sur un haut plateau verdoyant du Kirghizistan, montagnes en arrière-plan"
+    "secondaryCta": "VOIR LE PROGRAMME"
   },
   "benefits": {
     "items": [
-      { "title": "PETITS GROUPES", "description": "Jamais plus de 14 voyageurs" },
-      { "title": "GUIDES LOCAUX", "description": "Expérimentés et chaleureux" },
-      { "title": "HÉBERGEMENT CONFORTABLE", "description": "Yourtes et maisons d'hôtes" },
-      { "title": "MEILLEUR PRIX GARANTI", "description": "Aucun frais caché" }
+      {
+        "title": "PETITS GROUPES",
+        "description": "Jamais plus de 14 voyageurs"
+      },
+      {
+        "title": "GUIDES LOCAUX",
+        "description": "Expérimentés et chaleureux"
+      },
+      {
+        "title": "HÉBERGEMENT CONFORTABLE",
+        "description": "Yourtes et maisons d'hôtes"
+      },
+      {
+        "title": "MEILLEUR PRIX GARANTI",
+        "description": "Aucun frais caché"
+      }
     ]
   },
   "featuredTours": {
@@ -155,19 +152,12 @@
     "titleGreen": "NOS HÔTES",
     "description": "Des avis recueillis après chaque départ — les bons, et ceux qui nous ont fait changer des choses."
   },
-  "testimonials": {
-    "lena": {
-      "quote": "Le rythme était parfait. Assez de temps dans chaque vallée pour la ressentir vraiment, et notre guide traduisait bien plus que des mots : il expliquait pourquoi les choses se font ainsi ici."
-    },
-    "tom": {
-      "quote": "Kel-Suu est vraiment isolé et l'équipe l'a traité comme tel : véhicules adaptés, carburant de réserve, un vrai plan en cas de météo. Rien n'a jamais semblé improvisé."
-    },
-    "sofia": {
-      "quote": "Trois nuits sous la yourte et je serais volontiers restée une semaine. La famille qui nous accueillait nous a intégrés à la soirée, au lieu d'en faire un spectacle."
-    },
-    "hugo": {
-      "quote": "Bien organisé et honnête sur le contenu de chaque journée. La seule chose que je changerais, ce serait de demander un jour de plus au lac."
-    }
+  "lightbox": {
+    "open": "Ouvrir la photo {index} sur {total}",
+    "close": "Fermer la galerie",
+    "previous": "Photo précédente",
+    "next": "Photo suivante",
+    "counter": "{index} sur {total}"
   },
   "gallery": {
     "title": "GALERIE"
@@ -333,25 +323,7 @@
       }
     ],
     "teamTitle": "LES PERSONNES QUE VOUS RENCONTREREZ",
-    "teamDescription": "L'équipe qui prépare votre voyage est celle qui l'accompagne.",
-    "team": {
-      "aizhan": {
-        "role": "Fondatrice et conceptrice d'itinéraires",
-        "bio": "A grandi à Naryn, a étudié le tourisme à Bichkek et a personnellement parcouru chaque itinéraire de ce site au moins deux fois."
-      },
-      "ulan": {
-        "role": "Guide de montagne principal",
-        "bio": "Guide de montagne diplômé et cavalier. Quinze saisons sur les alpages entre Kyzart et Song-Kol."
-      },
-      "marat": {
-        "role": "Chauffeur d'expédition",
-        "bio": "Maintient la flotte de 4x4 en vie sur des pistes qui dévorent les suspensions. Connaît chaque station-service entre Bichkek et Och."
-      },
-      "elena": {
-        "role": "Relation voyageurs",
-        "bio": "Répond à vos e-mails, prépare les permis de zone frontalière et sait qui est végétarien avant même qu'on le demande."
-      }
-    }
+    "teamDescription": "L'équipe qui prépare votre voyage est celle qui l'accompagne."
   },
   "contactPage": {
     "meta": {
@@ -427,40 +399,6 @@
     "heroEyebrow": "AVANT DE RÉSERVER",
     "heroTitle": "QUESTIONS FRÉQUENTES",
     "heroDescription": "Ce qu'on nous demande le plus souvent, avec des réponses honnêtes plutôt que rassurantes.",
-    "items": {
-      "visa": {
-        "question": "Ai-je besoin d'un visa pour le Kirghizistan ?",
-        "answer": "Les ressortissants de la plupart des pays de l'UE, du Royaume-Uni, des États-Unis, du Canada, du Japon et d'une soixantaine d'autres pays entrent sans visa pour 60 jours maximum. Les autres peuvent généralement obtenir un e-visa en ligne en quelques jours. Vérifiez selon votre passeport avant d'acheter vos billets, et dites-nous s'il vous faut une lettre d'invitation : nous les délivrons gratuitement."
-      },
-      "fitness": {
-        "question": "Quelle condition physique faut-il ?",
-        "answer": "Pour nos circuits faciles, savoir marcher deux heures sur terrain irrégulier suffit. Les circuits modérés ajoutent des randonnées d'une demi-journée et plusieurs heures à cheval. Les expéditions impliquent de longues journées en véhicule en altitude et des nuits au-dessus de 3 000 mètres. Le niveau est indiqué sur chaque page de circuit, et nous préférons vous orienter vers un autre itinéraire plutôt que vous voir souffrir."
-      },
-      "accommodation": {
-        "question": "À quoi ressemble vraiment une nuit sous la yourte ?",
-        "answer": "Vous dormez sur d'épais matelas de feutre posés au sol, généralement à quatre ou six par yourte, sous de lourdes couvertures. Il y a un poêle à bois, pas d'électricité au-delà d'une lampe solaire, et des toilettes sèches à quelques pas. Il fait vraiment froid après la tombée de la nuit, même en juillet. La plupart des voyageurs en font la meilleure nuit du séjour."
-      },
-      "food": {
-        "question": "Gérez-vous les régimes végétariens ou particuliers ?",
-        "answer": "Oui, et le savoir à l'avance aide énormément. La cuisine kirghize est très carnée : dans les campements isolés, un menu végétarien doit être planifié et acheté à Bichkek. Végétalien, sans gluten et allergies sont tout à fait gérables si nous sommes prévenus. Dites-le au moment de la réservation, pas le premier matin."
-      },
-      "payment": {
-        "question": "Comment payer, et que se passe-t-il en cas d'annulation ?",
-        "answer": "Un acompte de 20 % confirme votre place, par virement ou par carte. Le solde est dû 30 jours avant le départ. En annulant à plus de 30 jours, vous ne perdez que l'acompte ; entre 30 et 14 jours, 50 % sont retenus ; à moins de 14 jours, aucun remboursement n'est possible. Nous recommandons vivement une assurance couvrant l'annulation."
-      },
-      "solo": {
-        "question": "Puis-je partir seul ou seule ?",
-        "answer": "Environ un tiers de nos voyageurs partent seuls. Vous partagerez un hébergement avec une personne du même sexe sans supplément, ou vous pouvez payer un supplément single pour une chambre individuelle en maison d'hôtes. Les yourtes sont toujours partagées — c'est la nature même d'une yourte."
-      },
-      "weather": {
-        "question": "Quelle est la meilleure période pour partir ?",
-        "answer": "Les alpages sont ouverts de mi-juin à mi-septembre ; avant, les cols sont enneigés et les campements pas encore montés. Issyk-Koul et les vallées basses fonctionnent de mai à octobre. Les circuits d'hiver ont lieu en janvier et février, pour le ski et la chasse à l'aigle. Juillet et août sont les plus chauds et les plus fréquentés ; notre période préférée reste le début septembre."
-      },
-      "custom": {
-        "question": "Pouvez-vous créer un voyage privé pour nous ?",
-        "answer": "Oui — près de la moitié de ce que nous opérons est privé. Envoyez-nous vos dates, la taille du groupe et vos centres d'intérêt, et nous reviendrons avec un programme jour par jour et un prix. Un voyage privé peut commencer n'importe quel jour de la semaine et suivre le rythme qui vous convient."
-      }
-    },
     "ctaTitle": "UNE AUTRE QUESTION ?",
     "ctaBody": "Posez-la directement. Une vraie personne à Bichkek lit chaque message et répond sous un jour ouvré.",
     "ctaPrimary": "NOUS ÉCRIRE",
@@ -514,542 +452,5 @@
     "home": "ACCUEIL",
     "tours": "VOIR LES CIRCUITS",
     "contact": "NOUS ÉCRIRE"
-  },
-  "destinations": {
-    "song-kol": {
-      "name": "Song-Kol",
-      "summary": "Un lac d'eau douce à 3 016 m entouré d'alpages où les familles d'éleveurs montent leurs yourtes de juin à septembre.",
-      "bestTime": "De mi-juin à mi-septembre",
-      "body": [
-        "Song-Kol est la version carte postale du Kirghizistan nomade et, fait rare pour une carte postale, elle reste vraie. Trois mois par an, la rive se couvre de yourtes quand les familles font monter leurs troupeaux depuis les vallées ; en octobre tout est vide à nouveau et les cols sont fermés.",
-        "Il n'y a ni hôtel, ni boutique, ni réseau mobile digne de ce nom. Vous dormez dans une yourte familiale, mangez ce que prépare le campement et vous couchez quand le poêle s'éteint. Le lac occupe une cuvette peu profonde : la lumière du soir traverse tout le bassin d'un seul coup.",
-        "Y arriver fait partie de l'expérience. La route du col de Kalmak-Achou monte en lacets serrés et le lac apparaît d'un seul bloc au sommet — c'est pour cela que nous la parcourons toujours dans ce sens."
-      ],
-      "highlights": [
-        "Trois mois par an de véritable alpage en activité, pas un campement mis en scène",
-        "Des sorties à cheval au départ de la yourte, en pleine steppe",
-        "L'un des ciels nocturnes les plus sombres d'Asie centrale",
-        "La montée du col de Kalmak-Achou, à faire de préférence par l'ouest"
-      ]
-    },
-    "kel-suu": {
-      "name": "Kel-Suu",
-      "summary": "Un lac glaciaire caché à 3 514 m dans la zone frontalière chinoise, accessible uniquement en 4x4 et avec un permis.",
-      "bestTime": "De juillet à début septembre",
-      "body": [
-        "Kel-Suu est la raison pour laquelle on revient une deuxième fois au Kirghizistan. Le lac remplit une gorge étroite entre des parois verticales, et son niveau monte et descend au gré d'un drainage souterrain : certaines années c'est un long fjord, d'autres une succession de vasques.",
-        "Il se trouve dans une zone frontalière réglementée : chaque visiteur a besoin d'un permis obtenu à l'avance. Cela, ajouté à une piste qui décourage les véhicules ordinaires, limite la fréquentation à quelques centaines de personnes par saison.",
-        "Le campement se trouve sur la plaine de Kouroumdouk, une heure en contrebas du lac, vers 3 300 m. Les nuits sont froides en toute saison et le temps peut basculer en vingt minutes — d'où la journée de réserve prévue sur chacun de nos itinéraires vers Kel-Suu."
-      ],
-      "highlights": [
-        "Des parois qui plongent directement dans une eau turquoise",
-        "Un permis de zone frontalière qui garantit une vraie solitude",
-        "Campement d'altitude sur la plaine de Kouroumdouk, sous un ciel immense",
-        "Quasiment aucune infrastructure — c'est du vrai voyage d'expédition"
-      ]
-    },
-    "issyk-kul": {
-      "name": "Issyk-Koul",
-      "summary": "Le deuxième plus grand lac d'altitude du monde, assez chaud pour s'y baigner, encadré par les neiges du Tian Shan.",
-      "bestTime": "De mai à octobre",
-      "body": [
-        "Issyk-Koul ne gèle jamais — c'est le sens de son nom — et il est assez salé pour qu'on y flotte. Le lac fait 180 km de long, si bien que les deux rives semblent appartenir à deux pays : au nord les stations balnéaires et les plages, au sud les canyons, les sources chaudes et les petits villages.",
-        "Nous travaillons sur la rive sud. Elle vous met à une heure de Jeti-Oguz, du canyon de Skazka et de la vallée de Barskoon, avec un mur de montagnes qui dépasse 4 000 m derrière les villages.",
-        "C'est aussi la région la plus facile à parcourir du pays. Les routes sont goudronnées, les maisons d'hôtes confortables, et la saison va de mai à octobre — bien avant et bien après l'ouverture des alpages."
-      ],
-      "highlights": [
-        "Se baigner dans un lac d'altitude tiède face aux sommets enneigés",
-        "Le canyon de Skazka au coucher du soleil, quand la roche vire au rouge",
-        "Les cascades de Barskoon et la route qui monte vers le plateau de Koumtor",
-        "Pétroglyphes et musées en plein air le long de la rive nord"
-      ]
-    },
-    "jeti-oguz": {
-      "name": "Jeti-Oguz",
-      "summary": "Des falaises de grès rouge au-dessus d'une vallée verte d'épicéas, avec sources chaudes et marche facile.",
-      "bestTime": "De mai à octobre",
-      "body": [
-        "Jeti-Oguz signifie « Sept Taureaux », d'après l'alignement de lames de grès rouge qui domine l'entrée de la vallée. C'est la formation rocheuse la plus photographiée du Kirghizistan et, chose rare, elle est à la hauteur des photos.",
-        "Derrière les falaises, la vallée s'ouvre sur une forêt d'épicéas et des alpages. Une marche tranquille de deux heures mène à la Vallée des Fleurs, et une journée plus longue atteint les prairies sous le col de Teleti.",
-        "La vallée est assez proche de Karakol pour s'y rendre en une matinée, ce qui en fait une bonne journée d'acclimatation avant d'aller plus haut."
-      ],
-      "highlights": [
-        "Les formations des Sept Taureaux et du Cœur Brisé",
-        "Marche facile en forêt à 2 200 m, idéale pour s'acclimater",
-        "Sources chaudes dans le village au pied des falaises",
-        "Campements de yourtes d'été sur les prairies plus haut dans la vallée"
-      ]
-    },
-    "bishkek": {
-      "name": "Bichkek",
-      "summary": "Une capitale verte et basse, planifiée à l'époque soviétique au pied des montagnes, et le point de départ de presque tous nos voyages.",
-      "bestTime": "D'avril à octobre",
-      "body": [
-        "Personne ne prend l'avion pour Bichkek en soi, mais la ville vaut mieux que sa réputation. Elle a été tracée avec de larges avenues et des canaux d'irrigation sous chaque rangée d'arbres : même en août, elle reste ombragée et agréable à parcourir à pied.",
-        "Le bazar d'Och est l'introduction la plus honnête au pays : feutre, épices, harnachement et un mur de fruits secs. La place Ala-Too et les musées alentour racontent l'histoire politique en un après-midi.",
-        "C'est aussi là que commencent les montagnes. La gorge d'Ala-Artcha est à quarante minutes du centre et monte jusqu'à des glaciers à 4 000 m : c'est la marche d'acclimatation classique du premier jour sur la plupart de nos circuits."
-      ],
-      "highlights": [
-        "Le bazar d'Och, idéalement tôt le matin en semaine",
-        "Le parc national d'Ala-Artcha, à 40 minutes du centre",
-        "L'architecture soviétique et la relève de la garde place Ala-Too",
-        "Le meilleur café et la dernière douche chaude avant la montagne"
-      ]
-    },
-    "osh-and-pamir": {
-      "name": "Och et le Pamir",
-      "summary": "La plus ancienne ville du pays et le début de la route du Pamir, qui grimpe à des cols de plus de 4 200 m.",
-      "bestTime": "De juin à septembre",
-      "body": [
-        "Och est habitée depuis trois mille ans et garde des allures de ville de la route de la Soie : le bazar longe la rivière et le Souleiman-Too surgit en plein centre, site de pèlerinage classé à l'UNESCO.",
-        "Au sud de la ville, la route du Pamir entame sa montée. Elle franchit le col de Taldyk à 3 615 m et le Kyzyl-Art à 4 280 m, traversant un plateau désertique d'altitude avec les sommets de la chaîne du Trans-Alaï au sud.",
-        "C'est la région la plus exigeante où nous travaillons. L'altitude ne redescend jamais, le carburant et les réparations sont rares, et la météo à 4 000 m fait ce qu'elle veut. C'est aussi la plus belle route d'Asie centrale."
-      ],
-      "highlights": [
-        "Le Souleiman-Too, site UNESCO au cœur d'Och",
-        "Les cols de Taldyk et de Kyzyl-Art sur la route du Pamir",
-        "Le camp de base du pic Lénine et les prairies d'Atchik-Tach",
-        "Des paysages de haut plateau désertique introuvables plus au nord"
-      ]
-    }
-  },
-  "tours": {
-    "heart-of-kyrgyzstan": {
-      "name": "Cœur du Kirghizistan",
-      "tagline": "Six jours de la capitale à un lac de zone frontalière, en passant par les alpages les plus connus du pays.",
-      "summary": "Bichkek, Song-Kol et Kel-Suu en une boucle — cheval, deux nuits sous la yourte et deux des lacs les plus spectaculaires d'Asie centrale.",
-      "overview": [
-        "C'est l'itinéraire que nous conseillerions à un premier voyage. En six jours, il couvre les trois choses que le Kirghizistan réussit mieux que partout ailleurs : des alpages d'été encore habités par des familles, une route en lacets vers un lac à 3 000 mètres, et une gorge frontalière que presque personne n'atteint.",
-        "Le rythme est volontairement mesuré. Deux nuits en altitude sous la yourte, une journée à cheval si vous le souhaitez, et une longue journée de route pour rejoindre Kel-Suu et revenir. Le reste, ce sont de courtes étapes avec le temps de s'arrêter. Personne ne vous pressera sur un point de vue pour tenir un horaire.",
-        "Les groupes sont limités à douze personnes et l'itinéraire fonctionne de fin mai à début octobre. En dehors de cette période, le col de Kalmak-Achou est sous la neige et les campements sont redescendus dans les vallées."
-      ],
-      "highlights": [
-        "Deux nuits dans de vrais campements familiaux, pas des répliques pour touristes",
-        "Une sortie à cheval sur l'alpage de Kilemche avec un berger local",
-        "Les lacets de Kalmak-Achou en descendant vers Song-Kol",
-        "Une journée entière à Kel-Suu, dans la zone frontalière réglementée",
-        "Tous les permis, droits d'entrée et formalités frontalières pris en charge"
-      ],
-      "days": [
-        {
-          "title": "Arrivée à Bichkek",
-          "description": "Accueil à l'aéroport à toute heure et repos à l'hôtel. L'après-midi, visite à pied de la place Ala-Too, du bazar d'Och et du vieux quartier soviétique, puis dîner de bienvenue avec votre guide et le reste du groupe."
-        },
-        {
-          "title": "Bichkek — Kyzart",
-          "description": "Quatre heures vers le sud par le col de Too-Achou, avec son tunnel à 3 180 m et une longue descente dans la vallée de Suusamyr. Arrivée au village de Kyzart en milieu d'après-midi et nuit en maison d'hôtes familiale — votre dernière douche chaude avant deux jours."
-        },
-        {
-          "title": "Kyzart — alpage de Kilemche",
-          "description": "La journée dont on se souvient. À cheval ou à pied par le col de Kyzart jusqu'à l'alpage de Kilemche, environ cinq heures avec un pique-nique en route. Chevaux et berger nous accompagnent ; le véhicule d'assistance emmène votre sac principal au campement."
-        },
-        {
-          "title": "Song-Kol puis Naryn",
-          "description": "Matinée au bord du lac, puis descente par les lacets de Kalmak-Achou — la vue s'ouvre d'un seul coup au sommet du col. L'après-midi, route vers Naryn le long de la rivière, arrivée pour le dîner en maison d'hôtes."
-        },
-        {
-          "title": "Excursion à Kel-Suu",
-          "description": "La journée la plus longue : départ matinal, quatre heures de piste dans la zone frontalière, et la dernière heure à pied jusqu'au lac. Plusieurs heures à Kel-Suu avant de regagner le campement de la plaine de Kouroumdouk pour une nuit sous tente à 3 300 m."
-        },
-        {
-          "title": "Retour à Bichkek",
-          "description": "Longue mais belle route vers le nord par la gorge de Naryn et le canyon de Boom, avec arrêts à la tour de Bourana et pour le déjeuner. Hôtel en début de soirée et transferts aéroport selon votre vol."
-        }
-      ],
-      "included": [
-        "Tout le transport en minibus privé ou 4x4 avec chauffeur",
-        "Cinq nuits : deux hôtels, une maison d'hôtes, deux campements de yourtes",
-        "Tous les petits-déjeuners, quatre déjeuners et cinq dîners",
-        "Guide anglophone, russophone, francophone ou germanophone",
-        "Chevaux et berger pour la traversée de Kilemche",
-        "Permis de zone frontalière de Kel-Suu et tous les droits d'entrée",
-        "Transferts aéroport à l'arrivée et au départ"
-      ],
-      "excluded": [
-        "Vols internationaux vers et depuis Bichkek",
-        "Assurance voyage, obligatoire sur ce circuit",
-        "Déjeuners et dîners libres à Bichkek et Naryn",
-        "Supplément chambre individuelle en hôtel et maison d'hôtes (120 €)",
-        "Pourboires pour le guide et le chauffeur"
-      ],
-      "notes": [
-        {
-          "title": "Altitude",
-          "description": "Vous dormez à 3 016 m à Song-Kol et à 3 300 m près de Kel-Suu. De légers maux de tête la première nuit sont fréquents ; l'itinéraire est conçu pour monter progressivement."
-        },
-        {
-          "title": "Que prendre",
-          "description": "Les nuits frôlent le gel même en juillet. Prévoyez une couche chaude, une veste coupe-vent et des chaussures que vous acceptez de mouiller. Nous fournissons les sacs de couchage pour les nuits au campement."
-        },
-        {
-          "title": "Connexion",
-          "description": "Aucun réseau mobile à Song-Kol ni à Kel-Suu. Votre guide dispose d'une balise satellite et le bureau de Bichkek reste joignable par ce biais à toute heure."
-        }
-      ]
-    },
-    "song-kol-nomad-life": {
-      "name": "Song-Kol : la vie nomade",
-      "tagline": "Quatre jours, dont deux sur un alpage à 3 000 mètres avec les familles qui y travaillent.",
-      "summary": "La version courte du voyage kirghize classique : le col de Too-Achou, deux nuits sous la yourte à Song-Kol, et le retour avec une soirée à Bichkek.",
-      "overview": [
-        "Tout le monde n'a pas quinze jours. Cet itinéraire prend la meilleure expérience du pays — vivre deux jours sur un alpage — et construit autour le plus court voyage honnête possible.",
-        "Vous logez chez les deux mêmes familles avec lesquelles nous travaillons depuis 2016, sur la rive sud où les campements sont les plus espacés. Les journées sont volontairement libres : monter à cheval, longer la rive, aider à rentrer le troupeau, ou ne rien faire du tout à 3 000 mètres.",
-        "C'est notre circuit le plus facile. Aucune marche difficile, des étapes de quatre à cinq heures, et la seule vraie contrainte reste l'altitude et le froid une fois la nuit tombée."
-      ],
-      "highlights": [
-        "Deux nuits complètes dans un campement familial au bord du lac",
-        "Sorties à cheval sur l'alpage, d'une heure à une journée entière",
-        "Apprendre à préparer le koumis et à feutrer un chyrdak avec la famille",
-        "Le lever de soleil sur le lac depuis la crête derrière le campement",
-        "Des groupes de dix voyageurs maximum"
-      ],
-      "days": [
-        {
-          "title": "Bichkek et la vallée de Tchouï",
-          "description": "Arrivée, installation à l'hôtel et tour d'orientation dans le centre de Bichkek. Si vous atterrissez tôt, nous filons vers la gorge d'Ala-Artcha pour un premier aperçu des montagnes et une acclimatation en douceur."
-        },
-        {
-          "title": "Par le col jusqu'à Song-Kol",
-          "description": "Vers le sud par le tunnel de Too-Achou et la vallée de Suusamyr, puis montée au lac dans l'après-midi. Arrivée au campement à temps pour voir rentrer les troupeaux, suivie du dîner dans la yourte familiale."
-        },
-        {
-          "title": "Une journée sur l'alpage",
-          "description": "Aucun programme imposé. Partez à cheval avec le berger, longez la rive, essayez-vous au feutre ou installez-vous avec un livre. Le soir, il y a généralement de la musique, et toujours plus à manger que prévu."
-        },
-        {
-          "title": "Retour à Bichkek",
-          "description": "Petit-déjeuner matinal et descente par les lacets de Kalmak-Achou, avec un arrêt à la tour de Bourana. Bichkek en fin d'après-midi et transferts aéroport selon votre vol."
-        }
-      ],
-      "included": [
-        "Transport privé avec chauffeur sur tout l'itinéraire",
-        "Trois nuits : un hôtel à Bichkek, deux nuits en campement de yourtes",
-        "Tous les petits-déjeuners, deux déjeuners et trois dîners",
-        "Guide sur tout l'itinéraire, en anglais, russe ou français",
-        "Une sortie à cheval encadrée à Song-Kol",
-        "Sacs de couchage et matelas pour les nuits au campement",
-        "Transferts aéroport à l'arrivée et au départ"
-      ],
-      "excluded": [
-        "Vols internationaux",
-        "Assurance voyage, obligatoire",
-        "Repas à Bichkek en dehors du petit-déjeuner",
-        "Heures de cheval supplémentaires (12 € l'heure)",
-        "Pourboires pour le guide, le chauffeur et la famille d'accueil"
-      ],
-      "notes": [
-        {
-          "title": "Dormir sous la yourte",
-          "description": "Quatre à six personnes partagent une yourte, sur des matelas de feutre et sous d'épaisses couvertures. Les toilettes sont sèches, à quelques pas du campement, et il n'y a pas de douche pendant deux jours."
-        },
-        {
-          "title": "Altitude",
-          "description": "Song-Kol est à 3 016 m. La montée se fait assez lentement pour que la plupart des voyageurs s'y sentent bien, mais ménagez-vous le premier après-midi."
-        },
-        {
-          "title": "Saison",
-          "description": "Cet itinéraire ne fonctionne que de mi-juin à mi-septembre. En dehors de ces dates, les campements sont démontés et le col est fermé."
-        }
-      ]
-    },
-    "kel-suu-expedition": {
-      "name": "Expédition Kel-Suu",
-      "tagline": "Sept jours et un permis frontalier pour atteindre l'un des lacs les moins visités d'Asie centrale.",
-      "summary": "Une vraie expédition vers Kel-Suu, avec camps d'altitude, 4x4 et une journée de réserve pour la météo. Huit voyageurs maximum.",
-      "overview": [
-        "Kel-Suu ne se visite pas correctement en une journée. Cet itinéraire lui accorde le temps qu'il mérite : trois nuits au-dessus de 3 000 mètres, deux journées entières au lac, et une journée de réserve, parce qu'à cette altitude c'est la météo qui fixe le programme, pas nous.",
-        "Nous voyageons en deux 4x4 avec du carburant de réserve et campons sous de vraies tentes d'expédition plutôt que de compter sur des yourtes qui pourraient ne pas être montées. Au-delà de Naryn, tout se passe hors réseau.",
-        "C'est le circuit le plus dur que nous proposons. Il n'est pas technique — ni escalade, ni via ferrata — mais il est froid, isolé et constamment en altitude, et l'hôpital le plus proche est loin. Nous le limitons à huit personnes et nous vous interrogeons sur votre condition physique avant de confirmer."
-      ],
-      "highlights": [
-        "Deux journées complètes à Kel-Suu au lieu de quelques heures pressées",
-        "Une journée de réserve pour que le mauvais temps ne vous prive pas du lac",
-        "Camp d'altitude sur la plaine de Kouroumdouk à 3 300 m",
-        "Song-Kol et la gorge de Naryn sur le trajet aller",
-        "Deux 4x4, carburant de réserve et balise satellite tout du long"
-      ],
-      "days": [
-        {
-          "title": "Briefing à Bichkek",
-          "description": "Arrivée, hôtel et briefing d'expédition l'après-midi : vérification du matériel, dossiers de permis et présentation du programme jour par jour. Dîner de bienvenue avec le guide et le chauffeur qui vous accompagneront toute la semaine."
-        },
-        {
-          "title": "Vers le sud, jusqu'à Kotchkor",
-          "description": "Sortie de la vallée de Tchouï par le canyon de Boom et longement de la pointe ouest d'Issyk-Koul. Après-midi à la coopérative de feutrières de Kotchkor, puis nuit en maison d'hôtes à 1 800 m pour commencer à prendre de l'altitude."
-        },
-        {
-          "title": "Montée à Song-Kol",
-          "description": "Montée au lac par l'ouest, avec une arrivée assez tôt pour longer la rive. Première nuit à 3 016 m en campement de yourtes — c'est cette nuit d'acclimatation qui rend le reste de la semaine possible."
-        },
-        {
-          "title": "Song-Kol — Naryn",
-          "description": "Descente des lacets de Kalmak-Achou puis route vers l'est le long de la rivière Naryn. Ravitaillement l'après-midi à Naryn, dernières vérifications de permis et nuit confortable en maison d'hôtes avant que la piste ne se dégrade."
-        },
-        {
-          "title": "Entrée en zone frontalière",
-          "description": "Contrôle des permis au poste d'Ak-Mouz, puis quatre heures de piste à travers la steppe d'altitude jusqu'à la plaine de Kouroumdouk. Camp monté à 3 300 m, après-midi libre pour monter sur la crête derrière."
-        },
-        {
-          "title": "Kel-Suu",
-          "description": "La journée entière au lac : une heure de marche depuis le point de dépose, puis tout le temps que la météo autorise sur la rive et les crêtes au-dessus. Retour au camp pour une deuxième nuit en altitude."
-        },
-        {
-          "title": "La longue route du retour",
-          "description": "Sortie de la zone frontalière et remontée vers le nord par Naryn et le canyon de Boom jusqu'à Bichkek — environ neuf heures avec les arrêts. Hôtel et dîner d'adieu, transferts aéroport à toute heure."
-        }
-      ],
-      "included": [
-        "Deux 4x4 avec chauffeurs expérimentés et carburant de réserve",
-        "Six nuits : deux hôtels, deux maisons d'hôtes, un campement de yourtes, deux nuits sous tente",
-        "Tous les repas du dîner du jour 1 au déjeuner du jour 7",
-        "Guide d'expédition et cuisinier de camp",
-        "Tentes d'expédition, matelas et sacs de couchage quatre saisons",
-        "Permis de zone frontalière de Kel-Suu et tous les droits d'entrée",
-        "Balise satellite et trousse de premiers secours complète"
-      ],
-      "excluded": [
-        "Vols internationaux",
-        "Assurance avec couverture évacuation — obligatoire et vérifiée",
-        "Repas à Bichkek les premier et dernier soirs",
-        "Supplément tente individuelle (180 €)",
-        "Équipement personnel et pourboires"
-      ],
-      "notes": [
-        {
-          "title": "Condition physique et altitude",
-          "description": "Trois nuits au-dessus de 3 000 m et de la marche quotidienne en altitude. Vous devez être à l'aise sur une randonnée de quatre heures chez vous avant de réserver. La nuit d'acclimatation à Song-Kol est intégrée."
-        },
-        {
-          "title": "Permis",
-          "description": "La zone frontalière de Kel-Suu exige un permis délivré 45 jours à l'avance. Il nous faut un scan de votre passeport à la réservation, et aucune inscription de dernière minute n'est possible."
-        },
-        {
-          "title": "Météo",
-          "description": "Il peut neiger à Kel-Suu en n'importe quel mois. La journée de réserve existe exactement pour cela, et votre guide l'utilisera plutôt que de forcer par mauvais temps."
-        }
-      ]
-    },
-    "issyk-kul-and-jeti-oguz": {
-      "name": "Issyk-Koul et Jeti-Oguz",
-      "tagline": "Cinq jours tranquilles autour du deuxième plus grand lac d'altitude du monde et des falaises rouges qui le dominent.",
-      "summary": "Baignade en eau tiède, canyons de grès rouge et marches faciles en forêt — notre itinéraire le plus doux, praticable de mai à octobre.",
-      "overview": [
-        "La rive sud d'Issyk-Koul est l'endroit où les Kirghizes eux-mêmes partent en vacances, et il y a une raison à cela. Le lac est assez chaud pour s'y baigner dès juin, le mur de montagnes derrière dépasse 4 000 mètres, et les canyons entre les villages valent tout ce qu'on trouve plus haut.",
-        "Cet itinéraire reste bas. Rien ici ne dépasse 2 500 mètres, chaque nuit se passe en maison d'hôtes confortable avec vraie douche, et la plus longue marche fait trois heures sur bon sentier. Il convient aux familles, aux groupes de niveaux mélangés et à ceux qui voyagent en début ou fin de saison.",
-        "Il fonctionne aussi très bien en prolongation. Si vous avez déjà fait un séjour en alpage, cinq jours ici forment l'atterrissage en douceur — et Karakol propose la meilleure cuisine du pays."
-      ],
-      "highlights": [
-        "Se baigner dans Issyk-Koul face aux sommets enneigés de la rive opposée",
-        "Le canyon de Skazka dans la dernière heure de lumière",
-        "Les falaises des Sept Taureaux et une marche facile dans la vallée de Jeti-Oguz",
-        "Karakol : la mosquée doungane, la cathédrale en bois et le marché aux bestiaux du dimanche",
-        "Une maison d'hôtes confortable chaque nuit — aucun bivouac sur cet itinéraire"
-      ],
-      "days": [
-        {
-          "title": "Bichkek — le lac",
-          "description": "Départ de Bichkek vers l'est par le canyon de Boom, arrivée sur la rive nord pour le déjeuner. Après-midi au champ de pétroglyphes et au musée de plein air de Tcholpon-Ata, puis route vers une maison d'hôtes de la rive sud et dîner."
-        },
-        {
-          "title": "Canyon de Skazka et bord du lac",
-          "description": "Baignade matinale, puis le canyon de Skazka — une courte marche dans le grès rouge érodé, dont l'aspect change d'heure en heure. Après-midi libre sur la plage ou sur l'eau."
-        },
-        {
-          "title": "Jeti-Oguz",
-          "description": "Les formations des Sept Taureaux et du Cœur Brisé, puis trois heures de marche tranquille dans la vallée à travers la forêt d'épicéas jusqu'à la Vallée des Fleurs. Sources chaudes au village ensuite, et nuit en maison d'hôtes à Karakol."
-        },
-        {
-          "title": "Karakol et Barskoon",
-          "description": "Matinée à Karakol : la mosquée doungane, la cathédrale orthodoxe en bois et le bazar. Après-midi dans la vallée de Barskoon, avec ses cascades et la route de montagne vers le plateau de Koumtor."
-        },
-        {
-          "title": "Retour par la rive nord",
-          "description": "Une dernière baignade, puis route vers l'ouest le long de la rive nord avec un arrêt à la tour de Bourana et son minaret karakhanide. Bichkek en fin d'après-midi, transferts selon les besoins."
-        }
-      ],
-      "included": [
-        "Minibus privé avec chauffeur sur tout l'itinéraire",
-        "Quatre nuits en maisons d'hôtes avec salle de bain privative",
-        "Tous les petits-déjeuners et trois dîners",
-        "Guide sur tout l'itinéraire, en anglais, russe, français ou allemand",
-        "Tous les droits d'entrée aux canyons, musées et au champ de pétroglyphes",
-        "Transferts aéroport à l'arrivée et au départ"
-      ],
-      "excluded": [
-        "Vols internationaux",
-        "Assurance voyage",
-        "Les déjeuners et deux dîners à Karakol",
-        "Supplément chambre individuelle (95 €)",
-        "Entrée aux sources chaudes et sports nautiques en option"
-      ],
-      "notes": [
-        {
-          "title": "Saison",
-          "description": "Cet itinéraire fonctionne de début mai à fin octobre. Le lac est assez chaud pour une baignade confortable à partir de mi-juin, même si les locaux commencent bien plus tôt."
-        },
-        {
-          "title": "Rythme",
-          "description": "Le circuit le plus facile que nous proposons. La plus longue marche fait trois heures sur bon sentier avec 250 m de dénivelé, et il n'y a pas d'altitude à proprement parler."
-        },
-        {
-          "title": "Familles",
-          "description": "C'est l'itinéraire que nous recommandons avec des enfants de plus de six ans. Indiquez leur âge à la réservation et nous adapterons les journées de marche."
-        }
-      ]
-    },
-    "silk-road-osh-and-pamir": {
-      "name": "Route de la Soie : Och et le Pamir",
-      "tagline": "Neuf jours de Bichkek à Och en traversant le pays, puis la montée sur la route du Pamir.",
-      "summary": "La traversée complète : Song-Kol, la gorge de Naryn, Och et ses trois mille ans, et les cols de la route du Pamir au-dessus de 4 000 mètres.",
-      "overview": [
-        "C'est le long. Neuf jours pour traverser le Kirghizistan de la vallée de Tchouï au nord jusqu'à la chaîne du Trans-Alaï, à la frontière tadjike, en passant par les alpages, les villes de la route de la Soie et la plus haute route d'Asie centrale.",
-        "La seconde moitié est du vrai voyage en haute altitude. Le col de Taldyk dépasse 3 600 mètres et le Kyzyl-Art atteint 4 280, avec deux nuits au-dessus de 3 500 dans les prairies d'Atchik-Tach, sous le pic Lénine. Carburant, eau et réparations y sont rares : nous emportons tout.",
-        "Nous l'opérons avec huit voyageurs maximum sur deux véhicules, de mi-juin à fin septembre. Il est exigeant, comporte plusieurs longues journées de route, et c'est la plus belle chose que nous fassions."
-      ],
-      "highlights": [
-        "Une traversée complète du pays, de la rive nord à la frontière sud",
-        "Le Souleiman-Too et le bazar d'Och, trois millénaires de route de la Soie",
-        "Les cols de Taldyk (3 615 m) et de Kyzyl-Art (4 280 m)",
-        "Deux nuits au camp de base du pic Lénine, dans les prairies d'Atchik-Tach",
-        "Song-Kol et la gorge de Naryn sur la partie nord"
-      ],
-      "days": [
-        {
-          "title": "Bichkek",
-          "description": "Arrivée et installation à l'hôtel, visite de la ville l'après-midi : place Ala-Too, bazar d'Och et musée national. Briefing d'expédition et dîner de bienvenue avec votre guide et les deux chauffeurs."
-        },
-        {
-          "title": "Vers Song-Kol",
-          "description": "Vers le sud par le col de Too-Achou et la vallée de Suusamyr, montée au lac dans l'après-midi. Première nuit à 3 016 m dans un campement familial, volontairement tôt dans le voyage pour amorcer l'acclimatation."
-        },
-        {
-          "title": "Song-Kol — Naryn",
-          "description": "Descente des lacets puis route vers l'est jusqu'à Naryn, la dernière vraie ville avant le sud. Ravitaillement l'après-midi, promenade au bazar et nuit confortable en maison d'hôtes."
-        },
-        {
-          "title": "Naryn — Kazarman",
-          "description": "Une journée rude et magnifique : deux cols sur une piste non goudronnée qui ferme aux premières neiges. Environ sept heures de route à travers un pays vide, jusqu'à la petite ville de Kazarman."
-        },
-        {
-          "title": "Kazarman — Och",
-          "description": "Par le col de Kaldamo puis descente dans la vallée de Ferghana, où le climat change du tout au tout : coton, abricots et quarante degrés. Arrivée à Och en fin d'après-midi, hôtel et dîner dans la vieille ville."
-        },
-        {
-          "title": "Och",
-          "description": "Une journée entière dans la plus ancienne ville du pays : le Souleiman-Too aux premières lueurs, le bazar Jayma le long de la rivière, et l'après-midi libre. C'est le dernier jour à basse altitude avant la route."
-        },
-        {
-          "title": "Sur la route du Pamir",
-          "description": "Sortie d'Och vers le sud, et ça monte. Le col de Taldyk à 3 615 m ouvre sur la vallée de l'Alaï, avec toute la chaîne du Trans-Alaï à l'horizon sud. Campement dans les prairies d'Atchik-Tach à 3 600 m."
-        },
-        {
-          "title": "Camp de base du pic Lénine",
-          "description": "Journée de marche depuis le camp vers le pied du pic Lénine, avec quelques centaines de mètres de montée jusqu'à un belvédère sur le glacier. Une variante plus longue atteint 4 100 m. Deuxième nuit à Atchik-Tach."
-        },
-        {
-          "title": "Retour à Och",
-          "description": "Retour par le Taldyk jusqu'à Och, arrivée en début d'après-midi. Un vol intérieur ou un transfert de nuit vers Bichkek peut être organisé ; les transferts aéroport sont inclus dans les deux cas."
-        }
-      ],
-      "included": [
-        "Deux 4x4 avec chauffeurs, carburant de réserve et matériel de dépannage",
-        "Huit nuits : trois hôtels, deux maisons d'hôtes, un campement de yourtes, deux nuits sous tente",
-        "Tous les repas sauf trois à Och et Bichkek",
-        "Guide d'expédition et cuisinier sur tout l'itinéraire",
-        "Tentes, matelas et sacs de couchage quatre saisons pour les camps d'altitude",
-        "Tous les droits d'entrée et permis de bivouac à Atchik-Tach",
-        "Transferts aéroport et organisation du trajet ou du vol Och — Bichkek"
-      ],
-      "excluded": [
-        "Vols internationaux",
-        "Assurance avec couverture évacuation — obligatoire et vérifiée",
-        "Le vol intérieur Och — Bichkek lui-même (environ 65 €)",
-        "Supplément tente ou chambre individuelle (240 €)",
-        "Pourboires et équipement personnel"
-      ],
-      "notes": [
-        {
-          "title": "Longues journées de route",
-          "description": "Trois journées comportent sept heures ou plus sur mauvaises pistes. C'est inévitable sur une traversée du pays, et nous préférons que vous le sachiez avant de réserver."
-        },
-        {
-          "title": "Altitude",
-          "description": "Deux nuits à 3 600 m après une semaine de montée progressive. Toute personne souffrant d'un problème cardiaque ou pulmonaire devrait en parler d'abord à un médecin."
-        },
-        {
-          "title": "Zone frontalière",
-          "description": "La vallée de l'Alaï est proche de la frontière tadjike et les passeports sont contrôlés à plusieurs postes. Emportez l'original, pas une copie."
-        }
-      ]
-    },
-    "winter-eagle-hunters": {
-      "name": "Hiver : chasseurs à l'aigle et neige",
-      "tagline": "Cinq jours d'hiver au bord d'un lac qui ne gèle jamais, avec des chasseurs et leurs aigles royaux.",
-      "summary": "Un circuit privé d'hiver : démonstrations de chasse à l'aigle sur neige fraîche, canyons déserts et ski au-dessus de Karakol.",
-      "overview": [
-        "Le Kirghizistan en hiver est un autre pays. Le lac reste libre de glace, la foule a totalement disparu, et les canyons simplement photogéniques en août deviennent extraordinaires sous la neige.",
-        "Le cœur de ce voyage, ce sont deux jours passés avec une famille de berkutchi — chasseurs à l'aigle — près de Bokonbaevo, sur la rive sud. Ce n'est pas un spectacle monté pour les cars de touristes. Vous passez une matinée avec les oiseaux, vous les regardez travailler en terrain ouvert, puis vous déjeunez chez la famille.",
-        "Nous l'opérons uniquement en privé, pour deux à six personnes, en janvier et février. Les journées sont courtes, les températures oscillent entre moins cinq et moins vingt, et chaque nuit se passe en maison d'hôtes chauffée."
-      ],
-      "highlights": [
-        "Deux jours avec une famille de berkutchi et leurs aigles royaux",
-        "Les canyons de Skazka et de Barskoon sous la neige, sans aucun autre visiteur",
-        "Deux jours de ski à la station de Karakol, forfaits inclus",
-        "Les cascades gelées de la vallée de Jeti-Oguz",
-        "Départs privés pour deux à six personnes, à n'importe quelle date de la saison"
-      ],
-      "days": [
-        {
-          "title": "Bichkek en hiver",
-          "description": "Accueil à l'aéroport et transfert à l'hôtel. Courte promenade en ville si la météo le permet, vérification de l'équipement pour le froid, et dîner avec votre guide pour passer en revue la semaine."
-        },
-        {
-          "title": "Vers la rive sud",
-          "description": "Vers l'est par le canyon de Boom jusqu'à Issyk-Koul, libre de glace même par moins quinze. Arrivée à Bokonbaevo l'après-midi et première rencontre avec la famille de chasseurs et leurs oiseaux."
-        },
-        {
-          "title": "Chasse à l'aigle",
-          "description": "Une matinée entière sur les collines au-dessus du village à observer les aigles travailler, avec le temps d'échanger avec les chasseurs sur le dressage et la saison. Après-midi au canyon de Skazka, à son meilleur sous la neige."
-        },
-        {
-          "title": "Karakol et les pistes",
-          "description": "Transfert vers l'est jusqu'à Karakol et une journée en montagne. La station culmine à 3 040 m et le ski en forêt y est vraiment bon. Les non-skieurs passent la journée aux cascades gelées de Jeti-Oguz."
-        },
-        {
-          "title": "Retour à Bichkek",
-          "description": "Une dernière matinée à Karakol pour la mosquée doungane et le marché aux bestiaux si c'est un dimanche, puis retour par la rive nord. Bichkek en soirée, transfert aéroport selon votre vol."
-        }
-      ],
-      "included": [
-        "4x4 privé équipé pour l'hiver avec chauffeur",
-        "Quatre nuits en maisons d'hôtes chauffées avec salle de bain privative",
-        "Tous les petits-déjeuners et quatre dîners",
-        "Guide privé sur tout l'itinéraire, en anglais, russe ou français",
-        "Deux sessions avec la famille de chasseurs à l'aigle",
-        "Forfait de ski à Karakol et location de skis ou snowboard pour une journée",
-        "Transferts aéroport à l'arrivée et au départ"
-      ],
-      "excluded": [
-        "Vols internationaux",
-        "Assurance voyage incluant les sports d'hiver",
-        "Les déjeuners sur tout l'itinéraire",
-        "Journées de ski supplémentaires (55 € forfait et location compris)",
-        "Pourboires pour le guide, le chauffeur et la famille de chasseurs"
-      ],
-      "notes": [
-        {
-          "title": "Le froid",
-          "description": "Comptez moins cinq le jour et jusqu'à moins vingt la nuit. Prévoyez de vraies chaussures isolées et une doudoune ; nous pouvons vous prêter le reste si vous préférez ne pas l'acheter."
-        },
-        {
-          "title": "Les aigles",
-          "description": "Ce sont des oiseaux de travail qui chassent en terrain ouvert, et la faune sauvage ne se produit pas sur commande. Le temps passé avec les chasseurs est garanti ; ce que les aigles attrapent dépend de la journée."
-        },
-        {
-          "title": "En privé uniquement",
-          "description": "Cet itinéraire fonctionne en départ privé pour deux à six personnes. Le prix est par personne sur une base de quatre voyageurs — demandez-nous un devis pour un autre effectif."
-        }
-      ]
-    }
   }
 }

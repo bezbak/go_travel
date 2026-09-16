@@ -6,9 +6,13 @@ import { DestinationCard } from "@/components/destinations/DestinationCard";
 import { PageHero } from "@/components/layout/PageHero";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/ui/Section";
-import { destinations } from "@/data/destinations";
-import { images } from "@/data/images";
 import { routing } from "@/i18n/routing";
+import {
+  getDestinations,
+  getPhotos,
+  type DestinationSummary,
+  type PhotoLibrary
+} from "@/lib/api";
 import { pageMetadata } from "@/lib/metadata";
 
 type DestinationsPageProps = {
@@ -22,7 +26,11 @@ export async function generateMetadata({
   const locale = hasLocale(routing.locales, requested)
     ? requested
     : routing.defaultLocale;
-  const t = await getTranslations({ locale });
+  const [t, photos] = await Promise.all([
+    getTranslations({ locale }),
+    getPhotos(locale)
+  ]);
+  const cover = photos.alpineLake;
 
   return pageMetadata({
     locale,
@@ -30,22 +38,36 @@ export async function generateMetadata({
     title: t("destinationsPage.meta.title"),
     description: t("destinationsPage.meta.description"),
     siteName: t("metadata.siteName"),
-    image: { src: images.alpineLake.src, alt: t(images.alpineLake.altKey) }
+    image: cover ? { src: cover.src, alt: cover.alt } : undefined
   });
 }
 
 export default async function DestinationsPage({ params }: DestinationsPageProps) {
-  const { locale } = await params;
-  setRequestLocale(locale);
+  const { locale: requested } = await params;
+  setRequestLocale(requested);
+  const locale = hasLocale(routing.locales, requested)
+    ? requested
+    : routing.defaultLocale;
+
+  const [destinations, photos] = await Promise.all([
+    getDestinations(locale),
+    getPhotos(locale)
+  ]);
 
   return (
     <PageShell>
-      <DestinationsPageContent />
+      <DestinationsPageContent destinations={destinations} photos={photos} />
     </PageShell>
   );
 }
 
-function DestinationsPageContent() {
+function DestinationsPageContent({
+  destinations,
+  photos
+}: {
+  destinations: DestinationSummary[];
+  photos: PhotoLibrary;
+}) {
   const t = useTranslations();
 
   return (
@@ -58,8 +80,8 @@ function DestinationsPageContent() {
         crumbsLabel={t("common.breadcrumbLabel")}
         description={t("destinationsPage.heroDescription")}
         eyebrow={t("destinationsPage.heroEyebrow")}
-        image={images.alpineLake}
-        imageAlt={t(images.alpineLake.altKey)}
+        image={photos.alpineLake ?? null}
+        imageAlt={photos.alpineLake?.alt ?? ""}
         title={t("destinationsPage.heroTitle")}
       />
 

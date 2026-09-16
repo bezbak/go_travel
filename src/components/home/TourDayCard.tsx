@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import type { ImageAsset } from "@/data/images";
+import type { ApiImage } from "@/lib/api";
 
 type TourDayCardProps = {
   dayNumber: number;
   title: string;
   description: string;
-  image: ImageAsset;
+  image: ApiImage | null;
 };
 
 export function TourDayCard({
@@ -32,10 +32,10 @@ export function TourDayCard({
       <div className="relative mt-[7px] h-[clamp(78px,13vw,248px)] overflow-hidden rounded-[12px] bg-[#ece8de]">
         <Image
           fill
-          alt={t(image.altKey)}
+          alt={image?.alt ?? ""}
           className="object-cover transition duration-300 group-hover:scale-[1.03]"
           sizes="(min-width: 1280px) 16vw, 33vw"
-          src={image.src}
+          src={image?.src ?? ""}
         />
       </div>
 

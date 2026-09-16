@@ -3,9 +3,14 @@ import { useTranslations } from "next-intl";
 
 import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { homeTour } from "@/data/tours";
+import type { ApiImage } from "@/lib/api";
 
-export function Hero() {
+type HeroProps = {
+  image: ApiImage | null;
+  featuredTourSlug: string | null;
+};
+
+export function Hero({ image, featuredTourSlug }: HeroProps) {
   const t = useTranslations("hero");
 
   return (
@@ -16,10 +21,10 @@ export function Hero() {
       <Image
         fill
         priority
-        alt={t("imageAlt")}
+        alt={image?.alt ?? ""}
         className="object-cover object-center"
         sizes="100vw"
-        src="/images/hero-yurts.png"
+        src={image?.src ?? ""}
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.9)_0%,rgba(255,255,255,0.78)_22%,rgba(255,255,255,0.18)_50%,rgba(255,255,255,0)_74%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.22)_0%,rgba(255,255,255,0)_28%,rgba(255,255,255,0.02)_72%,rgba(244,241,232,0.46)_100%)]" />
@@ -47,14 +52,16 @@ export function Hero() {
             <ButtonLink href="/tours" internal size="sm">
               {t("primaryCta")}
             </ButtonLink>
-            <ButtonLink
-              href={`/tours/${homeTour.slug}`}
-              internal
-              size="sm"
-              variant="outline"
-            >
-              {t("secondaryCta")}
-            </ButtonLink>
+            {featuredTourSlug ? (
+              <ButtonLink
+                href={`/tours/${featuredTourSlug}`}
+                internal
+                size="sm"
+                variant="outline"
+              >
+                {t("secondaryCta")}
+              </ButtonLink>
+            ) : null}
           </div>
         </div>
       </Container>

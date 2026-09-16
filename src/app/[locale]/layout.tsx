@@ -12,6 +12,7 @@ import type { ReactNode } from "react";
 
 import "@/app/globals.css";
 import { routing } from "@/i18n/routing";
+import { getSiteContent } from "@/lib/api";
 import { ogLocales, localeAlternates } from "@/lib/metadata";
 
 const inter = Inter({
@@ -43,7 +44,11 @@ export async function generateMetadata({
   const locale = hasLocale(routing.locales, requestedLocale)
     ? requestedLocale
     : routing.defaultLocale;
-  const t = await getTranslations({ locale, namespace: "metadata" });
+  const [t, site] = await Promise.all([
+    getTranslations({ locale, namespace: "metadata" }),
+    getSiteContent(locale)
+  ]);
+  const hero = site.heroImage;
 
   return {
     metadataBase: new URL("https://go_kyrgyzstan.travel"),
@@ -60,14 +65,9 @@ export async function generateMetadata({
         .filter((alternate) => alternate !== locale)
         .map((alternate) => ogLocales[alternate]),
       type: "website",
-      images: [
-        {
-          url: "/images/hero-yurts.png",
-          width: 1200,
-          height: 630,
-          alt: t("ogAlt")
-        }
-      ]
+      images: hero
+        ? [{ url: hero.src, width: hero.width, height: hero.height, alt: hero.alt }]
+        : []
     }
   };
 }

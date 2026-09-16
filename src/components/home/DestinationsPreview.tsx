@@ -3,9 +3,13 @@ import { useTranslations } from "next-intl";
 import { DestinationCard } from "@/components/destinations/DestinationCard";
 import { ButtonLink } from "@/components/ui/Button";
 import { Section } from "@/components/ui/Section";
-import { destinations } from "@/data/destinations";
+import type { DestinationSummary } from "@/lib/api";
 
-export function DestinationsPreview() {
+type DestinationsPreviewProps = {
+  destinations: DestinationSummary[];
+};
+
+export function DestinationsPreview({ destinations }: DestinationsPreviewProps) {
   const t = useTranslations("destinationsSection");
 
   return (

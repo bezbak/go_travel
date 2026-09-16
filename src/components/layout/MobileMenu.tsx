@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
 import { ButtonLink } from "@/components/ui/Button";
-import { contact } from "@/data/site";
 import type { Locale } from "@/i18n/routing";
 
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -19,6 +18,7 @@ export type NavItem = {
 
 type MobileMenuProps = {
   navItems: NavItem[];
+  phoneHref: string;
   brand: {
     homeAria: string;
     logoText: string;
@@ -38,7 +38,7 @@ type MobileMenuProps = {
   };
 };
 
-export function MobileMenu({ navItems, brand, labels }: MobileMenuProps) {
+export function MobileMenu({ navItems, brand, labels, phoneHref }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -128,7 +128,7 @@ export function MobileMenu({ navItems, brand, labels }: MobileMenuProps) {
                   <a
                     aria-label={labels.phoneAria}
                     className="flex items-center gap-3 font-display text-[14px] font-bold text-[#181818]"
-                    href={contact.phoneHref}
+                    href={phoneHref}
                   >
                     <span className="grid size-10 place-items-center rounded-full bg-[#669a17] text-white">
                       <Phone aria-hidden="true" className="size-4" />

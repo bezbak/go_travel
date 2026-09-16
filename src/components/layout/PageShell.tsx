@@ -1,4 +1,8 @@
+import { getLocale } from "next-intl/server";
 import type { ReactNode } from "react";
+
+import { getSiteContent } from "@/lib/api";
+import type { Locale } from "@/i18n/routing";
 
 import { Footer } from "./Footer";
 import { Header } from "./Header";
@@ -9,12 +13,15 @@ type PageShellProps = {
   variant?: "overlay" | "solid";
 };
 
-export function PageShell({ children, variant = "solid" }: PageShellProps) {
+export async function PageShell({ children, variant = "solid" }: PageShellProps) {
+  const locale = (await getLocale()) as Locale;
+  const site = await getSiteContent(locale);
+
   return (
     <>
-      <Header variant={variant} />
+      <Header contact={site.contact} variant={variant} />
       <main>{children}</main>
-      <Footer />
+      <Footer contact={site.contact} />
     </>
   );
 }

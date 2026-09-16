@@ -3,11 +3,16 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 import { Container } from "@/components/ui/Container";
-import { featureImage } from "@/data/tours";
+import type { ApiImage } from "@/lib/api";
 
 const featureIcons = [Mountain, MapPinned, UsersRound, Leaf] as const;
 
-export function WhyTravelWithUs() {
+type WhyTravelWithUsProps = {
+  featureImage: ApiImage | null;
+  backdropImage: ApiImage | null;
+};
+
+export function WhyTravelWithUs({ featureImage, backdropImage }: WhyTravelWithUsProps) {
   const t = useTranslations();
 
   return (
@@ -22,7 +27,7 @@ export function WhyTravelWithUs() {
           alt=""
           className="soft-section-fade object-cover object-left-bottom"
           sizes="48vw"
-          src="/images/hero-yurts.png"
+          src={backdropImage?.src ?? ""}
         />
       </div>
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(248,246,239,0.28)_0%,rgba(248,246,239,0.88)_44%,rgba(248,246,239,0.96)_100%)]" />
@@ -33,10 +38,10 @@ export function WhyTravelWithUs() {
             <div className="relative h-[clamp(120px,21vw,328px)] overflow-hidden rounded-[12px] bg-[#d9d4c8]">
               <Image
                 fill
-                alt={t(featureImage.altKey)}
+                alt={featureImage?.alt ?? ""}
                 className="object-cover"
                 sizes="(min-width: 1024px) 40vw, 45vw"
-                src={featureImage.src}
+                src={featureImage?.src ?? ""}
               />
             </div>
           </div>

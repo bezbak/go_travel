@@ -1,53 +1,35 @@
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import type { ImageAsset } from "@/data/images";
-import { cn } from "@/lib/utils";
+import { Lightbox } from "@/components/ui/Lightbox";
+import type { ApiImage } from "@/lib/api";
 
 type PhotoGridProps = {
-  images: ImageAsset[];
+  images: ApiImage[];
   className?: string;
   /** `feature` makes the first photo span two columns and two rows. */
   layout?: "even" | "feature";
 };
 
+/** Photo grid whose tiles open a full-screen gallery. */
 export function PhotoGrid({ images, className, layout = "feature" }: PhotoGridProps) {
-  const t = useTranslations();
+  const t = useTranslations("lightbox");
 
   if (images.length === 0) {
     return null;
   }
 
   return (
-    <div
-      className={cn(
-        "grid grid-cols-2 gap-[var(--grid-gap)] lg:grid-cols-4",
-        className
-      )}
-    >
-      {images.map((image, index) => (
-        <div
-          key={`${image.src}-${index}`}
-          className={cn(
-            "relative h-[180px] overflow-hidden rounded-[14px] bg-[#e7e2d9] 2xl:h-[210px]",
-            layout === "feature" &&
-              index === 0 &&
-              "sm:col-span-2 sm:row-span-2 sm:h-full sm:min-h-[374px] 2xl:min-h-[434px]"
-          )}
-        >
-          <Image
-            fill
-            alt={t(image.altKey)}
-            className="object-cover transition duration-500 hover:scale-[1.04]"
-            sizes={
-              layout === "feature" && index === 0
-                ? "(min-width: 640px) 50vw, 90vw"
-                : "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 90vw"
-            }
-            src={image.src}
-          />
-        </div>
-      ))}
-    </div>
+    <Lightbox
+      className={className}
+      images={images}
+      labels={{
+        open: t.raw("open") as string,
+        close: t.raw("close") as string,
+        previous: t.raw("previous") as string,
+        next: t.raw("next") as string,
+        counter: t.raw("counter") as string
+      }}
+      layout={layout}
+    />
   );
 }

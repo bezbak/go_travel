@@ -5,8 +5,8 @@ import type { ComponentType } from "react";
 import { InstagramIcon, WhatsappIcon } from "@/components/ui/BrandIcons";
 import { Container } from "@/components/ui/Container";
 import { footerCompanyNav, footerInformationNav, mainNav } from "@/data/navigation";
-import { contact, social } from "@/data/site";
 import { Link } from "@/i18n/navigation";
+import type { SiteContent } from "@/lib/api";
 
 import { Logo } from "./Logo";
 
@@ -15,8 +15,17 @@ const socialIcons: Record<string, ComponentType<{ className?: string }>> = {
   whatsapp: WhatsappIcon
 };
 
-export function Footer() {
+type FooterProps = {
+  contact: SiteContent["contact"];
+};
+
+export function Footer({ contact }: FooterProps) {
   const t = useTranslations();
+
+  const social = [
+    { key: "instagram", href: contact?.instagramHref },
+    { key: "whatsapp", href: contact?.whatsappHref }
+  ].filter((item): item is { key: string; href: string } => Boolean(item.href));
 
   return (
     <footer className="bg-[#181818] pt-[clamp(30px,3.4vw,52px)] pb-[34px] text-white">
@@ -80,7 +89,7 @@ export function Footer() {
             <li className="flex items-start gap-2.5">
               <MapPin aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-[#8fbc4a]" />
               <span>
-                {contact.addressLines.map((line) => (
+                {contact?.addressLines.map((line) => (
                   <span key={line} className="block">
                     {line}
                   </span>
@@ -91,18 +100,18 @@ export function Footer() {
               <Phone aria-hidden="true" className="size-4 shrink-0 text-[#8fbc4a]" />
               <a
                 className="transition duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#669a17]"
-                href={contact.phoneHref}
+                href={contact?.phoneHref ?? "#"}
               >
-                {contact.phone}
+                {contact?.phone}
               </a>
             </li>
             <li className="flex items-center gap-2.5">
               <Mail aria-hidden="true" className="size-4 shrink-0 text-[#8fbc4a]" />
               <a
                 className="break-all transition duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#669a17]"
-                href={contact.emailHref}
+                href={contact ? `mailto:${contact.email}` : "#"}
               >
-                {contact.email}
+                {contact?.email}
               </a>
             </li>
           </ul>

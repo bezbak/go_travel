@@ -2,15 +2,22 @@ import { Quote, Star } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { Section } from "@/components/ui/Section";
-import { testimonials } from "@/data/site";
+import type { SiteContent } from "@/lib/api";
 import { cn } from "@/lib/utils";
 
 type TestimonialsProps = {
+  testimonials: SiteContent["testimonials"];
+  tourNames: Record<string, string>;
   id?: string;
   className?: string;
 };
 
-export function Testimonials({ id = "reviews", className }: TestimonialsProps) {
+export function Testimonials({
+  testimonials,
+  tourNames,
+  id = "reviews",
+  className
+}: TestimonialsProps) {
   const t = useTranslations();
 
   return (
@@ -59,7 +66,7 @@ export function Testimonials({ id = "reviews", className }: TestimonialsProps) {
             </div>
 
             <blockquote className="mt-[12px] flex-1 text-[13px] font-medium leading-[1.65] text-[#4f4f4f]">
-              {t(`testimonials.${testimonial.key}.quote`)}
+              {testimonial.quote}
             </blockquote>
 
             <figcaption className="mt-[18px] border-t border-[#e4e0d6] pt-[14px]">
@@ -67,8 +74,8 @@ export function Testimonials({ id = "reviews", className }: TestimonialsProps) {
                 {testimonial.name}
               </p>
               <p className="mt-1 text-[12px] font-medium text-[#7a7a7a]">
-                {t(`common.countries.${testimonial.countryKey}`)} ·{" "}
-                {t(`tours.${testimonial.tourSlug}.name`)}
+                {testimonial.country}
+                {testimonial.tourSlug ? ` · ${tourNames[testimonial.tourSlug] ?? ""}` : ""}
               </p>
             </figcaption>
           </figure>

@@ -1,4 +1,5 @@
 import { buildAmoFormData, amoForm, validateInquiry, type InquiryPayload } from "@/lib/amo";
+import { apiOrigin } from "@/lib/api";
 
 /** Nothing here may be cached — every enquiry has to reach amoCRM. */
 export const dynamic = "force-dynamic";
@@ -35,6 +36,10 @@ export async function POST(request: Request) {
     return Response.json({ ok: false, error: "invalid_payload" }, { status: 422 });
   }
 
+  // The enquiry is also stored in the CMS so the team can see it in the admin;
+  // a failure here must never block the amoCRM hand-off, which is the record.
+  const storedInCrm = { sent: false };
+
   try {
     const response = await fetch(amoForm.endpoint, {
       method: "POST",
@@ -60,5 +65,22 @@ export async function POST(request: Request) {
     return Response.json({ ok: false, error: "crm_unreachable" }, { status: 502 });
   }
 
+  storedInCrm.sent = true;
+  await recordInquiry(payload, storedInCrm.sent);
+
   return Response.json({ ok: true });
+}
+
+/** Mirrors the enquiry into Django so it shows up under "Заявки". */
+async function recordInquiry(payload: InquiryPayload, sentToCrm: boolean) {
+  try {
+    await fetch(`${apiOrigin}/api/inquiries/`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...payload, sentToCrm }),
+      signal: AbortSignal.timeout(8_000)
+    });
+  } catch (error) {
+    console.error("Could not store the enquiry in the CMS", error);
+  }
 }

@@ -12,22 +12,23 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { PhotoGrid } from "@/components/ui/PhotoGrid";
 import { Section } from "@/components/ui/Section";
-import {
-  destinationSlugs,
-  getDestination,
-  type Destination
-} from "@/data/destinations";
-import { getToursByDestination } from "@/data/tours";
 import { routing } from "@/i18n/routing";
-import { rawList } from "@/lib/messages";
+import {
+  getBuildSlugs,
+  getDestination,
+  getTours,
+  type Destination,
+  type TourSummary
+} from "@/lib/api";
 import { pageMetadata } from "@/lib/metadata";
 
 type DestinationDetailPageProps = {
   params: Promise<{ locale: string; slug: string }>;
 };
 
-export function generateStaticParams() {
-  return destinationSlugs.map((slug) => ({ slug }));
+export async function generateStaticParams() {
+  const slugs = await getBuildSlugs("destinations");
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -37,7 +38,7 @@ export async function generateMetadata({
   const locale = hasLocale(routing.locales, requested)
     ? requested
     : routing.defaultLocale;
-  const destination = getDestination(slug);
+  const destination = await getDestination(locale, slug);
 
   if (!destination) {
     return {};
@@ -48,50 +49,55 @@ export async function generateMetadata({
   return pageMetadata({
     locale,
     path: `/destinations/${destination.slug}`,
-    title: t("destinationDetail.meta.title", {
-      name: t(`destinations.${destination.slug}.name`)
-    }),
-    description: t(`destinations.${destination.slug}.summary`),
+    title: t("destinationDetail.meta.title", { name: destination.name }),
+    description: destination.summary,
     siteName: t("metadata.siteName"),
-    image: {
-      src: destination.heroImage.src,
-      alt: t(destination.heroImage.altKey)
-    }
+    image: destination.heroImage
+      ? { src: destination.heroImage.src, alt: destination.heroImage.alt }
+      : undefined
   });
 }
 
 export default async function DestinationDetailPage({
   params
 }: DestinationDetailPageProps) {
-  const { locale, slug } = await params;
-  setRequestLocale(locale);
+  const { locale: requested, slug } = await params;
+  setRequestLocale(requested);
+  const locale = hasLocale(routing.locales, requested)
+    ? requested
+    : routing.defaultLocale;
 
-  const destination = getDestination(slug);
+  const [destination, allTours] = await Promise.all([
+    getDestination(locale, slug),
+    getTours(locale)
+  ]);
 
   if (!destination) {
     notFound();
   }
 
+  const relatedTours = allTours.filter((tour) =>
+    tour.destinations.some((region) => region.slug === slug)
+  );
+
   return (
     <PageShell>
-      <DestinationDetailContent destination={destination} />
+      <DestinationDetailContent destination={destination} relatedTours={relatedTours} />
     </PageShell>
   );
 }
 
 function DestinationDetailContent({
-  destination
+  destination,
+  relatedTours
 }: {
   destination: Destination;
+  relatedTours: TourSummary[];
 }) {
   const t = useTranslations();
-  const name = t(`destinations.${destination.slug}.name`);
-  const body = rawList<string>(t, `destinations.${destination.slug}.body`);
-  const highlights = rawList<string>(
-    t,
-    `destinations.${destination.slug}.highlights`
-  );
-  const relatedTours = getToursByDestination(destination.slug);
+  const name = destination.name;
+  const body = destination.body;
+  const highlights = destination.highlights;
 
   return (
     <>
@@ -102,10 +108,10 @@ function DestinationDetailContent({
           { label: name }
         ]}
         crumbsLabel={t("common.breadcrumbLabel")}
-        description={t(`destinations.${destination.slug}.summary`)}
+        description={destination.summary}
         eyebrow={t("destinationDetail.eyebrow")}
         image={destination.heroImage}
-        imageAlt={t(destination.heroImage.altKey)}
+        imageAlt={destination.heroImage?.alt ?? ""}
         size="lg"
         title={name}
       />
@@ -132,7 +138,7 @@ function DestinationDetailContent({
             <Fact
               icon={<CalendarRange aria-hidden="true" className="size-[clamp(13px,1.4vw,18px)]" />}
               label={t("common.bestSeason")}
-              value={t(`destinations.${destination.slug}.bestTime`)}
+              value={destination.bestTime}
             />
           </dl>
         </Container>

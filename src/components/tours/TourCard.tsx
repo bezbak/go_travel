@@ -3,14 +3,14 @@ import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 
 import { Badge } from "@/components/ui/Badge";
-import { tourDuration, type Tour } from "@/data/tours";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
+import type { TourSummary } from "@/lib/api";
 import { formatPrice, formatRating } from "@/lib/format";
 import { cn } from "@/lib/utils";
 
 type TourCardProps = {
-  tour: Tour;
+  tour: TourSummary;
   className?: string;
   /** Grid cards fill their column; rail cards keep a fixed width for scrolling. */
   layout?: "grid" | "rail";
@@ -19,7 +19,6 @@ type TourCardProps = {
 export function TourCard({ tour, className, layout = "grid" }: TourCardProps) {
   const t = useTranslations();
   const locale = useLocale() as Locale;
-  const days = tourDuration(tour);
   const region = tour.destinations[0];
 
   return (
@@ -33,10 +32,10 @@ export function TourCard({ tour, className, layout = "grid" }: TourCardProps) {
       <div className="relative h-[clamp(104px,14.5vw,236px)] shrink-0 overflow-hidden bg-[#e7e2d9]">
         <Image
           fill
-          alt={t(tour.cardImage.altKey)}
+          alt={tour.cardImage?.alt ?? ""}
           className="object-cover transition duration-500 group-hover:scale-[1.05]"
           sizes="(min-width: 1280px) 33vw, 50vw"
-          src={tour.cardImage.src}
+          src={tour.cardImage?.src ?? ""}
         />
         <div className="absolute inset-x-0 top-0 flex flex-wrap items-start justify-between gap-1.5 p-[clamp(7px,1vw,14px)]">
           <Badge tone="green">{t(`common.style.${tour.style}`)}</Badge>
@@ -49,7 +48,7 @@ export function TourCard({ tour, className, layout = "grid" }: TourCardProps) {
       <div className="flex flex-1 flex-col p-[clamp(10px,1.5vw,24px)]">
         <div className="flex flex-wrap items-center gap-x-2 text-[length:var(--fs-3xs)] font-semibold text-[#7a7a7a]">
           <MapPin aria-hidden="true" className="size-[14px] text-[#6a9d17]" />
-          <span>{t(`destinations.${region}.name`)}</span>
+          <span>{region?.name}</span>
           <span aria-hidden="true">·</span>
           <span className="flex items-center gap-1 text-[#171717]">
             <Star
@@ -66,19 +65,19 @@ export function TourCard({ tour, className, layout = "grid" }: TourCardProps) {
             className="transition duration-200 after:absolute after:inset-0 after:content-[''] hover:text-[#669a17] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6a9d17]"
             href={`/tours/${tour.slug}`}
           >
-            {t(`tours.${tour.slug}.name`)}
+            {tour.name}
           </Link>
         </h3>
 
         <p className="mt-[10px] text-[length:var(--fs-xs)] font-medium leading-[1.6] text-[#5f5f5f]">
-          {t(`tours.${tour.slug}.summary`)}
+          {tour.summary}
         </p>
 
         <dl className="mt-[16px] flex flex-wrap items-center gap-x-[clamp(8px,1.2vw,18px)] gap-y-2 text-[length:var(--fs-3xs)] font-semibold text-[#4f4f4f]">
           <div className="flex items-center gap-1.5">
             <dt className="sr-only">{t("common.duration")}</dt>
             <Clock aria-hidden="true" className="size-[14px] text-[#6a9d17]" />
-            <dd>{t("common.days", { count: days })}</dd>
+            <dd>{t("common.days", { count: tour.days })}</dd>
           </div>
           <div className="flex items-center gap-1.5">
             <dt className="sr-only">{t("common.groupSize")}</dt>

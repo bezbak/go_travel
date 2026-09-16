@@ -2,13 +2,13 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 
 import { Container } from "@/components/ui/Container";
-import type { ImageAsset } from "@/data/images";
+import type { ApiImage } from "@/lib/api";
 import { cn } from "@/lib/utils";
 
 import { Breadcrumbs, type Crumb } from "./Breadcrumbs";
 
 type PageHeroProps = {
-  image: ImageAsset;
+  image: ApiImage | null;
   imageAlt: string;
   eyebrow?: string;
   title: ReactNode;
@@ -47,7 +47,7 @@ export function PageHero({
         alt={imageAlt}
         className="-z-10 object-cover object-center"
         sizes="100vw"
-        src={image.src}
+        src={image?.src ?? ""}
       />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(12,12,12,0.72)_0%,rgba(12,12,12,0.35)_45%,rgba(12,12,12,0.82)_100%)]" />
 

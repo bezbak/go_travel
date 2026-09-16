@@ -8,11 +8,19 @@ import { InquiryForm } from "@/components/forms/InquiryForm";
 import { PageHero } from "@/components/layout/PageHero";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/ui/Section";
-import { images } from "@/data/images";
-import { bookingSteps, contact } from "@/data/site";
-import { tours } from "@/data/tours";
 import { routing } from "@/i18n/routing";
+import {
+  getPhotos,
+  getSiteContent,
+  getTours,
+  type PhotoLibrary,
+  type SiteContent,
+  type TourSummary
+} from "@/lib/api";
 import { pageMetadata } from "@/lib/metadata";
+
+/** Keys into `contactPage.steps.*`; the copy is UI text, not CMS content. */
+const bookingSteps = ["choose", "confirm", "prepare", "travel"] as const;
 
 type ContactPageProps = {
   params: Promise<{ locale: string }>;
@@ -25,7 +33,11 @@ export async function generateMetadata({
   const locale = hasLocale(routing.locales, requested)
     ? requested
     : routing.defaultLocale;
-  const t = await getTranslations({ locale });
+  const [t, photos] = await Promise.all([
+    getTranslations({ locale }),
+    getPhotos(locale)
+  ]);
+  const cover = photos.bishkekSunset;
 
   return pageMetadata({
     locale,
@@ -33,23 +45,44 @@ export async function generateMetadata({
     title: t("contactPage.meta.title"),
     description: t("contactPage.meta.description"),
     siteName: t("metadata.siteName"),
-    image: { src: images.bishkekSunset.src, alt: t(images.bishkekSunset.altKey) }
+    image: cover ? { src: cover.src, alt: cover.alt } : undefined
   });
 }
 
 export default async function ContactPage({ params }: ContactPageProps) {
-  const { locale } = await params;
-  setRequestLocale(locale);
+  const { locale: requested } = await params;
+  setRequestLocale(requested);
+  const locale = hasLocale(routing.locales, requested)
+    ? requested
+    : routing.defaultLocale;
+
+  const [site, photos, tours] = await Promise.all([
+    getSiteContent(locale),
+    getPhotos(locale),
+    getTours(locale)
+  ]);
 
   return (
     <PageShell>
-      <ContactPageContent />
+      <ContactPageContent contact={site.contact} photos={photos} tours={tours} />
     </PageShell>
   );
 }
 
-function ContactPageContent() {
+function ContactPageContent({
+  contact,
+  photos,
+  tours
+}: {
+  contact: SiteContent["contact"];
+  photos: PhotoLibrary;
+  tours: TourSummary[];
+}) {
   const t = useTranslations();
+
+  if (!contact) {
+    return null;
+  }
 
   return (
     <>
@@ -61,8 +94,8 @@ function ContactPageContent() {
         crumbsLabel={t("common.breadcrumbLabel")}
         description={t("contactPage.heroDescription")}
         eyebrow={t("contactPage.heroEyebrow")}
-        image={images.bishkekSunset}
-        imageAlt={t(images.bishkekSunset.altKey)}
+        image={photos.bishkekSunset ?? null}
+        imageAlt={photos.bishkekSunset?.alt ?? ""}
         title={t("contactPage.heroTitle")}
       />
 
@@ -91,7 +124,7 @@ function ContactPageContent() {
                 value={contact.whatsapp}
               />
               <ContactRow
-                href={contact.emailHref}
+                href={`mailto:${contact.email}`}
                 icon={<Mail aria-hidden="true" className="size-[17px]" />}
                 label={t("contactPage.emailLabel")}
                 value={contact.email}
@@ -135,7 +168,7 @@ function ContactPageContent() {
                 { value: "general", label: t("contactPage.generalEnquiry") },
                 ...tours.map((tour) => ({
                   value: tour.slug,
-                  label: t(`tours.${tour.slug}.name`)
+                  label: tour.name
                 }))
               ]}
             />
