@@ -7,8 +7,6 @@
  * has to fetch them from the API host.
  */
 
-import { unstable_cache } from "next/cache";
-
 import type { Locale } from "@/i18n/routing";
 
 /** Where Django runs. Override with API_BASE_URL in the environment. */
@@ -244,12 +242,29 @@ export function getPhotos(locale: Locale) {
 }
 
 /**
+ * Deduplicates the slug lookup within one build without surviving it.
+ *
+ * `unstable_cache` would persist to `.next/cache` and hand the next build the
+ * previous list, so a tour added in the admin would not be prerendered until
+ * the entry expired — the pages worked, but only by rendering on demand. A
+ * plain module-level map gives the same one-request-per-kind saving and starts
+ * empty in every build process.
+ */
+const buildSlugCache = new Map<string, Promise<string[]>>();
+
+/**
  * Slugs for `generateStaticParams`. A build with the backend down still has to
  * succeed, so an unreachable API yields no prerendered paths and the pages are
  * rendered on demand instead.
  */
-export const getBuildSlugs = unstable_cache(
-  async (kind: "tours" | "destinations") => {
+export function getBuildSlugs(kind: "tours" | "destinations") {
+  const cached = buildSlugCache.get(kind);
+
+  if (cached) {
+    return cached;
+  }
+
+  const pending = (async () => {
     try {
       const response = await fetch(`${apiOrigin}/api/${kind}/?locale=en`, {
         cache: "no-store"
@@ -265,12 +280,14 @@ export const getBuildSlugs = unstable_cache(
       console.warn(
         `[api] ${apiOrigin} unreachable — /${kind} pages will render on demand.`
       );
+      buildSlugCache.delete(kind);
       return [];
     }
-  },
-  ["build-slugs"],
-  { revalidate: REVALIDATE_SECONDS }
-);
+  })();
+
+  buildSlugCache.set(kind, pending);
+  return pending;
+}
 
 /** The tour whose itinerary the home page showcases. */
 export async function getHomeTour(locale: Locale): Promise<Tour | null> {
