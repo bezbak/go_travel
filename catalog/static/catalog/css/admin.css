@@ -1,0 +1,193 @@
+/* Go Kyrgyzstan admin: photo thumbnails, gallery grids and the lightbox. */
+
+:root {
+  --gk-green: #669a17;
+  --gk-green-dark: #56880f;
+  --gk-orange: #f45a16;
+  --gk-border: #e3ded2;
+}
+
+/* --- thumbnails ---------------------------------------------------------- */
+
+.gk-thumb {
+  border-radius: 10px;
+  border: 1px solid var(--gk-border);
+  object-fit: cover;
+  background: #f4f1e8;
+  cursor: zoom-in;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  vertical-align: middle;
+}
+
+.gk-thumb:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(23, 23, 23, 0.18);
+}
+
+.gk-thumb--large {
+  width: 260px;
+  height: 160px;
+}
+
+.gk-thumb--empty {
+  display: inline-grid;
+  place-items: center;
+  width: 74px;
+  height: 74px;
+  border-radius: 10px;
+  border: 1px dashed var(--gk-border);
+  color: #a8a29a;
+}
+
+.gk-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 4px 0 2px;
+}
+
+.gk-empty {
+  margin: 6px 0;
+  color: #8a8a8a;
+  font-style: italic;
+}
+
+/* Inline rows hold a thumbnail, so give them room to breathe. */
+.inline-group .tabular td.field-photo_preview,
+.inline-group .tabular td.field-day_preview {
+  width: 92px;
+  padding: 6px 8px;
+}
+
+/* --- lightbox ------------------------------------------------------------ */
+
+body.gk-lightbox-open {
+  overflow: hidden;
+}
+
+.gk-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 20000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 32px 16px 64px;
+  background: rgba(16, 16, 16, 0.92);
+  backdrop-filter: blur(4px);
+}
+
+.gk-lightbox[hidden] {
+  display: none;
+}
+
+.gk-lightbox__figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  max-width: min(1200px, 88vw);
+  max-height: 84vh;
+}
+
+.gk-lightbox__figure img {
+  max-width: 100%;
+  max-height: 74vh;
+  border-radius: 12px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
+  object-fit: contain;
+  background: #101010;
+}
+
+.gk-lightbox__figure figcaption {
+  color: #f3f3f3;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 780px;
+}
+
+.gk-lightbox__nav,
+.gk-lightbox__close {
+  border: 0;
+  cursor: pointer;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  line-height: 1;
+  transition: background 0.18s ease;
+}
+
+.gk-lightbox__nav:hover,
+.gk-lightbox__close:hover {
+  background: var(--gk-green);
+}
+
+.gk-lightbox__nav {
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  font-size: 30px;
+}
+
+.gk-lightbox__nav[hidden] {
+  visibility: hidden;
+}
+
+.gk-lightbox__close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  width: 44px;
+  height: 44px;
+  font-size: 26px;
+}
+
+.gk-lightbox__counter {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 640px) {
+  .gk-lightbox {
+    padding: 16px 8px 56px;
+  }
+
+  .gk-lightbox__nav {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+}
+
+/* --- small brand touches ------------------------------------------------- */
+
+.main-header.navbar {
+  border-bottom: 1px solid var(--gk-border);
+}
+
+.btn-primary {
+  background-color: var(--gk-green);
+  border-color: var(--gk-green);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--gk-green-dark);
+  border-color: var(--gk-green-dark);
+}
+
+a {
+  color: var(--gk-green-dark);
+}
+
+.card-title {
+  font-weight: 700;
+}
