@@ -26,6 +26,11 @@ DEBUG = os.environ.get("DJANGO_DEBUG", "1") == "1"
 
 ALLOWED_HOSTS = env_list("DJANGO_ALLOWED_HOSTS", ["back.go-kyrgyzstan.com","127.0.0.1","go-kyrgyzstan.com"])
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://back.go-kyrgyzstan.com',
+    'https://go-kyrgyzstan.com',
+]
+
 INSTALLED_APPS = [
     # Must precede django.contrib.admin so Jazzmin can override its templates.
     "jazzmin",
