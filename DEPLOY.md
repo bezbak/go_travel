@@ -46,8 +46,11 @@ export DJANGO_CORS_ORIGINS=https://example.com
 .venv/bin/gunicorn config.wsgi:application --bind 127.0.0.1:8000 --workers 3
 ```
 
-При `DJANGO_DEBUG=0` Django перестаёт раздавать файлы сам — `media/` и
-`staticfiles/` должен отдавать nginx:
+При `DJANGO_DEBUG=0` Django перестаёт раздавать файлы сам. Если перед ним стоит
+nginx — пусть отдаёт он; если нет (например, только gunicorn под pm2), включите
+`DJANGO_SERVE_FILES=1`, иначе все фото отдадут 404, а админка останется без CSS.
+
+nginx:
 
 ```nginx
 location /media/       { alias /srv/go_travel_back/media/; expires 30d; }
@@ -55,8 +58,11 @@ location /static/      { alias /srv/go_travel_back/staticfiles/; expires 30d; }
 location /api/ /admin/ { proxy_pass http://127.0.0.1:8000; }
 ```
 
-Фотографии сайт грузит **напрямую с хоста бэкенда**, поэтому `/media/` должен
-быть доступен публично, а `API_BASE_URL` — быть публичным адресом.
+Фотографии на страницах браузер берёт **не с бэкенда**: их забирает сервер
+Next и отдаёт уже оптимизированными со своего порта. Бэкенд достаточно сделать
+доступным для сервера Next — публичный адрес нужен только для `og:image`
+(превью ссылок в соцсетях и мессенджерах), поэтому `API_BASE_URL` всё же лучше
+указывать публичным.
 
 ## 2. Сайт
 
@@ -77,7 +83,54 @@ nginx перед Node:
 location / { proxy_pass http://127.0.0.1:3000; }
 ```
 
-## 3. Проверка после выкладки
+## 3. pm2
+
+В репозитории лежит `ecosystem.config.js` — оба сервиса, бэкенд на 8005 и сайт
+на 3017. Перед первым запуском поправьте в нём `cwd`, `PUBLIC_API`,
+`ALLOWED_HOSTS` и `SITE_ORIGIN`.
+
+```bash
+# 1. бэкенд: зависимости, миграции, статика
+cd /srv/go_travel_back
+.venv/bin/pip install -r requirements-prod.txt      # ставит gunicorn
+.venv/bin/python manage.py migrate
+.venv/bin/python manage.py collectstatic --noinput
+
+# 2. поднять API — он нужен для сборки сайта
+cd /srv/go_travel
+set -a; . /srv/go_travel_back/.env; set +a          # DJANGO_SECRET_KEY и прочее
+pm2 start ecosystem.config.js --only go-travel-api
+
+# 3. собрать и поднять сайт
+npm ci
+API_BASE_URL=http://127.0.0.1:8005 npm run build
+pm2 start ecosystem.config.js --only go-travel-web
+
+# 4. автозапуск после перезагрузки
+pm2 save
+pm2 startup
+```
+
+Дальше:
+
+```bash
+pm2 status
+pm2 logs go-travel-api --lines 50
+pm2 restart go-travel-web          # после пересборки сайта
+```
+
+Секретов в `ecosystem.config.js` нет — он в git. `DJANGO_SECRET_KEY` берётся из
+окружения той оболочки, где выполняется `pm2 start`, поэтому строка `set -a; .
+.env; set +a` обязательна. Проверить, что ключ доехал:
+
+```bash
+pm2 env 0 | grep DJANGO_SECRET_KEY
+```
+
+На Windows-сервере gunicorn не работает — замените строку `args` в конфиге на
+`-m waitress --listen=0.0.0.0:8005 config.wsgi:application`.
+
+## 4. Проверка после выкладки
 
 ```bash
 curl -s https://api.example.com/api/tours/?locale=ru | head -c 200
@@ -105,8 +158,15 @@ curl -o /dev/null -w "%{http_code}\n" https://example.com/ru/tours/grand-tour-of
 **Новый тур не открывается по прямой ссылке после деплоя** — сайт собирали до
 того, как тур появился в базе. Пересоберите.
 
-**Фото не грузятся, в консоли 403/404 на `/media/...`** — nginx не отдаёт
-`media/`, либо `API_BASE_URL` — внутренний адрес, недоступный из браузера.
+**Фото не грузятся** — их забирает сервер Next, а не браузер, поэтому смотреть
+надо в логи сайта, а не в консоль браузера. Почти всегда причина одна: при
+`DJANGO_DEBUG=0` никто не отдаёт `media/`. Включите `DJANGO_SERVE_FILES=1` или
+настройте nginx. Проверить напрямую:
+`curl -o /dev/null -w "%{http_code}
+" http://127.0.0.1:8005/media/photos/kel-suu-lake.png`
+
+**В соцсетях не видно превью ссылки** — `API_BASE_URL` указан внутренним
+адресом: `og:image` ведёт на бэкенд напрямую и должен быть публичным.
 
 **В админке сломана вёрстка** — не выполнен `collectstatic` или nginx не отдаёт
 `/static/`.
