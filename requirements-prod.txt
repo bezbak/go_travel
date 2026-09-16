@@ -1,0 +1,9 @@
+# Production-only additions, on top of requirements.txt:
+#   pip install -r requirements-prod.txt
+-r requirements.txt
+
+# WSGI server. Linux and macOS only - gunicorn cannot run on Windows.
+# On a Windows server use waitress instead:
+#   pip install waitress
+#   python -m waitress --listen=0.0.0.0:8005 config.wsgi:application
+gunicorn==23.0.0
