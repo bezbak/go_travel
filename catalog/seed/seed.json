@@ -8,122 +8,122 @@
   "images": [
     {
       "key": "heroYurts",
-      "src": "/images/hero-yurts.png",
-      "width": 1672,
-      "height": 941,
+      "src": "/images/hero-yurts.jpg",
+      "width": 2400,
+      "height": 1600,
       "alt": {
-        "en": "White yurts on a green Kyrgyz highland plateau with mountains behind",
-        "ru": "Белые юрты на зелёном высокогорном плато Кыргызстана, за ними горы",
-        "kg": "Кыргызстандын жашыл бийик платосундагы ак боз үйлөр, арт жагында тоолор",
-        "fr": "Yourtes blanches sur un haut plateau verdoyant du Kirghizistan, montagnes en arrière-plan"
+        "en": "A wooden herder's hut in a golden valley below jagged, snow-streaked Kyrgyz peaks",
+        "ru": "Деревянный домик пастуха в золотистой долине под зубчатыми заснеженными вершинами Кыргызстана",
+        "kg": "Кыргызстандын тиштелген карлуу чокуларынын алдындагы алтын өрөөндөгү жыгач койчу үйү",
+        "fr": "Une cabane de berger en bois dans une vallée dorée sous des sommets kirghizes déchiquetés et enneigés"
       }
     },
     {
       "key": "yurtsSunset",
-      "src": "/images/gallery-yurts-sunset.png",
-      "width": 1672,
-      "height": 940,
+      "src": "/images/gallery-yurts-sunset.jpg",
+      "width": 1600,
+      "height": 2400,
       "alt": {
-        "en": "Yurts at sunset on a Kyrgyz alpine plain",
-        "ru": "Юрты на закате на высокогорной равнине Кыргызстана",
-        "kg": "Кыргыз тоо түздүгүндөгү күн батардагы боз үйлөр",
-        "fr": "Yourtes au coucher du soleil sur une plaine d'altitude kirghize"
+        "en": "Yurts glowing under a starry night sky on the Kyrgyz steppe",
+        "ru": "Юрты светятся под звёздным ночным небом в кыргызской степи",
+        "kg": "Кыргыз талаасында жылдыздуу түнкү асман алдында жарык чачкан боз үйлөр",
+        "fr": "Des yourtes illuminées sous un ciel étoilé dans la steppe kirghize"
       }
     },
     {
       "key": "alpineLake",
-      "src": "/images/gallery-alpine-lake.png",
-      "width": 1672,
-      "height": 941,
+      "src": "/images/gallery-alpine-lake.jpg",
+      "width": 2400,
+      "height": 1350,
       "alt": {
-        "en": "Turquoise alpine lake surrounded by Kyrgyz mountains",
-        "ru": "Бирюзовое горное озеро в окружении гор Кыргызстана",
-        "kg": "Кыргыз тоолору курчаган көгүлтүр тоо көлү",
-        "fr": "Lac d'altitude turquoise entouré des montagnes du Kirghizistan"
+        "en": "Aerial view of a turquoise alpine lake with grazing horses and snow-capped peaks",
+        "ru": "Вид с воздуха на бирюзовое горное озеро с пасущимися лошадьми и заснеженными вершинами",
+        "kg": "Жайылып жаткан аттар жана карлуу чокулары бар көгүлтүр тоо көлүнүн асмандан көрүнүшү",
+        "fr": "Vue aérienne d'un lac de montagne turquoise avec des chevaux au pâturage et des sommets enneigés"
       }
     },
     {
       "key": "yurtNight",
-      "src": "/images/gallery-yurt-night.png",
-      "width": 1672,
-      "height": 941,
+      "src": "/images/gallery-yurt-night.jpg",
+      "width": 1600,
+      "height": 2400,
       "alt": {
-        "en": "Yurt camp glowing under a starry night sky",
-        "ru": "Юрточный лагерь под звёздным ночным небом",
-        "kg": "Жылдыздуу түнкү асман астындагы боз үй лагери",
-        "fr": "Campement de yourtes sous un ciel étoilé"
+        "en": "A single yurt glowing at night under a star-filled sky",
+        "ru": "Одинокая юрта светится ночью под усыпанным звёздами небом",
+        "kg": "Жылдыздуу асман астында түнкүсүн жарык чачкан жалгыз боз үй",
+        "fr": "Une yourte isolée illuminée la nuit sous un ciel étoilé"
       }
     },
     {
       "key": "kelSuu",
-      "src": "/images/kel-suu-lake.png",
-      "width": 1672,
-      "height": 941,
+      "src": "/images/kel-suu-lake.jpg",
+      "width": 1350,
+      "height": 2400,
       "alt": {
-        "en": "Turquoise Kel-Suu Lake between steep cliffs",
-        "ru": "Бирюзовое озеро Кель-Суу между отвесными скалами",
+        "en": "Turquoise Kel-Suu Lake held between steep rocky cliffs",
+        "ru": "Бирюзовое озеро Кель-Суу, зажатое между отвесными скалами",
         "kg": "Тик аскалардын ортосундагы көгүлтүр Кел-Суу көлү",
-        "fr": "Le lac turquoise de Kel-Suu entre des falaises abruptes"
+        "fr": "Le lac turquoise de Kel-Suu enserré entre des falaises abruptes"
       }
     },
     {
       "key": "songKol",
-      "src": "/images/song-kol-yurts.png",
-      "width": 1536,
-      "height": 1024,
+      "src": "/images/song-kol-yurts.jpg",
+      "width": 1350,
+      "height": 2400,
       "alt": {
-        "en": "Song-Kol Lake with yurts and snowy mountains",
-        "ru": "Озеро Сон-Куль с юртами и заснеженными горами",
-        "kg": "Боз үйлөрү жана карлуу тоолору менен Соң-Көл",
-        "fr": "Le lac Song-Kol avec des yourtes et des montagnes enneigées"
+        "en": "A high jailoo plateau near Song-Kol beneath a jagged mountain range",
+        "ru": "Высокогорное джайлоо у Сон-Куля на фоне зубчатого горного хребта",
+        "kg": "Тиштелген тоо кыркасынын алдындагы Соң-Көлдүн жанындагы бийик жайлоо",
+        "fr": "Un haut plateau (jailoo) près de Song-Kol au pied d'une chaîne de montagnes déchiquetée"
       }
     },
     {
       "key": "kyzartHorses",
-      "src": "/images/kyzart-horses.png",
-      "width": 1536,
-      "height": 1024,
+      "src": "/images/kyzart-horses.jpg",
+      "width": 1600,
+      "height": 2400,
       "alt": {
-        "en": "Horse riders crossing an alpine meadow near Kyzart",
-        "ru": "Всадники пересекают горный луг рядом с Кызартом",
-        "kg": "Кызарттын жанындагы тоо шалбаасын кесип өтүп бараткан атчандар",
-        "fr": "Cavaliers traversant un pâturage de montagne près de Kyzart"
+        "en": "A lone horse rider crossing a green alpine meadow",
+        "ru": "Одинокий всадник пересекает зелёный горный луг",
+        "kg": "Жашыл тоо шалбаасын кесип өтүп бараткан жалгыз атчан",
+        "fr": "Un cavalier solitaire traversant une prairie alpine verdoyante"
       }
     },
     {
       "key": "kilemche",
-      "src": "/images/kilemche-valley.png",
-      "width": 1536,
-      "height": 1024,
+      "src": "/images/kilemche-valley.jpg",
+      "width": 1350,
+      "height": 2400,
       "alt": {
-        "en": "Green Kilemche valley and summer jailoo pasture",
-        "ru": "Зелёная долина Килемче и летнее пастбище джайлоо",
-        "kg": "Жашыл Килемче өрөөнү жана жайкы жайлоо",
-        "fr": "La vallée verdoyante de Kilemche et son alpage d'été"
+        "en": "A braided river winding through the green Kilemche valley in golden light",
+        "ru": "Разветвлённая река, петляющая по зелёной долине Килемче в золотистом свете",
+        "kg": "Алтын жарыкта Килемче өрөөнүн жашыл түздүгүн кесип өткөн бутактанган дарыя",
+        "fr": "Une rivière tressée serpentant dans la vallée verdoyante de Kilemche sous une lumière dorée"
       }
     },
     {
       "key": "bishkekSunset",
-      "src": "/images/bishkek-sunset.png",
-      "width": 1536,
-      "height": 1024,
+      "src": "/images/bishkek-sunset.jpg",
+      "width": 1350,
+      "height": 2400,
       "alt": {
-        "en": "Bishkek street at sunset with mountains in the distance",
-        "ru": "Улица Бишкека на закате, вдали горы",
-        "kg": "Күн батардагы Бишкек көчөсү, алыстан тоолор көрүнөт",
-        "fr": "Une rue de Bichkek au coucher du soleil, montagnes au loin"
+        "en": "A wildflower meadow under a pink sunset sky near Bishkek",
+        "ru": "Луг с полевыми цветами под розовым закатным небом недалеко от Бишкека",
+        "kg": "Бишкектин жанындагы кызгылт күн батар асман астындагы талаа гүлдөрүнүн шалбаасы",
+        "fr": "Un pré de fleurs sauvages sous un ciel de coucher de soleil rose près de Bichkek"
       }
     },
     {
       "key": "bishkekRoad",
-      "src": "/images/bishkek-road.png",
-      "width": 1536,
-      "height": 1024,
+      "src": "/images/bishkek-road.jpg",
+      "width": 1920,
+      "height": 2400,
       "alt": {
-        "en": "Minibus on a winding mountain road towards Bishkek",
-        "ru": "Микроавтобус на горном серпантине по дороге в Бишкек",
-        "kg": "Бишкекке карай тоо жолундагы микроавтобус",
-        "fr": "Minibus sur une route de montagne en direction de Bichkek"
+        "en": "A winding mountain road cutting through forested slopes",
+        "ru": "Извилистая горная дорога, проходящая через лесистые склоны",
+        "kg": "Токойлуу беткейлерди кесип өткөн ийри-буйру тоо жолу",
+        "fr": "Une route de montagne sinueuse traversant des pentes boisées"
       }
     }
   ],
