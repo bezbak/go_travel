@@ -125,6 +125,150 @@
         "kg": "Токойлуу беткейлерди кесип өткөн ийри-буйру тоо жолу",
         "fr": "Une route de montagne sinueuse traversant des pentes boisées"
       }
+    },
+    {
+      "key": "issykKul",
+      "src": "/images/issyk-kul.jpg",
+      "width": 2400,
+      "height": 1600,
+      "alt": {
+        "en": "Lake Issyk-Kul with a boat on the water and mountains along the far shore",
+        "ru": "Озеро Иссык-Куль с лодкой на воде и горами вдоль дальнего берега",
+        "kg": "Алыскы жээк боюнда тоолору бар, суусунда кайыгы жүргөн Ысык-Көл көлү",
+        "fr": "Le lac Issyk-Koul avec un bateau sur l'eau et des montagnes le long de la rive opposée"
+      }
+    },
+    {
+      "key": "jetiOguz",
+      "src": "/images/jeti-oguz.jpg",
+      "width": 1350,
+      "height": 2400,
+      "alt": {
+        "en": "Eroded red sandstone rock formations at Jeti-Oguz",
+        "ru": "Разрушенные эрозией красные песчаниковые скалы Джети-Огуза",
+        "kg": "Жети-Өгүздүн эрозияга учураган кызыл кумдук аскалары",
+        "fr": "Formations rocheuses de grès rouge érodées à Jeti-Oguz"
+      }
+    },
+    {
+      "key": "skazkaCanyon",
+      "src": "/images/skazka-canyon.jpg",
+      "width": 1350,
+      "height": 2400,
+      "alt": {
+        "en": "Aerial view of the red sandstone ridges of Skazka canyon",
+        "ru": "Вид с воздуха на красные песчаниковые гряды каньона Сказка",
+        "kg": "Жомок капчыгайынын кызыл кумдук кыркаларынын асмандан көрүнүшү",
+        "fr": "Vue aérienne des crêtes de grès rouge du canyon de Skazka"
+      }
+    },
+    {
+      "key": "altynArashan",
+      "src": "/images/altyn-arashan.jpg",
+      "width": 2400,
+      "height": 1800,
+      "alt": {
+        "en": "A glacial stream winding through spruce forest near Altyn-Arashan",
+        "ru": "Ледниковый ручей, петляющий по еловому лесу у Алтын-Арашана",
+        "kg": "Алтын-Арашандын жанындагы карагай токоюн кесип өткөн мөңгү суусу",
+        "fr": "Un ruisseau glaciaire serpentant dans la forêt d'épicéas près d'Altyn-Arachan"
+      }
+    },
+    {
+      "key": "barskoonWaterfall",
+      "src": "/images/barskoon-waterfall.jpg",
+      "width": 1920,
+      "height": 2400,
+      "alt": {
+        "en": "A waterfall dropping through the forested Barskoon valley",
+        "ru": "Водопад в лесистой Барскоонской долине",
+        "kg": "Токойлуу Барскоон өрөөнүндөгү шаркыратма",
+        "fr": "Une cascade dans la vallée boisée de Barskoon"
+      }
+    },
+    {
+      "key": "eagleHunter",
+      "src": "/images/eagle-hunter.jpg",
+      "width": 1600,
+      "height": 2400,
+      "alt": {
+        "en": "A Kyrgyz eagle hunter in traditional dress with his golden eagle",
+        "ru": "Кыргызский беркутчи в традиционном костюме со своим беркутом",
+        "kg": "Салттуу кийимдеги кыргыз бүркүтчүсү өзүнүн бүркүтү менен",
+        "fr": "Un chasseur à l'aigle kirghize en tenue traditionnelle avec son aigle royal"
+      }
+    },
+    {
+      "key": "eagleHunterHorseback",
+      "src": "/images/eagle-hunter-horseback.jpg",
+      "width": 1600,
+      "height": 2400,
+      "alt": {
+        "en": "An eagle hunter on horseback holding his golden eagle",
+        "ru": "Беркутчи верхом на лошади держит своего беркута",
+        "kg": "Атчан бүркүтчү өзүнүн бүркүтүн кармап турат",
+        "fr": "Un chasseur à l'aigle à cheval tenant son aigle royal"
+      }
+    },
+    {
+      "key": "bishkekGuard",
+      "src": "/images/bishkek-guard.jpg",
+      "width": 1868,
+      "height": 2400,
+      "alt": {
+        "en": "Changing of the guard on Ala-Too Square in Bishkek",
+        "ru": "Смена караула на площади Ала-Тоо в Бишкеке",
+        "kg": "Бишкектеги Ала-Тоо аянтындагы кароол алмашуу",
+        "fr": "La relève de la garde sur la place Ala-Too à Bichkek"
+      }
+    },
+    {
+      "key": "alaArcha",
+      "src": "/images/ala-archa.jpg",
+      "width": 2400,
+      "height": 1800,
+      "alt": {
+        "en": "Horses grazing below the peaks of Ala-Archa National Park",
+        "ru": "Лошади пасутся у подножия вершин национального парка Ала-Арча",
+        "kg": "Ала-Арча улуттук паркынын чокуларынын түбүндө жайылган аттар",
+        "fr": "Des chevaux paissant au pied des sommets du parc national d'Ala-Archa"
+      }
+    },
+    {
+      "key": "oshSulaimanToo",
+      "src": "/images/osh-sulaiman-too.jpg",
+      "width": 2400,
+      "height": 1600,
+      "alt": {
+        "en": "Sulaiman-Too, the sacred UNESCO mountain rising over Osh",
+        "ru": "Сулайман-Тоо — священная гора ЮНЕСКО над Ошем",
+        "kg": "Оштун үстүнөн көтөрүлгөн ЮНЕСКОнун ыйык тоосу Сулайман-Тоо",
+        "fr": "Souleiman-Too, la montagne sacrée classée à l'UNESCO qui domine Och"
+      }
+    },
+    {
+      "key": "pamirHighway",
+      "src": "/images/pamir-highway.jpg",
+      "width": 1280,
+      "height": 960,
+      "alt": {
+        "en": "The road towards Sary-Tash with the snow-capped Trans-Alay range ahead",
+        "ru": "Дорога к Сары-Ташу на фоне заснеженного Заалайского хребта",
+        "kg": "Карлуу Алай кырка тоосунун алдында Сары-Ташка кеткен жол",
+        "fr": "La route vers Sary-Tash avec la chaîne enneigée du Trans-Alaï en toile de fond"
+      }
+    },
+    {
+      "key": "leninPeak",
+      "src": "/images/lenin-peak.jpg",
+      "width": 2048,
+      "height": 1536,
+      "alt": {
+        "en": "Snow-covered Lenin Peak rising above stone cairns at Achik-Tash",
+        "ru": "Заснеженный пик Ленина над каменными турами в Ачик-Таше",
+        "kg": "Ачык-Таштагы таш үйүндүлөрдүн үстүндөгү карлуу Ленин чокусу",
+        "fr": "Le pic Lénine enneigé s'élevant au-dessus des cairns de pierre à Atchik-Tach"
+      }
     }
   ],
   "destinations": [
@@ -296,11 +440,11 @@
       "altitude_m": 1607,
       "drive_hours": 4,
       "best_months": "05-10",
-      "hero": "alpineLake",
-      "card": "alpineLake",
+      "hero": "issykKul",
+      "card": "issykKul",
       "gallery": [
-        "alpineLake",
-        "yurtsSunset",
+        "issykKul",
+        "skazkaCanyon",
         "bishkekSunset",
         "kyzartHorses"
       ],
@@ -377,13 +521,13 @@
       "altitude_m": 2200,
       "drive_hours": 6,
       "best_months": "05-10",
-      "hero": "kilemche",
-      "card": "kilemche",
+      "hero": "jetiOguz",
+      "card": "jetiOguz",
       "gallery": [
+        "jetiOguz",
+        "skazkaCanyon",
         "kilemche",
-        "kyzartHorses",
-        "alpineLake",
-        "heroYurts"
+        "altynArashan"
       ],
       "name": {
         "en": "Jeti-Oguz",
@@ -458,13 +602,13 @@
       "altitude_m": 800,
       "drive_hours": 0,
       "best_months": "04-10",
-      "hero": "bishkekSunset",
-      "card": "bishkekSunset",
+      "hero": "bishkekGuard",
+      "card": "bishkekGuard",
       "gallery": [
+        "bishkekGuard",
+        "alaArcha",
         "bishkekSunset",
-        "bishkekRoad",
-        "alpineLake",
-        "heroYurts"
+        "bishkekRoad"
       ],
       "name": {
         "en": "Bishkek",
@@ -539,13 +683,13 @@
       "altitude_m": 3600,
       "drive_hours": 12,
       "best_months": "06-09",
-      "hero": "heroYurts",
-      "card": "bishkekRoad",
+      "hero": "oshSulaimanToo",
+      "card": "oshSulaimanToo",
       "gallery": [
-        "bishkekRoad",
-        "heroYurts",
-        "kilemche",
-        "yurtNight"
+        "oshSulaimanToo",
+        "pamirHighway",
+        "leninPeak",
+        "kilemche"
       ],
       "name": {
         "en": "Osh & the Pamir",
@@ -625,7 +769,7 @@
       "gallery": [
         "alpineLake",
         "kilemche",
-        "kyzartHorses",
+        "altynArashan",
         "yurtNight"
       ],
       "name": {
@@ -723,10 +867,10 @@
       "card": "heroYurts",
       "gallery": [
         "kelSuu",
-        "alpineLake",
+        "issykKul",
         "songKol",
-        "kyzartHorses",
-        "yurtNight"
+        "alpineLake",
+        "altynArashan"
       ],
       "departures": [
         {
@@ -973,7 +1117,7 @@
         },
         {
           "number": 4,
-          "photo": "alpineLake",
+          "photo": "issykKul",
           "title": {
             "en": "Kel-Suu to Issyk-Kul",
             "ru": "Кель-Суу — Иссык-Куль",
@@ -989,7 +1133,7 @@
         },
         {
           "number": 5,
-          "photo": "bishkekRoad",
+          "photo": "altynArashan",
           "title": {
             "en": "Issyk-Kul to Altyn-Arashan",
             "ru": "Иссык-Куль — Алтын-Арашан",
@@ -1005,7 +1149,7 @@
         },
         {
           "number": 6,
-          "photo": "kyzartHorses",
+          "photo": "alpineLake",
           "title": {
             "en": "Ala-Kul",
             "ru": "Ала-Куль",
@@ -2463,14 +2607,14 @@
       "old_price_eur": 820,
       "rating": 4.7,
       "review_count": 152,
-      "hero": "alpineLake",
-      "card": "alpineLake",
+      "hero": "issykKul",
+      "card": "issykKul",
       "gallery": [
-        "alpineLake",
-        "kilemche",
-        "yurtsSunset",
-        "bishkekSunset",
-        "kyzartHorses"
+        "issykKul",
+        "skazkaCanyon",
+        "jetiOguz",
+        "barskoonWaterfall",
+        "bishkekSunset"
       ],
       "departures": [
         {
@@ -2700,7 +2844,7 @@
         },
         {
           "number": 2,
-          "photo": "alpineLake",
+          "photo": "skazkaCanyon",
           "title": {
             "en": "Skazka canyon and the shore",
             "ru": "Каньон Сказка и берег",
@@ -2716,7 +2860,7 @@
         },
         {
           "number": 3,
-          "photo": "kilemche",
+          "photo": "jetiOguz",
           "title": {
             "en": "Jeti-Oguz",
             "ru": "Джети-Огуз",
@@ -2732,7 +2876,7 @@
         },
         {
           "number": 4,
-          "photo": "kyzartHorses",
+          "photo": "barskoonWaterfall",
           "title": {
             "en": "Karakol and Barskoon",
             "ru": "Каракол и Барскоон",
@@ -2784,14 +2928,14 @@
       "old_price_eur": null,
       "rating": 4.8,
       "review_count": 43,
-      "hero": "kilemche",
-      "card": "kilemche",
+      "hero": "oshSulaimanToo",
+      "card": "oshSulaimanToo",
       "gallery": [
+        "oshSulaimanToo",
+        "pamirHighway",
+        "leninPeak",
         "kilemche",
-        "bishkekRoad",
-        "heroYurts",
-        "kelSuu",
-        "alpineLake"
+        "songKol"
       ],
       "departures": [
         {
@@ -3089,7 +3233,7 @@
         },
         {
           "number": 6,
-          "photo": "heroYurts",
+          "photo": "oshSulaimanToo",
           "title": {
             "en": "Osh",
             "ru": "Ош",
@@ -3105,7 +3249,7 @@
         },
         {
           "number": 7,
-          "photo": "yurtsSunset",
+          "photo": "pamirHighway",
           "title": {
             "en": "Onto the Pamir Highway",
             "ru": "Выход на Памирский тракт",
@@ -3121,7 +3265,7 @@
         },
         {
           "number": 8,
-          "photo": "kelSuu",
+          "photo": "leninPeak",
           "title": {
             "en": "Lenin Peak base camp",
             "ru": "Базовый лагерь пика Ленина",
@@ -3137,7 +3281,7 @@
         },
         {
           "number": 9,
-          "photo": "yurtNight",
+          "photo": "oshSulaimanToo",
           "title": {
             "en": "Return to Osh",
             "ru": "Возвращение в Ош",
@@ -3171,14 +3315,14 @@
       "old_price_eur": null,
       "rating": 4.9,
       "review_count": 37,
-      "hero": "yurtNight",
-      "card": "yurtNight",
+      "hero": "eagleHunter",
+      "card": "eagleHunter",
       "gallery": [
-        "yurtNight",
-        "kyzartHorses",
+        "eagleHunter",
+        "eagleHunterHorseback",
+        "issykKul",
         "alpineLake",
-        "bishkekSunset",
-        "yurtsSunset"
+        "bishkekSunset"
       ],
       "departures": [
         {
@@ -3412,7 +3556,7 @@
         },
         {
           "number": 2,
-          "photo": "kyzartHorses",
+          "photo": "issykKul",
           "title": {
             "en": "To the south shore",
             "ru": "На южный берег",
@@ -3428,7 +3572,7 @@
         },
         {
           "number": 3,
-          "photo": "alpineLake",
+          "photo": "eagleHunter",
           "title": {
             "en": "Eagle hunting",
             "ru": "Охота с беркутом",
@@ -3801,12 +3945,12 @@
     }
   ],
   "gallery": [
-    "/images/gallery-yurts-sunset.png",
-    "/images/kyzart-horses.png",
-    "/images/gallery-alpine-lake.png",
-    "/images/gallery-yurt-night.png",
-    "/images/hero-yurts.png"
+    "/images/gallery-yurts-sunset.jpg",
+    "/images/kyzart-horses.jpg",
+    "/images/gallery-alpine-lake.jpg",
+    "/images/gallery-yurt-night.jpg",
+    "/images/hero-yurts.jpg"
   ],
-  "feature_image": "/images/kel-suu-lake.png",
-  "hero_image": "/images/hero-yurts.png"
+  "feature_image": "/images/kel-suu-lake.jpg",
+  "hero_image": "/images/hero-yurts.jpg"
 }
