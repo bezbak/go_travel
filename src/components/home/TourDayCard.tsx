@@ -19,7 +19,7 @@ export function TourDayCard({
   const t = useTranslations();
 
   return (
-    <article className="group flex h-full flex-col rounded-[18px] border border-[#e7e2d9] bg-white p-[clamp(6px,0.8vw,12px)] shadow-[0_8px_28px_rgba(23,23,23,0.035)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_42px_rgba(23,23,23,0.09)]">
+    <article className="group flex h-full flex-col rounded-[18px] border border-[#e7e2d9] bg-white p-[clamp(6px,0.8vw,12px)] shadow-[0_0_44px_-8px_rgba(245,165,36,0.32),0_8px_28px_rgba(23,23,23,0.035)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_0_58px_-6px_rgba(245,165,36,0.46),0_16px_42px_rgba(23,23,23,0.09)]">
       <div className="grid justify-items-center">
         <span className="rounded-full bg-[#6a9d17] px-[clamp(7px,1vw,14px)] py-[3px] font-display text-[length:var(--fs-3xs)] font-black uppercase leading-none tracking-[0] text-white">
           {t("common.dayNumber", { number: dayNumber })}

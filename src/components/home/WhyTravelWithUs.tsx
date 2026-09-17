@@ -34,7 +34,7 @@ export function WhyTravelWithUs({ featureImage, backdropImage }: WhyTravelWithUs
 
       <Container className="relative z-10 grid grid-cols-[0.92fr_1.08fr] items-center gap-[clamp(14px,2.6vw,48px)]">
         <div className="relative min-h-[clamp(150px,24vw,380px)]">
-          <div className="mx-auto w-[94%] max-w-[560px] rotate-[-4deg] rounded-[18px] bg-white p-[clamp(6px,1vw,18px)] shadow-[0_24px_55px_rgba(43,38,28,0.22)] lg:absolute lg:left-[40px] lg:top-[10px] 2xl:left-[58px]">
+          <div className="mx-auto w-[94%] max-w-[560px] rotate-[-4deg] rounded-[18px] bg-white p-[clamp(6px,1vw,18px)] shadow-[0_0_70px_-8px_rgba(245,165,36,0.4),0_24px_55px_rgba(43,38,28,0.22)] lg:absolute lg:left-[40px] lg:top-[10px] 2xl:left-[58px]">
             <div className="relative h-[clamp(120px,21vw,328px)] overflow-hidden rounded-[12px] bg-[#d9d4c8]">
               <Image
                 fill

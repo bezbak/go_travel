@@ -24,7 +24,7 @@ export function TourCard({ tour, className, layout = "grid" }: TourCardProps) {
   return (
     <article
       className={cn(
-        "group relative flex flex-col overflow-hidden rounded-[18px] border border-[#e7e2d9] bg-white shadow-[0_8px_28px_rgba(23,23,23,0.04)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_46px_rgba(23,23,23,0.1)]",
+        "group relative flex flex-col overflow-hidden rounded-[18px] border border-[#e7e2d9] bg-white shadow-[0_0_50px_-6px_rgba(245,165,36,0.35),0_8px_28px_rgba(23,23,23,0.04)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_0_65px_-4px_rgba(245,165,36,0.5),0_18px_46px_rgba(23,23,23,0.1)]",
         layout === "rail" && "min-w-[290px]",
         className
       )}

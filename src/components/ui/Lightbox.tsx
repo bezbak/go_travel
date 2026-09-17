@@ -97,9 +97,9 @@ export function Lightbox({ images, labels, className, layout = "feature" }: Ligh
               .replace("{index}", String(index + 1))
               .replace("{total}", String(images.length))}
             className={cn(
-              "group relative cursor-zoom-in overflow-hidden bg-[#e7e2d9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6a9d17]",
+              "group relative cursor-zoom-in overflow-hidden bg-[#e7e2d9] shadow-[0_0_28px_-6px_rgba(245,165,36,0.35)] transition duration-300 hover:shadow-[0_0_40px_-4px_rgba(245,165,36,0.5)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6a9d17]",
               layout === "strip"
-                ? "h-[clamp(74px,10.5vw,170px)] rounded-[8px] shadow-[0_8px_24px_rgba(23,23,23,0.05)]"
+                ? "h-[clamp(74px,10.5vw,170px)] rounded-[8px]"
                 : "h-[180px] rounded-[14px] 2xl:h-[210px]",
               layout === "feature" &&
                 index === 0 &&

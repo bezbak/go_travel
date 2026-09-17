@@ -17,7 +17,7 @@ export function DestinationCard({ destination, className }: DestinationCardProps
   return (
     <article
       className={cn(
-        "group relative isolate flex min-h-[clamp(158px,21vw,340px)] flex-col justify-end overflow-hidden rounded-[18px] bg-[#1d1d1d] p-[clamp(11px,1.5vw,22px)]",
+        "group relative isolate flex min-h-[clamp(158px,21vw,340px)] flex-col justify-end overflow-hidden rounded-[18px] bg-[#1d1d1d] p-[clamp(11px,1.5vw,22px)] shadow-[0_0_50px_-6px_rgba(245,165,36,0.4)] transition duration-300 hover:shadow-[0_0_65px_-4px_rgba(245,165,36,0.55)]",
         className
       )}
     >
