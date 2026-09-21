@@ -11,7 +11,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-LOCALES = ("en", "ru", "kg", "fr")
+LOCALES = ("en", "ru", "kg", "fr", "de", "es")
 
 
 class TranslatedMixin(models.Model):
@@ -46,6 +46,8 @@ class Photo(TranslatedMixin):
     alt_ru = models.CharField(_("alt-текст (рус.)"), max_length=300, blank=True)
     alt_kg = models.CharField(_("alt-текст (кырг.)"), max_length=300, blank=True)
     alt_fr = models.CharField(_("alt-текст (фр.)"), max_length=300, blank=True)
+    alt_de = models.CharField(_("alt-текст (нем.)"), max_length=300, blank=True)
+    alt_es = models.CharField(_("alt-текст (исп.)"), max_length=300, blank=True)
 
     created_at = models.DateTimeField(_("добавлено"), auto_now_add=True)
 
@@ -88,21 +90,29 @@ class Destination(TranslatedMixin):
     name_ru = models.CharField(_("название (рус.)"), max_length=200)
     name_kg = models.CharField(_("название (кырг.)"), max_length=200)
     name_fr = models.CharField(_("название (фр.)"), max_length=200)
+    name_de = models.CharField(_("название (нем.)"), max_length=200, blank=True)
+    name_es = models.CharField(_("название (исп.)"), max_length=200, blank=True)
 
     summary_en = models.TextField(_("краткое описание (англ.)"))
     summary_ru = models.TextField(_("краткое описание (рус.)"))
     summary_kg = models.TextField(_("краткое описание (кырг.)"))
     summary_fr = models.TextField(_("краткое описание (фр.)"))
+    summary_de = models.TextField(_("краткое описание (нем.)"), blank=True)
+    summary_es = models.TextField(_("краткое описание (исп.)"), blank=True)
 
     best_time_en = models.CharField(_("лучшее время (англ.)"), max_length=200)
     best_time_ru = models.CharField(_("лучшее время (рус.)"), max_length=200)
     best_time_kg = models.CharField(_("лучшее время (кырг.)"), max_length=200)
     best_time_fr = models.CharField(_("лучшее время (фр.)"), max_length=200)
+    best_time_de = models.CharField(_("лучшее время (нем.)"), max_length=200, blank=True)
+    best_time_es = models.CharField(_("лучшее время (исп.)"), max_length=200, blank=True)
 
     body_en = models.TextField(_("текст (англ.)"), help_text=_("Один абзац на строку."))
     body_ru = models.TextField(_("текст (рус.)"), help_text=_("Один абзац на строку."))
     body_kg = models.TextField(_("текст (кырг.)"), help_text=_("Один абзац на строку."))
     body_fr = models.TextField(_("текст (фр.)"), help_text=_("Один абзац на строку."))
+    body_de = models.TextField(_("текст (нем.)"), help_text=_("Один абзац на строку."), blank=True)
+    body_es = models.TextField(_("текст (исп.)"), help_text=_("Один абзац на строку."), blank=True)
 
     highlights_en = models.TextField(
         _("изюминки (англ.)"), blank=True, help_text=_("Один пункт на строку.")
@@ -115,6 +125,12 @@ class Destination(TranslatedMixin):
     )
     highlights_fr = models.TextField(
         _("изюминки (фр.)"), blank=True, help_text=_("Один пункт на строку.")
+    )
+    highlights_de = models.TextField(
+        _("изюминки (нем.)"), blank=True, help_text=_("Один пункт на строку.")
+    )
+    highlights_es = models.TextField(
+        _("изюминки (исп.)"), blank=True, help_text=_("Один пункт на строку.")
     )
 
     class Meta:
@@ -227,36 +243,50 @@ class Tour(TranslatedMixin):
     name_ru = models.CharField(_("название (рус.)"), max_length=200)
     name_kg = models.CharField(_("название (кырг.)"), max_length=200)
     name_fr = models.CharField(_("название (фр.)"), max_length=200)
+    name_de = models.CharField(_("название (нем.)"), max_length=200, blank=True)
+    name_es = models.CharField(_("название (исп.)"), max_length=200, blank=True)
 
     tagline_en = models.TextField(_("подзаголовок (англ.)"))
     tagline_ru = models.TextField(_("подзаголовок (рус.)"))
     tagline_kg = models.TextField(_("подзаголовок (кырг.)"))
     tagline_fr = models.TextField(_("подзаголовок (фр.)"))
+    tagline_de = models.TextField(_("подзаголовок (нем.)"), blank=True)
+    tagline_es = models.TextField(_("подзаголовок (исп.)"), blank=True)
 
     summary_en = models.TextField(_("краткое описание (англ.)"))
     summary_ru = models.TextField(_("краткое описание (рус.)"))
     summary_kg = models.TextField(_("краткое описание (кырг.)"))
     summary_fr = models.TextField(_("краткое описание (фр.)"))
+    summary_de = models.TextField(_("краткое описание (нем.)"), blank=True)
+    summary_es = models.TextField(_("краткое описание (исп.)"), blank=True)
 
     overview_en = models.TextField(_("описание (англ.)"), help_text=_("Один абзац на строку."))
     overview_ru = models.TextField(_("описание (рус.)"), help_text=_("Один абзац на строку."))
     overview_kg = models.TextField(_("описание (кырг.)"), help_text=_("Один абзац на строку."))
     overview_fr = models.TextField(_("описание (фр.)"), help_text=_("Один абзац на строку."))
+    overview_de = models.TextField(_("описание (нем.)"), help_text=_("Один абзац на строку."), blank=True)
+    overview_es = models.TextField(_("описание (исп.)"), help_text=_("Один абзац на строку."), blank=True)
 
     highlights_en = models.TextField(_("изюминки (англ.)"), help_text=_("Один пункт на строку."))
     highlights_ru = models.TextField(_("изюминки (рус.)"), help_text=_("Один пункт на строку."))
     highlights_kg = models.TextField(_("изюминки (кырг.)"), help_text=_("Один пункт на строку."))
     highlights_fr = models.TextField(_("изюминки (фр.)"), help_text=_("Один пункт на строку."))
+    highlights_de = models.TextField(_("изюминки (нем.)"), help_text=_("Один пункт на строку."), blank=True)
+    highlights_es = models.TextField(_("изюминки (исп.)"), help_text=_("Один пункт на строку."), blank=True)
 
     included_en = models.TextField(_("входит в стоимость (англ.)"), help_text=_("Один пункт на строку."))
     included_ru = models.TextField(_("входит в стоимость (рус.)"), help_text=_("Один пункт на строку."))
     included_kg = models.TextField(_("входит в стоимость (кырг.)"), help_text=_("Один пункт на строку."))
     included_fr = models.TextField(_("входит в стоимость (фр.)"), help_text=_("Один пункт на строку."))
+    included_de = models.TextField(_("входит в стоимость (нем.)"), help_text=_("Один пункт на строку."), blank=True)
+    included_es = models.TextField(_("входит в стоимость (исп.)"), help_text=_("Один пункт на строку."), blank=True)
 
     excluded_en = models.TextField(_("не входит (англ.)"), help_text=_("Один пункт на строку."))
     excluded_ru = models.TextField(_("не входит (рус.)"), help_text=_("Один пункт на строку."))
     excluded_kg = models.TextField(_("не входит (кырг.)"), help_text=_("Один пункт на строку."))
     excluded_fr = models.TextField(_("не входит (фр.)"), help_text=_("Один пункт на строку."))
+    excluded_de = models.TextField(_("не входит (нем.)"), help_text=_("Один пункт на строку."), blank=True)
+    excluded_es = models.TextField(_("не входит (исп.)"), help_text=_("Один пункт на строку."), blank=True)
 
     class Meta:
         verbose_name = _("тур")
@@ -287,11 +317,15 @@ class TourDay(TranslatedMixin):
     title_ru = models.CharField(_("заголовок (рус.)"), max_length=200)
     title_kg = models.CharField(_("заголовок (кырг.)"), max_length=200)
     title_fr = models.CharField(_("заголовок (фр.)"), max_length=200)
+    title_de = models.CharField(_("заголовок (нем.)"), max_length=200, blank=True)
+    title_es = models.CharField(_("заголовок (исп.)"), max_length=200, blank=True)
 
     description_en = models.TextField(_("текст (англ.)"))
     description_ru = models.TextField(_("текст (рус.)"))
     description_kg = models.TextField(_("текст (кырг.)"))
     description_fr = models.TextField(_("текст (фр.)"))
+    description_de = models.TextField(_("текст (нем.)"), blank=True)
+    description_es = models.TextField(_("текст (исп.)"), blank=True)
 
     class Meta:
         verbose_name = _("день маршрута")
@@ -317,11 +351,15 @@ class TourNote(TranslatedMixin):
     title_ru = models.CharField(_("заголовок (рус.)"), max_length=200)
     title_kg = models.CharField(_("заголовок (кырг.)"), max_length=200)
     title_fr = models.CharField(_("заголовок (фр.)"), max_length=200)
+    title_de = models.CharField(_("заголовок (нем.)"), max_length=200, blank=True)
+    title_es = models.CharField(_("заголовок (исп.)"), max_length=200, blank=True)
 
     description_en = models.TextField(_("текст (англ.)"))
     description_ru = models.TextField(_("текст (рус.)"))
     description_kg = models.TextField(_("текст (кырг.)"))
     description_fr = models.TextField(_("текст (фр.)"))
+    description_de = models.TextField(_("текст (нем.)"), blank=True)
+    description_es = models.TextField(_("текст (исп.)"), blank=True)
 
     class Meta:
         verbose_name = _("Полезно знать")
@@ -384,11 +422,15 @@ class TeamMember(TranslatedMixin):
     role_ru = models.CharField(_("должность (рус.)"), max_length=200)
     role_kg = models.CharField(_("должность (кырг.)"), max_length=200)
     role_fr = models.CharField(_("должность (фр.)"), max_length=200)
+    role_de = models.CharField(_("должность (нем.)"), max_length=200, blank=True)
+    role_es = models.CharField(_("должность (исп.)"), max_length=200, blank=True)
 
     bio_en = models.TextField(_("о сотруднике (англ.)"))
     bio_ru = models.TextField(_("о сотруднике (рус.)"))
     bio_kg = models.TextField(_("о сотруднике (кырг.)"))
     bio_fr = models.TextField(_("о сотруднике (фр.)"))
+    bio_de = models.TextField(_("о сотруднике (нем.)"), blank=True)
+    bio_es = models.TextField(_("о сотруднике (исп.)"), blank=True)
 
     class Meta:
         verbose_name = _("сотрудник")
@@ -420,11 +462,15 @@ class Testimonial(TranslatedMixin):
     country_ru = models.CharField(_("страна (рус.)"), max_length=120)
     country_kg = models.CharField(_("страна (кырг.)"), max_length=120)
     country_fr = models.CharField(_("страна (фр.)"), max_length=120)
+    country_de = models.CharField(_("страна (нем.)"), max_length=120, blank=True)
+    country_es = models.CharField(_("страна (исп.)"), max_length=120, blank=True)
 
     quote_en = models.TextField(_("отзыв (англ.)"))
     quote_ru = models.TextField(_("отзыв (рус.)"))
     quote_kg = models.TextField(_("отзыв (кырг.)"))
     quote_fr = models.TextField(_("отзыв (фр.)"))
+    quote_de = models.TextField(_("отзыв (нем.)"), blank=True)
+    quote_es = models.TextField(_("отзыв (исп.)"), blank=True)
 
     class Meta:
         verbose_name = _("отзыв")
@@ -444,11 +490,15 @@ class FaqItem(TranslatedMixin):
     question_ru = models.CharField(_("вопрос (рус.)"), max_length=300)
     question_kg = models.CharField(_("вопрос (кырг.)"), max_length=300)
     question_fr = models.CharField(_("вопрос (фр.)"), max_length=300)
+    question_de = models.CharField(_("вопрос (нем.)"), max_length=300, blank=True)
+    question_es = models.CharField(_("вопрос (исп.)"), max_length=300, blank=True)
 
     answer_en = models.TextField(_("ответ (англ.)"))
     answer_ru = models.TextField(_("ответ (рус.)"))
     answer_kg = models.TextField(_("ответ (кырг.)"))
     answer_fr = models.TextField(_("ответ (фр.)"))
+    answer_de = models.TextField(_("ответ (нем.)"), blank=True)
+    answer_es = models.TextField(_("ответ (исп.)"), blank=True)
 
     class Meta:
         verbose_name = _("вопрос")

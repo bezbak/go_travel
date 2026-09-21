@@ -19,7 +19,7 @@ SEED_DIR = Path(__file__).resolve().parent / "seed"
 SEED_JSON = SEED_DIR / "seed.json"
 SEED_IMAGES = SEED_DIR / "images"
 
-LOCALES = ("en", "ru", "kg", "fr")
+LOCALES = ("en", "ru", "kg", "fr", "de", "es")
 
 # Model name -> the field this seed treats as its natural key.
 SEEDED_MODELS = (
@@ -249,6 +249,102 @@ def apply_tour_order(apps=None, stdout=None):
     if stdout is not None:
         stdout.write(f"re-ordered {updated} tours")
     return updated
+
+
+def _join(value):
+    return "\n".join(value) if isinstance(value, list) else (value or "")
+
+
+def _fill_empty(obj, field, values):
+    """Set `field_<locale>` from `values` wherever the stored text is empty."""
+    changed = []
+    for locale in LOCALES:
+        attr = f"{field}_{locale}"
+        text = _join(values.get(locale))
+        if text and not getattr(obj, attr, ""):
+            setattr(obj, attr, text)
+            changed.append(attr)
+    return changed
+
+
+def fill_missing_translations(apps=None, stdout=None):
+    """
+    Copy seed translations into rows whose text for a locale is still empty.
+
+    This is how a locale added after the first deployment (German and Spanish
+    were) reaches an existing database: rows are matched to `seed.json` by their
+    slug or key, and only empty fields are written, so anything an editor has
+    typed or changed in the admin is left alone.
+    """
+    data = load_seed()
+    filled = 0
+
+    def save(obj, changed):
+        nonlocal filled
+        if changed:
+            obj.save(update_fields=changed)
+            filled += len(changed)
+
+    Photo = _resolve(apps, "Photo")
+    for entry in data["images"]:
+        obj = Photo.objects.filter(key=entry["key"]).first()
+        if obj:
+            save(obj, _fill_empty(obj, "alt", entry["alt"]))
+
+    Destination = _resolve(apps, "Destination")
+    for entry in data["destinations"]:
+        obj = Destination.objects.filter(slug=entry["slug"]).first()
+        if obj:
+            changed = []
+            for field in ("name", "summary", "best_time", "body", "highlights"):
+                changed += _fill_empty(obj, field, entry[field])
+            save(obj, changed)
+
+    Tour = _resolve(apps, "Tour")
+    TourDay = _resolve(apps, "TourDay")
+    TourNote = _resolve(apps, "TourNote")
+    for entry in data["tours"]:
+        tour = Tour.objects.filter(slug=entry["slug"]).first()
+        if not tour:
+            continue
+        changed = []
+        for field in ("name", "tagline", "summary", "overview", "highlights", "included", "excluded"):
+            changed += _fill_empty(tour, field, entry[field])
+        save(tour, changed)
+
+        for day in entry["days"]:
+            obj = TourDay.objects.filter(tour=tour, number=day["number"]).first()
+            if obj:
+                changed = _fill_empty(obj, "title", day["title"])
+                changed += _fill_empty(obj, "description", day["description"])
+                save(obj, changed)
+
+        for order, note in enumerate(entry["notes"]["en"]):
+            obj = TourNote.objects.filter(tour=tour, order=order).first()
+            if obj:
+                titles = {loc: entry["notes"][loc][order]["title"] for loc in LOCALES}
+                texts = {loc: entry["notes"][loc][order]["description"] for loc in LOCALES}
+                changed = _fill_empty(obj, "title", titles)
+                changed += _fill_empty(obj, "description", texts)
+                save(obj, changed)
+
+    for model_name, key_field, fields, section in (
+        ("TeamMember", "key", ("role", "bio"), "team"),
+        ("Testimonial", "key", ("country", "quote"), "testimonials"),
+        ("FaqItem", "key", ("question", "answer"), "faq"),
+    ):
+        Model = _resolve(apps, model_name)
+        for entry in data[section]:
+            obj = Model.objects.filter(**{key_field: entry[key_field]}).first()
+            if obj:
+                changed = []
+                for field in fields:
+                    changed += _fill_empty(obj, field, entry[field])
+                save(obj, changed)
+
+    if stdout is not None:
+        stdout.write(f"filled {filled} empty translation fields")
+    return filled
 
 
 def run(apps=None, stdout=None):

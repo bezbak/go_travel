@@ -72,13 +72,13 @@ class LightboxMedia:
 class PhotoAdmin(LightboxMedia, admin.ModelAdmin):
     list_display = ("preview", "key", "alt_ru", "dimensions", "used_in")
     list_display_links = ("preview", "key")
-    search_fields = ("key", "alt_en", "alt_ru", "alt_kg", "alt_fr")
+    search_fields = ("key", "alt_en", "alt_ru", "alt_kg", "alt_fr", "alt_de", "alt_es")
     readonly_fields = ("large_preview", "width", "height", "created_at")
     list_per_page = 40
 
     fieldsets = (
         (_("Фото"), {"fields": ("large_preview", "key", "image", ("width", "height"), "created_at")}),
-        (_("Alt-текст"), {"fields": ("alt_en", "alt_ru", "alt_kg", "alt_fr")}),
+        (_("Alt-текст"), {"fields": ("alt_en", "alt_ru", "alt_kg", "alt_fr", "alt_de", "alt_es")}),
     )
 
     @admin.display(description=_("превью"))
@@ -131,8 +131,10 @@ class TourDayInline(admin.StackedInline):
         ("number", "photo", "day_preview"),
         ("title_en", "title_ru"),
         ("title_kg", "title_fr"),
+        ("title_de", "title_es"),
         ("description_en", "description_ru"),
         ("description_kg", "description_fr"),
+        ("description_de", "description_es"),
     )
     verbose_name = _("день маршрута")
     verbose_name_plural = _("Маршрут по дням — на сайте это карточки дней")
@@ -167,8 +169,10 @@ class TourNoteInline(admin.StackedInline):
         "order",
         ("title_en", "title_ru"),
         ("title_kg", "title_fr"),
+        ("title_de", "title_es"),
         ("description_en", "description_ru"),
         ("description_kg", "description_fr"),
+        ("description_de", "description_es"),
     )
     verbose_name_plural = _("Полезно знать — аккордеон под маршрутом")
 
@@ -196,7 +200,7 @@ class TourAdmin(LightboxMedia, admin.ModelAdmin):
     list_display_links = ("card_preview", "name_ru")
     list_editable = ("featured", "is_published")
     list_filter = ("is_published", "featured", "difficulty", "style", "destinations")
-    search_fields = ("slug", "name_en", "name_ru", "name_kg", "name_fr")
+    search_fields = ("slug", "name_en", "name_ru", "name_kg", "name_fr", "name_de", "name_es")
     prepopulated_fields = {"slug": ("name_en",)}
     filter_horizontal = ("destinations",)
     autocomplete_fields = ("hero_photo", "card_photo")
@@ -229,18 +233,18 @@ class TourAdmin(LightboxMedia, admin.ModelAdmin):
                 "description": _("Фото маршрута добавляются в блоке «Фото маршрута» ниже; нажмите на любую миниатюру, чтобы открыть галерею."),
             },
         ),
-        (_("Название"), {"fields": ("name_en", "name_ru", "name_kg", "name_fr")}),
-        (_("Подзаголовок"), {"fields": ("tagline_en", "tagline_ru", "tagline_kg", "tagline_fr")}),
-        (_("Краткое описание"), {"fields": ("summary_en", "summary_ru", "summary_kg", "summary_fr")}),
-        (_("Описание"), {"fields": ("overview_en", "overview_ru", "overview_kg", "overview_fr")}),
+        (_("Название"), {"fields": ("name_en", "name_ru", "name_kg", "name_fr", "name_de", "name_es")}),
+        (_("Подзаголовок"), {"fields": ("tagline_en", "tagline_ru", "tagline_kg", "tagline_fr", "tagline_de", "tagline_es")}),
+        (_("Краткое описание"), {"fields": ("summary_en", "summary_ru", "summary_kg", "summary_fr", "summary_de", "summary_es")}),
+        (_("Описание"), {"fields": ("overview_en", "overview_ru", "overview_kg", "overview_fr", "overview_de", "overview_es")}),
         (
             _("Изюминки"),
-            {"fields": ("highlights_en", "highlights_ru", "highlights_kg", "highlights_fr")},
+            {"fields": ("highlights_en", "highlights_ru", "highlights_kg", "highlights_fr", "highlights_de", "highlights_es")},
         ),
-        (_("Входит в стоимость"), {"fields": ("included_en", "included_ru", "included_kg", "included_fr")}),
+        (_("Входит в стоимость"), {"fields": ("included_en", "included_ru", "included_kg", "included_fr", "included_de", "included_es")}),
         (
             _("Не входит в стоимость"),
-            {"fields": ("excluded_en", "excluded_ru", "excluded_kg", "excluded_fr")},
+            {"fields": ("excluded_en", "excluded_ru", "excluded_kg", "excluded_fr", "excluded_de", "excluded_es")},
         ),
     )
 
@@ -316,7 +320,7 @@ class DestinationAdmin(LightboxMedia, admin.ModelAdmin):
     list_display_links = ("card_preview", "name_ru")
     list_editable = ("is_published",)
     list_filter = ("is_published",)
-    search_fields = ("slug", "name_en", "name_ru", "name_kg", "name_fr")
+    search_fields = ("slug", "name_en", "name_ru", "name_kg", "name_fr", "name_de", "name_es")
     prepopulated_fields = {"slug": ("name_en",)}
     autocomplete_fields = ("hero_photo", "card_photo")
     readonly_fields = ("cover_preview", "gallery_preview")
@@ -330,16 +334,16 @@ class DestinationAdmin(LightboxMedia, admin.ModelAdmin):
             {"fields": (("altitude_m", "drive_hours"), "best_months")},
         ),
         (_("Фотографии"), {"fields": ("cover_preview", ("hero_photo", "card_photo"), "gallery_preview")}),
-        (_("Название"), {"fields": ("name_en", "name_ru", "name_kg", "name_fr")}),
-        (_("Краткое описание"), {"fields": ("summary_en", "summary_ru", "summary_kg", "summary_fr")}),
+        (_("Название"), {"fields": ("name_en", "name_ru", "name_kg", "name_fr", "name_de", "name_es")}),
+        (_("Краткое описание"), {"fields": ("summary_en", "summary_ru", "summary_kg", "summary_fr", "summary_de", "summary_es")}),
         (
             _("Лучшее время"),
-            {"fields": ("best_time_en", "best_time_ru", "best_time_kg", "best_time_fr")},
+            {"fields": ("best_time_en", "best_time_ru", "best_time_kg", "best_time_fr", "best_time_de", "best_time_es")},
         ),
-        (_("Текст страницы"), {"fields": ("body_en", "body_ru", "body_kg", "body_fr")}),
+        (_("Текст страницы"), {"fields": ("body_en", "body_ru", "body_kg", "body_fr", "body_de", "body_es")}),
         (
             _("Изюминки"),
-            {"fields": ("highlights_en", "highlights_ru", "highlights_kg", "highlights_fr")},
+            {"fields": ("highlights_en", "highlights_ru", "highlights_kg", "highlights_fr", "highlights_de", "highlights_es")},
         ),
     )
 
@@ -408,8 +412,8 @@ class TeamMemberAdmin(LightboxMedia, admin.ModelAdmin):
 
     fieldsets = (
         (_("Основное"), {"fields": (("key", "order"), "is_published", "name", "photo")}),
-        (_("Должность"), {"fields": ("role_en", "role_ru", "role_kg", "role_fr")}),
-        (_("О сотруднике"), {"fields": ("bio_en", "bio_ru", "bio_kg", "bio_fr")}),
+        (_("Должность"), {"fields": ("role_en", "role_ru", "role_kg", "role_fr", "role_de", "role_es")}),
+        (_("О сотруднике"), {"fields": ("bio_en", "bio_ru", "bio_kg", "bio_fr", "bio_de", "bio_es")}),
     )
 
     @admin.display(description=_("фото"))
@@ -431,8 +435,8 @@ class TestimonialAdmin(admin.ModelAdmin):
             _("Основное"),
             {"fields": (("key", "order"), "is_published", "name", ("tour", "rating"))},
         ),
-        (_("Страна"), {"fields": ("country_en", "country_ru", "country_kg", "country_fr")}),
-        (_("Отзыв"), {"fields": ("quote_en", "quote_ru", "quote_kg", "quote_fr")}),
+        (_("Страна"), {"fields": ("country_en", "country_ru", "country_kg", "country_fr", "country_de", "country_es")}),
+        (_("Отзыв"), {"fields": ("quote_en", "quote_ru", "quote_kg", "quote_fr", "quote_de", "quote_es")}),
     )
 
 
@@ -448,9 +452,9 @@ class FaqItemAdmin(admin.ModelAdmin):
         (_("Основное"), {"fields": (("key", "order"), "is_published")}),
         (
             _("Вопрос"),
-            {"fields": ("question_en", "question_ru", "question_kg", "question_fr")},
+            {"fields": ("question_en", "question_ru", "question_kg", "question_fr", "question_de", "question_es")},
         ),
-        (_("Ответ"), {"fields": ("answer_en", "answer_ru", "answer_kg", "answer_fr")}),
+        (_("Ответ"), {"fields": ("answer_en", "answer_ru", "answer_kg", "answer_fr", "answer_de", "answer_es")}),
     )
 
 

@@ -25,8 +25,22 @@ class Command(BaseCommand):
             ),
         )
 
+        parser.add_argument(
+            "--translations",
+            action="store_true",
+            help=(
+                "Fill fields that are still empty for any language from seed.json "
+                "(existing text is never overwritten)."
+            ),
+        )
+
     @transaction.atomic
     def handle(self, *args, **options):
+        if options["translations"]:
+            seeding.fill_missing_translations(stdout=self.stdout)
+            self.stdout.write(self.style.SUCCESS("Translations filled."))
+            return
+
         if options["sync"]:
             if options["reset"]:
                 raise CommandError("--sync and --reset do the opposite; pick one.")

@@ -22,7 +22,7 @@ from .models import (
     Tour,
 )
 
-LOCALES = ("en", "ru", "kg", "fr")
+LOCALES = ("en", "ru", "kg", "fr", "de", "es")
 
 
 def pick_locale(request):
