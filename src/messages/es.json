@@ -1,0 +1,460 @@
+{
+  "metadata": {
+    "title": "go_kyrgyzstan.travel - Viajes a Kirguistán y Asia Central",
+    "description": "Descubre Kirguistán y Asia Central con viajes en grupo y privados cuidadosamente diseñados, guías locales, lagos de montaña, campamentos de yurtas y tradiciones nómadas.",
+    "siteName": "go_kyrgyzstan.travel"
+  },
+  "brand": {
+    "name": "GO KYRGYZSTAN",
+    "logoText": "go",
+    "tagline": "Auténtico. Salvaje. Inolvidable.",
+    "homeAria": "Página de inicio de Go Kyrgyzstan"
+  },
+  "navigation": {
+    "tours": "VIAJES",
+    "destinations": "DESTINOS",
+    "about": "SOBRE NOSOTROS",
+    "faq": "FAQ",
+    "contact": "CONTACTO"
+  },
+  "header": {
+    "book": "RESERVAR AHORA",
+    "phoneAria": "Llamar a Go Kyrgyzstan",
+    "openMenu": "Abrir el menú de navegación",
+    "closeMenu": "Cerrar el menú de navegación",
+    "menuTitle": "Menú"
+  },
+  "languageSwitcher": {
+    "ariaLabel": "Seleccionar idioma",
+    "short": {
+      "en": "EN",
+      "kg": "KG",
+      "ru": "RU",
+      "fr": "FR",
+      "de": "DE",
+      "es": "ES"
+    },
+    "names": {
+      "en": "Inglés",
+      "kg": "Kirguís",
+      "ru": "Ruso",
+      "fr": "Francés",
+      "de": "Alemán",
+      "es": "Español"
+    }
+  },
+  "common": {
+    "breadcrumbHome": "Inicio",
+    "breadcrumbLabel": "Ruta de navegación",
+    "from": "Desde",
+    "perPerson": "por persona",
+    "viewTour": "Ver viaje",
+    "duration": "Duración",
+    "groupSize": "Tamaño del grupo",
+    "difficulty": "Dificultad",
+    "bestSeason": "Mejor época",
+    "deal": "Oferta especial",
+    "altitudeLabel": "Altitud",
+    "days": "{count, plural, one {# día} other {# días}}",
+    "daysNights": "{days} días / {nights} noches",
+    "dayNumber": "Día {number}",
+    "maxPeople": "Máx. {count} viajeros",
+    "altitude": "{value, number} m",
+    "tourCount": "{count, plural, =0 {Aún no hay viajes} one {# viaje} other {# viajes}}",
+    "ratingOutOfFive": "Valoración de {rating} sobre 5",
+    "difficultyLevel": {
+      "easy": "Fácil",
+      "moderate": "Moderado",
+      "challenging": "Exigente"
+    },
+    "style": {
+      "group": "Grupo reducido",
+      "private": "Viaje privado",
+      "expedition": "Expedición"
+    },
+    "seasons": {
+      "spring": "Primavera",
+      "summer": "Verano",
+      "autumn": "Otoño",
+      "winter": "Invierno"
+    }
+  },
+  "hero": {
+    "titleLine1": "DESCUBRE EL",
+    "titleLine2": "CORAZÓN DE",
+    "titleLine3": "KIRGUISTÁN",
+    "body": "Seis días inolvidables entre montañas majestuosas, lagos inmaculados y tradiciones nómadas.",
+    "primaryCta": "EXPLORAR VIAJES",
+    "secondaryCta": "VER ITINERARIO"
+  },
+  "benefits": {
+    "items": [
+      {
+        "title": "VIAJES EN GRUPO REDUCIDO",
+        "description": "Nunca más de 14 viajeros"
+      },
+      {
+        "title": "GUÍAS LOCALES",
+        "description": "Con experiencia y amables"
+      },
+      {
+        "title": "ALOJAMIENTO CÓMODO",
+        "description": "Campamentos de yurtas y casas de huéspedes"
+      },
+      {
+        "title": "GARANTÍA DEL MEJOR PRECIO",
+        "description": "Sin costes ocultos"
+      }
+    ]
+  },
+  "featuredTours": {
+    "eyebrow": "RUTAS SELECCIONADAS",
+    "titleDark": "NUESTROS VIAJES MÁS",
+    "titleGreen": "QUERIDOS",
+    "description": "Tres itinerarios que muestran lo mejor de Kirguistán: altos pastos, lagos glaciares y noches en yurta.",
+    "cta": "VER TODOS LOS VIAJES"
+  },
+  "tourProgram": {
+    "titleDark": "PROGRAMA DEL",
+    "titleGreen": "VIAJE",
+    "subtitle": "Descubre la belleza de Kirguistán día a día",
+    "cta": "VER ITINERARIO COMPLETO",
+    "secondaryCta": "EXPLORAR TODOS LOS VIAJES"
+  },
+  "whyTravel": {
+    "titleDark": "¿POR QUÉ VIAJAR",
+    "titleGreen": "CON NOSOTROS?",
+    "items": [
+      {
+        "title": "EXPERIENCIAS AUTÉNTICAS",
+        "description": "Sumérgete en la cultura y las tradiciones locales."
+      },
+      {
+        "title": "EQUIPO LOCAL EXPERTO",
+        "description": "Guías apasionados que conocen Kirguistán mejor que nadie."
+      },
+      {
+        "title": "VIAJES EN GRUPO REDUCIDO",
+        "description": "Trato personalizado y momentos inolvidables."
+      },
+      {
+        "title": "VIAJE SOSTENIBLE",
+        "description": "Apoyamos a las comunidades locales y a la naturaleza."
+      }
+    ]
+  },
+  "destinationsSection": {
+    "eyebrow": "DÓNDE VIAJAMOS",
+    "titleDark": "NUESTROS",
+    "titleGreen": "DESTINOS",
+    "description": "Desde los bulevares de Biskek hasta un lago a 3.500 metros al que casi nadie llega.",
+    "cta": "TODOS LOS DESTINOS"
+  },
+  "testimonialsSection": {
+    "eyebrow": "HISTORIAS DE VIAJEROS",
+    "titleDark": "LO QUE DICEN",
+    "titleGreen": "NUESTROS CLIENTES",
+    "description": "Opiniones recogidas después de cada salida: lo bueno y lo que luego corregimos."
+  },
+  "lightbox": {
+    "open": "Abrir la foto {index} de {total}",
+    "close": "Cerrar la galería",
+    "previous": "Foto anterior",
+    "next": "Foto siguiente",
+    "counter": "{index} de {total}"
+  },
+  "gallery": {
+    "title": "GALERÍA"
+  },
+  "newsletter": {
+    "eyebrow": "RECIBE INSPIRACIÓN PARA VIAJAR",
+    "title": "DIRECTO A TU BUZÓN",
+    "description": "Suscríbete a nuestro boletín y sé el primero en enterarte de nuevos viajes y ofertas especiales.",
+    "placeholder": "Tu correo electrónico",
+    "submit": "SUSCRIBIRME",
+    "loading": "ENVIANDO",
+    "success": "Gracias, la inspiración para tu viaje está en camino.",
+    "invalid": "Introduce una dirección de correo electrónico válida.",
+    "error": "Algo salió mal. Inténtalo de nuevo.",
+    "inputLabel": "Correo electrónico",
+    "iconLabel": "Boletín"
+  },
+  "footer": {
+    "blurb": "Un equipo con sede en Biskek que diseña viajes en grupo reducido y privados por Kirguistán y Asia Central desde 2014.",
+    "copyright": "© 2026 Go Kyrgyzstan. Todos los derechos reservados.",
+    "exploreTitle": "EXPLORAR",
+    "companyTitle": "EMPRESA",
+    "informationTitle": "INFORMACIÓN",
+    "company": {
+      "about": "Sobre nosotros",
+      "team": "Nuestro equipo",
+      "reviews": "Opiniones",
+      "contact": "Contacto"
+    },
+    "information": {
+      "faq": "FAQ",
+      "booking": "Condiciones de reserva",
+      "privacy": "Política de privacidad",
+      "terms": "Términos y condiciones"
+    },
+    "social": {
+      "instagram": "Instagram",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "toursPage": {
+    "meta": {
+      "title": "Viajes por Kirguistán - en grupo, privados y de expedición",
+      "description": "Explora todos los itinerarios de Go Kyrgyzstan: viajes de 4 a 9 días a Song-Kol, Kel-Suu, el Issyk-Kul y la Carretera del Pamir, con precios, fechas y planes día a día."
+    },
+    "heroEyebrow": "TODOS LOS ITINERARIOS",
+    "heroTitle": "NUESTROS VIAJES",
+    "heroDescription": "Todas las rutas que hacemos, con precios reales y fechas de salida reales. Filtra por región, duración o por cuánto quieres esforzarte para disfrutar de las vistas.",
+    "filtersTitle": "FILTRAR VIAJES",
+    "filters": {
+      "destination": "Destino",
+      "anyDestination": "Todos los destinos",
+      "duration": "Duración",
+      "anyDuration": "Cualquier duración",
+      "durationOptions": {
+        "short": "Hasta 4 días",
+        "medium": "De 5 a 7 días",
+        "long": "8 días o más"
+      },
+      "difficulty": "Dificultad",
+      "anyDifficulty": "Cualquier dificultad",
+      "style": "Tipo de viaje",
+      "anyStyle": "Cualquier tipo",
+      "sort": "Ordenar por",
+      "sortOptions": {
+        "recommended": "Recomendados",
+        "priceAsc": "Precio: de menor a mayor",
+        "priceDesc": "Precio: de mayor a menor",
+        "durationAsc": "Más cortos primero"
+      }
+    },
+    "resultCount": "{count, plural, =0 {Ningún viaje coincide con tus filtros} one {# viaje coincide} other {# viajes coinciden}}",
+    "clearFilters": "Borrar filtros",
+    "emptyTitle": "AÚN NO HAY COINCIDENCIAS",
+    "emptyBody": "Prueba a ampliar alguno de los filtros o cuéntanos qué tienes en mente y construiremos la ruta a su alrededor."
+  },
+  "tourDetail": {
+    "meta": {
+      "title": "{name} - viaje a Kirguistán"
+    },
+    "departuresTitle": "Próximas salidas",
+    "seatsLeft": "{count, plural, one {# plaza libre} other {# plazas libres}}",
+    "available": "Plazas disponibles",
+    "almostFull": "Casi completo",
+    "requestBooking": "SOLICITAR RESERVA",
+    "askOnWhatsapp": "PREGUNTAR POR WHATSAPP",
+    "overviewTitle": "SOBRE ESTE VIAJE",
+    "itineraryTitle": "DÍA A DÍA",
+    "itineraryDescription": "Abre cualquier día para ver dónde duermes, cuánto viajas y cómo se siente realmente esa jornada.",
+    "inclusionsTitle": "QUÉ INCLUYE",
+    "includedTitle": "Incluido en el precio",
+    "excludedTitle": "No incluido",
+    "goodToKnowTitle": "CONVIENE SABER",
+    "galleryTitle": "FOTOS DE LA RUTA",
+    "inquiryTitle": "SOLICITAR ESTE VIAJE",
+    "inquiryDescription": "Envíanos unas líneas y te responderemos en un día laborable con la disponibilidad y el plan exacto.",
+    "regionsTitle": "Regiones de esta ruta",
+    "priceNote": "Los precios empiezan en {price} por persona en habitación doble compartida o yurta. Suplementos individuales y salidas privadas bajo petición.",
+    "relatedTitle": "TAMBIÉN TE PUEDE INTERESAR",
+    "relatedDescription": "Otras rutas que recorren terreno similar o combinan bien como ampliación."
+  },
+  "destinationsPage": {
+    "meta": {
+      "title": "Destinos en Kirguistán - lagos, jailoos y ciudades de la Ruta de la Seda",
+      "description": "Song-Kol, Kel-Suu, Issyk-Kul, Jeti-Oguz, Biskek y la Carretera del Pamir: cómo es cada región, cuándo ir y qué viajes llegan hasta ella."
+    },
+    "heroEyebrow": "REGIÓN POR REGIÓN",
+    "heroTitle": "DESTINOS",
+    "heroDescription": "Seis regiones que, entre todas, cubren casi todo por lo que la gente viene a Kirguistán."
+  },
+  "destinationDetail": {
+    "meta": {
+      "title": "{name} - guía de viaje"
+    },
+    "eyebrow": "GUÍA DEL DESTINO",
+    "driveLabel": "Desde Biskek",
+    "driveValue": "{hours} h por carretera",
+    "driveBase": "Punto de partida",
+    "highlightsTitle": "POR QUÉ IR",
+    "planCta": "PLANIFICAR UN VIAJE AQUÍ",
+    "toursTitle": "VIAJES QUE VISITAN {name}",
+    "toursDescription": "Cada itinerario de abajo pasa al menos un día completo en esta región."
+  },
+  "about": {
+    "meta": {
+      "title": "Sobre Go Kyrgyzstan - un equipo local en Biskek",
+      "description": "Quiénes somos, cómo diseñamos nuestras rutas y por qué trabajamos con las familias cuyos pastos y casas de huéspedes visitamos."
+    },
+    "heroEyebrow": "QUIÉNES SOMOS",
+    "heroTitle": "UN EQUIPO LOCAL, NO UN CALL CENTER",
+    "heroDescription": "Vivimos en Biskek, recorremos estas carreteras cada temporada y sabemos qué paso sigue bajo la nieve en junio.",
+    "storyTitle": "NUESTRA HISTORIA",
+    "story": [
+      "Go Kyrgyzstan nació en 2014 con un minibús, dos guías y la convicción obstinada de que el país merecía algo mejor que una lista de miradores. La primera temporada hicimos cuatro salidas. La mayoría de los viajeros eran amigos de amigos.",
+      "Doce años después hacemos unas cien salidas al año y el método de trabajo apenas ha cambiado. Recorremos nosotros mismos cada nueva ruta antes de ponerla a la venta. Nos alojamos con las mismas familias en Kyzart y en Song-Kol, por eso nos guardan camas en agosto, cuando todo está lleno.",
+      "Mantenemos los grupos pequeños porque un jailoo con catorce visitantes es una visita y un jailoo con cuarenta es un espectáculo. Nos cuesta margen y es la decisión que menos queremos cambiar."
+    ],
+    "storyCta": "VER NUESTROS VIAJES",
+    "stats": {
+      "years": "Años organizando viajes",
+      "travellers": "Viajeros atendidos",
+      "tours": "Rutas que operamos",
+      "rating": "Valoración media"
+    },
+    "valuesTitle": "CÓMO TRABAJAMOS",
+    "valuesDescription": "Cuatro cosas que decidimos pronto y que no hemos cambiado desde entonces.",
+    "values": [
+      {
+        "title": "RUTAS QUE HEMOS RECORRIDO",
+        "description": "Nada sale a la venta hasta que alguien del equipo lo ha hecho todo, en la misma temporada y con el mismo vehículo."
+      },
+      {
+        "title": "DINERO QUE SE QUEDA EN LA ZONA",
+        "description": "Guías, conductores, cocineros y familias de las yurtas cobran directamente y con tarifas acordadas con ellos, no en su contra."
+      },
+      {
+        "title": "PLANES DIARIOS HONESTOS",
+        "description": "Si un día son ocho horas de carretera, escribimos ocho horas de carretera. Las sorpresas pertenecen al paisaje, no al calendario."
+      },
+      {
+        "title": "HUELLA LIGERA EN EL PASTO",
+        "description": "Grupos reducidos, sin plástico de un solo uso en el campamento y nos llevamos todo lo que traemos."
+      }
+    ],
+    "teamTitle": "LAS PERSONAS QUE CONOCERÁS",
+    "teamDescription": "El equipo que planifica tu viaje es el mismo que lo lleva a cabo."
+  },
+  "contactPage": {
+    "meta": {
+      "title": "Contacto con Go Kyrgyzstan - planifica tu viaje",
+      "description": "Habla con nuestra oficina de Biskek sobre fechas, salidas privadas y rutas a medida. Respondemos a cada consulta en un día laborable."
+    },
+    "heroEyebrow": "PONTE EN CONTACTO",
+    "heroTitle": "PLANIFICA TU VIAJE",
+    "heroDescription": "Cuéntanos más o menos cuándo quieres viajar y qué esperas del viaje. Te devolveremos un plan, no un folleto.",
+    "detailsTitle": "HABLA CON NOSOTROS",
+    "detailsBody": "Nuestra oficina está en el centro de Biskek. En temporada alta la respuesta más rápida suele llegar por WhatsApp, porque la mitad del equipo está en ruta.",
+    "phoneLabel": "Teléfono",
+    "whatsappLabel": "WhatsApp",
+    "emailLabel": "Correo electrónico",
+    "officeLabel": "Oficina",
+    "hoursLabel": "Horario",
+    "hoursValue": "Lun–Vie 09:00–18:00, sáb 10:00–15:00 (GMT+6)",
+    "mapTitle": "Mapa de la oficina de Go Kyrgyzstan en Biskek",
+    "formTitle": "ENVIAR UNA CONSULTA",
+    "formBody": "Cuanto más nos cuentes sobre fechas, tamaño del grupo y ritmo, más útil será nuestra primera respuesta.",
+    "generalEnquiry": "Consulta general",
+    "stepsTitle": "CÓMO FUNCIONA LA RESERVA",
+    "stepsDescription": "Cuatro pasos desde el primer mensaje hasta estar en un paso de montaña a 3.000 metros.",
+    "steps": {
+      "choose": {
+        "title": "1. CUÉNTANOS EL PLAN",
+        "description": "Elige una salida o describe lo que quieres. Comprobamos la disponibilidad y te enviamos una propuesta día a día."
+      },
+      "confirm": {
+        "title": "2. CONFIRMA EL VIAJE",
+        "description": "Un depósito del 20 % reserva tus plazas. El resto se paga 30 días antes de la salida."
+      },
+      "prepare": {
+        "title": "3. PREPÁRATE",
+        "description": "Dos semanas antes recibes una lista de equipaje, la documentación de los permisos y el número de tu guía."
+      },
+      "travel": {
+        "title": "4. VIAJA",
+        "description": "Te recibimos en el aeropuerto y nos encargamos de todo desde ahí. Hay alguien localizable en Biskek en todo momento."
+      }
+    }
+  },
+  "inquiry": {
+    "fields": {
+      "name": "Tu nombre",
+      "email": "Correo electrónico",
+      "phone": "Teléfono o WhatsApp",
+      "date": "Fecha de inicio preferida",
+      "tour": "Viaje",
+      "people": "Viajeros",
+      "message": "Tu mensaje",
+      "messagePlaceholder": "Cuéntanos tus fechas, tu grupo y todo lo que quieras ver especialmente."
+    },
+    "submit": "ENVIAR CONSULTA",
+    "sending": "ENVIANDO",
+    "successTitle": "CONSULTA ENVIADA",
+    "successBody": "Gracias: hemos recibido tu mensaje y te responderemos en un día laborable, normalmente antes.",
+    "sendAnother": "ENVIAR OTRA",
+    "privacyNote": "Solo usamos tus datos para responder a esta consulta.",
+    "errors": {
+      "name": "Dinos tu nombre, por favor.",
+      "email": "Introduce una dirección de correo electrónico válida.",
+      "message": "Con una o dos frases basta; añade un poco más, por favor.",
+      "summary": "Algunos campos todavía necesitan atención.",
+      "request": "No hemos podido enviar tu consulta en este momento. Inténtalo de nuevo o escríbenos por WhatsApp."
+    }
+  },
+  "faq": {
+    "meta": {
+      "title": "FAQ - visados, forma física, yurtas y pago",
+      "description": "Respuestas a las preguntas que más recibimos sobre viajar por Kirguistán: visados, altitud, cómo es realmente una noche en yurta, pago y viajes a medida."
+    },
+    "heroEyebrow": "ANTES DE RESERVAR",
+    "heroTitle": "PREGUNTAS FRECUENTES",
+    "heroDescription": "Lo que más nos preguntan, respondido con rigor y no solo para tranquilizar.",
+    "ctaTitle": "¿SIGUES CON ALGUNA DUDA?",
+    "ctaBody": "Pregúntanos directamente. Una persona real en Biskek lee cada mensaje y responde en un día laborable.",
+    "ctaPrimary": "CONTÁCTANOS",
+    "ctaSecondary": "EXPLORAR VIAJES"
+  },
+  "legal": {
+    "meta": {
+      "title": "Condiciones de reserva, privacidad y términos",
+      "description": "Condiciones de reserva y pago, política de cancelación, aviso de privacidad y condiciones generales de los viajes de Go Kyrgyzstan."
+    },
+    "heroEyebrow": "LA LETRA PEQUEÑA",
+    "heroTitle": "TÉRMINOS Y POLÍTICAS",
+    "heroDescription": "Condiciones de reserva, cómo tratamos tus datos y qué puedes esperar de nosotros si algo sale mal.",
+    "navLabel": "Secciones de esta página",
+    "updated": "Última actualización: 1 de marzo de 2026. Este es un texto de ejemplo para un sitio de demostración.",
+    "sections": {
+      "booking": {
+        "title": "Condiciones de reserva",
+        "body": [
+          "Una reserva queda confirmada cuando hemos recibido tu depósito del 20 % del precio total del viaje y te hemos enviado una confirmación por escrito. Hasta que llegue esa confirmación, las plazas se mantienen pero no están garantizadas.",
+          "El resto se paga 30 días antes de la salida. En las reservas hechas con menos de 30 días de antelación, el importe total se abona en el momento de la reserva.",
+          "Las cancelaciones con más de 30 días de antelación pierden solo el depósito. Entre 30 y 14 días se retiene el 50 % del precio del viaje. Dentro de los 14 días previos a la salida no hay reembolso. Recomendamos un seguro de viaje que cubra la cancelación por cualquier motivo.",
+          "Podemos cancelar una salida en grupo si han reservado menos de cuatro viajeros; en ese caso se te ofrece una fecha alternativa, otro viaje o el reembolso íntegro. No cancelaremos por este motivo más tarde de 21 días antes de la salida.",
+          "Las rutas de montaña dependen del tiempo, del estado de las carreteras y de la disponibilidad de permisos. Cuando una ruta deba cambiar, siempre ofreceremos una alternativa equivalente y asumiremos el coste."
+        ]
+      },
+      "privacy": {
+        "title": "Política de privacidad",
+        "body": [
+          "Recogemos solo la información necesaria para planificar y llevar a cabo tu viaje: nombre, datos de contacto, datos del pasaporte cuando un permiso lo exige y cualquier información dietética o médica que decidas compartir.",
+          "Los datos del pasaporte y de los permisos se comparten con las autoridades kirguisas competentes y con las oficinas de permisos de la zona fronteriza, y con nadie más. Las notas dietéticas y médicas se comparten con tu guía y tu cocinero.",
+          "No vendemos tus datos ni pasamos tu correo electrónico a servicios de marketing de terceros. La suscripción al boletín es independiente de la reserva y puede cancelarse desde cualquier correo que enviemos.",
+          "Puedes pedirnos en cualquier momento una copia de los datos que conservamos sobre ti, o que los eliminemos, escribiendo a la dirección de nuestra página de contacto. Conservamos los registros de reservas siete años por motivos contables."
+        ]
+      },
+      "terms": {
+        "title": "Términos y condiciones",
+        "body": [
+          "El seguro de viaje que cubra tratamiento médico, evacuación y repatriación es obligatorio en todos nuestros viajes. Podemos pedirte el número de tu póliza antes de la salida.",
+          "Eres responsable de contar con un pasaporte válido y con el visado que exija tu nacionalidad. Emitimos con gusto cartas de invitación, pero no podemos responsabilizarnos de una entrada denegada.",
+          "Nuestros guías pueden ajustar o acortar una actividad cuando la consideren insegura. Su decisión en la montaña es definitiva y no procede reembolso por una actividad modificada por motivos de seguridad.",
+          "Los precios se indican en euros y quedan garantizados una vez recibido tu depósito. Los precios de temporadas futuras pueden cambiar hasta que se confirme una reserva.",
+          "Este es un sitio web de demostración. Los datos de la empresa, los precios y las fechas que se muestran aquí son datos de ejemplo y no constituyen una oferta contractual."
+        ]
+      }
+    }
+  },
+  "notFound": {
+    "title": "ESTA RUTA NO EXISTE",
+    "body": "La página que buscas se ha movido o nunca existió. Las montañas, en cambio, siguen exactamente donde las dejamos.",
+    "home": "IR AL INICIO",
+    "tours": "EXPLORAR VIAJES",
+    "contact": "CONTÁCTANOS"
+  }
+}

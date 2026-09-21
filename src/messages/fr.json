@@ -30,13 +30,17 @@
       "en": "EN",
       "kg": "KG",
       "ru": "RU",
-      "fr": "FR"
+      "fr": "FR",
+      "de": "DE",
+      "es": "ES"
     },
     "names": {
       "en": "Anglais",
       "kg": "Kirghize",
       "ru": "Russe",
-      "fr": "Français"
+      "fr": "Français",
+      "de": "Allemand",
+      "es": "Espagnol"
     }
   },
   "common": {

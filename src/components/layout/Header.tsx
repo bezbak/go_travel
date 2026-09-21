@@ -32,13 +32,17 @@ export function Header({ contact, variant = "overlay" }: HeaderProps) {
     en: t("languageSwitcher.short.en"),
     kg: t("languageSwitcher.short.kg"),
     ru: t("languageSwitcher.short.ru"),
-    fr: t("languageSwitcher.short.fr")
+    fr: t("languageSwitcher.short.fr"),
+    de: t("languageSwitcher.short.de"),
+    es: t("languageSwitcher.short.es")
   } satisfies Record<Locale, string>;
   const languageNames = {
     en: t("languageSwitcher.names.en"),
     kg: t("languageSwitcher.names.kg"),
     ru: t("languageSwitcher.names.ru"),
-    fr: t("languageSwitcher.names.fr")
+    fr: t("languageSwitcher.names.fr"),
+    de: t("languageSwitcher.names.de"),
+    es: t("languageSwitcher.names.es")
   } satisfies Record<Locale, string>;
   const brand = {
     homeAria: t("brand.homeAria"),

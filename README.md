@@ -1,6 +1,6 @@
 # Go Kyrgyzstan — сайт
 
-Next.js 16 + next-intl, четыре языка (en / ru / kg / fr).
+Next.js 16 + next-intl, шесть языков (en / ru / kg / fr / de / es).
 
 Весь контент — туры, направления, фотографии, отзывы, команда, FAQ и
 контакты — приходит из Django-бэкенда в `../go_travel_back`. В самом сайте

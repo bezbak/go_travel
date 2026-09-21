@@ -1,6 +1,6 @@
 import { defineRouting } from "next-intl/routing";
 
-export const locales = ["en", "kg", "ru", "fr"] as const;
+export const locales = ["en", "kg", "ru", "fr", "de", "es"] as const;
 
 export type Locale = (typeof locales)[number];
 

@@ -4,7 +4,9 @@ const intlLocales: Record<Locale, string> = {
   en: "en-GB",
   kg: "ky-KG",
   ru: "ru-RU",
-  fr: "fr-FR"
+  fr: "fr-FR",
+  de: "de-DE",
+  es: "es-ES"
 };
 
 export function intlLocale(locale: Locale): string {

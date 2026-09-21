@@ -6,7 +6,9 @@ export const ogLocales: Record<Locale, string> = {
   en: "en_US",
   kg: "ky_KG",
   ru: "ru_RU",
-  fr: "fr_FR"
+  fr: "fr_FR",
+  de: "de_DE",
+  es: "es_ES"
 };
 
 /**

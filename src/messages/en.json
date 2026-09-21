@@ -30,13 +30,17 @@
       "en": "EN",
       "kg": "KG",
       "ru": "RU",
-      "fr": "FR"
+      "fr": "FR",
+      "de": "DE",
+      "es": "ES"
     },
     "names": {
       "en": "English",
       "kg": "Kyrgyz",
       "ru": "Russian",
-      "fr": "French"
+      "fr": "French",
+      "de": "German",
+      "es": "Spanish"
     }
   },
   "common": {
