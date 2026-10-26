@@ -12,28 +12,28 @@
       "key": "heroYurts",
       "src": "/images/hero-yurts.jpg",
       "width": 2400,
-      "height": 1600,
+      "height": 1350,
       "alt": {
-        "en": "A wooden herder's hut in a golden valley below jagged, snow-streaked Kyrgyz peaks",
-        "ru": "Деревянный домик пастуха в золотистой долине под зубчатыми заснеженными вершинами Кыргызстана",
-        "kg": "Кыргызстандын тиштелген карлуу чокуларынын алдындагы алтын өрөөндөгү жыгач койчу үйү",
-        "fr": "Une cabane de berger en bois dans une vallée dorée sous des sommets kirghizes déchiquetés et enneigés",
-        "de": "Eine hölzerne Hirtenhütte in einem goldenen Tal unter zerklüfteten, schneegestreiften kirgisischen Gipfeln",
-        "es": "Una cabaña de madera de pastores en un valle dorado bajo picos kirguises escarpados y veteados de nieve"
+        "en": "Horses grazing beside a herder's hut in a golden valley below a snow-streaked Kyrgyz peak",
+        "ru": "Лошади пасутся у домика пастуха в золотистой долине под заснеженной вершиной",
+        "kg": "Алтын өрөөндө карлуу чоку астындагы койчу үйүнүн жанында оттоп жүргөн жылкылар",
+        "fr": "Des chevaux paissent près d'une cabane de berger dans une vallée dorée, sous un sommet kirghize enneigé",
+        "de": "Pferde grasen neben einer Hirtenhütte in einem goldenen Tal unter einem schneegestreiften Gipfel",
+        "es": "Caballos pastando junto a una cabaña de pastores en un valle dorado bajo un pico veteado de nieve"
       }
     },
     {
       "key": "yurtsSunset",
       "src": "/images/gallery-yurts-sunset.jpg",
-      "width": 1600,
+      "width": 1350,
       "height": 2400,
       "alt": {
-        "en": "Yurts glowing under a starry night sky on the Kyrgyz steppe",
-        "ru": "Юрты светятся под звёздным ночным небом в кыргызской степи",
-        "kg": "Кыргыз талаасында жылдыздуу түнкү асман алдында жарык чачкан боз үйлөр",
-        "fr": "Des yourtes illuminées sous un ciel étoilé dans la steppe kirghize",
-        "de": "Leuchtende Jurten unter einem Sternenhimmel in der kirgisischen Steppe",
-        "es": "Yurtas iluminadas bajo un cielo estrellado en la estepa kirguisa"
+        "en": "Ornamented yurts on wooden platforms at a lakeside camp under a dramatic dusk sky",
+        "ru": "Юрты с национальным орнаментом на деревянных помостах в лагере у озера под драматичным вечерним небом",
+        "kg": "Көл жээгиндеги лагерде жыгач аянтчаларда турган оюу-чийме түшүрүлгөн боз үйлөр, кечки асман астында",
+        "fr": "Des yourtes ornementées sur des plateformes en bois dans un camp au bord d'un lac, sous un ciel crépusculaire dramatique",
+        "de": "Verzierte Jurten auf Holzplattformen in einem Camp am See unter einem dramatischen Abendhimmel",
+        "es": "Yurtas ornamentadas sobre plataformas de madera en un campamento junto al lago bajo un cielo dramático al anochecer"
       }
     },
     {
@@ -42,12 +42,12 @@
       "width": 2400,
       "height": 1350,
       "alt": {
-        "en": "Aerial view of a turquoise alpine lake with grazing horses and snow-capped peaks",
-        "ru": "Вид с воздуха на бирюзовое горное озеро с пасущимися лошадьми и заснеженными вершинами",
-        "kg": "Жайылып жаткан аттар жана карлуу чокулары бар көгүлтүр тоо көлүнүн асмандан көрүнүшү",
-        "fr": "Vue aérienne d'un lac de montagne turquoise avec des chevaux au pâturage et des sommets enneigés",
-        "de": "Luftaufnahme eines türkisfarbenen Bergsees mit weidenden Pferden und schneebedeckten Gipfeln",
-        "es": "Vista aérea de un lago alpino turquesa con caballos pastando y cumbres nevadas"
+        "en": "A turquoise alpine lake in a rocky glacial cirque streaked with snow",
+        "ru": "Бирюзовое высокогорное озеро в скалистом ледниковом цирке с полосами снега",
+        "kg": "Карлуу тилкелер жаткан аска-таштуу мөңгү циркиндеги көгүлтүр бийик тоо көлү",
+        "fr": "Un lac alpin turquoise dans un cirque glaciaire rocheux zébré de neige",
+        "de": "Ein türkisfarbener Bergsee in einem felsigen Gletscherkar mit Schneeresten",
+        "es": "Un lago alpino turquesa en un circo glaciar rocoso con vetas de nieve"
       }
     },
     {
@@ -70,54 +70,54 @@
       "width": 1350,
       "height": 2400,
       "alt": {
-        "en": "Turquoise Kel-Suu Lake held between steep rocky cliffs",
-        "ru": "Бирюзовое озеро Кель-Суу, зажатое между отвесными скалами",
-        "kg": "Тик аскалардын ортосундагы көгүлтүр Кел-Суу көлү",
-        "fr": "Le lac turquoise de Kel-Suu enserré entre des falaises abruptes",
-        "de": "Der türkisfarbene Kel-Suu-See zwischen steilen Felswänden",
-        "es": "El lago turquesa de Kel-Suu encajado entre altos acantilados rocosos"
+        "en": "Aerial view of turquoise Kel-Suu Lake winding between steep, snow-dusted cliffs",
+        "ru": "Вид с воздуха на бирюзовое озеро Кель-Суу, зажатое между отвесными заснеженными скалами",
+        "kg": "Тик, кар жаап калган аскалардын ортосундагы көгүлтүр Кел-Суу көлүнүн асмандан көрүнүшү",
+        "fr": "Vue aérienne du lac turquoise de Kel-Suu serpentant entre des falaises abruptes saupoudrées de neige",
+        "de": "Luftaufnahme des türkisfarbenen Kel-Suu-Sees zwischen steilen, schneebestäubten Felswänden",
+        "es": "Vista aérea del lago turquesa de Kel-Suu entre acantilados escarpados cubiertos de nieve"
       }
     },
     {
       "key": "songKol",
       "src": "/images/song-kol-yurts.jpg",
-      "width": 1350,
-      "height": 2400,
+      "width": 2304,
+      "height": 1536,
       "alt": {
-        "en": "A high jailoo plateau near Song-Kol beneath a jagged mountain range",
-        "ru": "Высокогорное джайлоо у Сон-Куля на фоне зубчатого горного хребта",
-        "kg": "Тиштелген тоо кыркасынын алдындагы Соң-Көлдүн жанындагы бийик жайлоо",
-        "fr": "Un haut plateau (jailoo) près de Song-Kol au pied d'une chaîne de montagnes déchiquetée",
-        "de": "Eine hochgelegene Jailoo-Hochebene bei Song-Kol unter einer zerklüfteten Bergkette",
-        "es": "Una meseta de jailoo cerca de Song-Kol al pie de una cordillera escarpada"
+        "en": "A row of white yurts beside Song-Kol lake in warm sunset light",
+        "ru": "Ряд белых юрт у озера Сон-Куль в тёплом свете заката",
+        "kg": "Соң-Көлдүн жээгинде күндүн жылуу нурунда тизилген ак боз үйлөр",
+        "fr": "Une rangée de yourtes blanches au bord du lac Song-Kol dans la chaude lumière du couchant",
+        "de": "Eine Reihe weißer Jurten am Song-Kol-See im warmen Licht des Sonnenuntergangs",
+        "es": "Una hilera de yurtas blancas junto al lago Song-Kol bajo la cálida luz del atardecer"
       }
     },
     {
       "key": "kyzartHorses",
       "src": "/images/kyzart-horses.jpg",
-      "width": 1600,
+      "width": 1350,
       "height": 2400,
       "alt": {
-        "en": "A lone horse rider crossing a green alpine meadow",
-        "ru": "Одинокий всадник пересекает зелёный горный луг",
-        "kg": "Жашыл тоо шалбаасын кесип өтүп бараткан жалгыз атчан",
-        "fr": "Un cavalier solitaire traversant une prairie alpine verdoyante",
-        "de": "Ein einsamer Reiter überquert eine grüne Almwiese",
-        "es": "Un jinete solitario cruza un prado alpino verde"
+        "en": "A lone horse standing in a green mountain meadow with sunlit peaks behind",
+        "ru": "Одинокая лошадь на зелёном горном лугу на фоне освещённых солнцем вершин",
+        "kg": "Күн нуруна чөмүлгөн чокулардын алдындагы жашыл тоо шалбаасында турган жалгыз ат",
+        "fr": "Un cheval solitaire dans une prairie de montagne verdoyante devant des sommets baignés de soleil",
+        "de": "Ein einzelnes Pferd auf einer grünen Bergwiese vor sonnenbeschienenen Gipfeln",
+        "es": "Un caballo solitario en un prado de montaña verde, con cumbres iluminadas por el sol al fondo"
       }
     },
     {
       "key": "kilemche",
       "src": "/images/kilemche-valley.jpg",
-      "width": 1350,
-      "height": 2400,
+      "width": 2400,
+      "height": 1350,
       "alt": {
-        "en": "A braided river winding through the green Kilemche valley in golden light",
-        "ru": "Разветвлённая река, петляющая по зелёной долине Килемче в золотистом свете",
-        "kg": "Алтын жарыкта Килемче өрөөнүн жашыл түздүгүн кесип өткөн бутактанган дарыя",
-        "fr": "Une rivière tressée serpentant dans la vallée verdoyante de Kilemche sous une lumière dorée",
-        "de": "Ein verzweigter Fluss windet sich im goldenen Licht durch das grüne Kilemche-Tal",
-        "es": "Un río trenzado serpentea por el verde valle de Kilemche bajo una luz dorada"
+        "en": "A braided river crossing a golden high valley beneath stormy clouds and snowy peaks",
+        "ru": "Разветвлённая река в золотистой высокогорной долине под грозовыми облаками и заснеженными вершинами",
+        "kg": "Бороондуу булуттардын жана карлуу чокулардын астындагы алтын түстөгү бийик өрөөндү кесип өткөн бутактанган дарыя",
+        "fr": "Une rivière tressée traversant une haute vallée dorée sous des nuages d'orage et des sommets enneigés",
+        "de": "Ein verzweigter Fluss durchzieht ein goldenes Hochtal unter Gewitterwolken und schneebedeckten Gipfeln",
+        "es": "Un río trenzado cruza un valle alto dorado bajo nubes de tormenta y cumbres nevadas"
       }
     },
     {
@@ -168,54 +168,54 @@
       "width": 1350,
       "height": 2400,
       "alt": {
-        "en": "Eroded red sandstone rock formations at Jeti-Oguz",
-        "ru": "Разрушенные эрозией красные песчаниковые скалы Джети-Огуза",
-        "kg": "Жети-Өгүздүн эрозияга учураган кызыл кумдук аскалары",
-        "fr": "Formations rocheuses de grès rouge érodées à Jeti-Oguz",
-        "de": "Erodierte rote Sandsteinformationen bei Jeti-Oguz",
-        "es": "Formaciones erosionadas de arenisca roja en Jeti-Oguz"
+        "en": "Aerial view of the red sandstone ridge of Jeti-Oguz at dusk",
+        "ru": "Вид с воздуха на красную песчаниковую гряду Джети-Огуза в сумерках",
+        "kg": "Жети-Өгүздүн кызыл кумдук кырка тоосунун кечки жарыктагы асмандан көрүнүшү",
+        "fr": "Vue aérienne de la crête de grès rouge de Jeti-Oguz au crépuscule",
+        "de": "Luftaufnahme des roten Sandsteinkamms von Jeti-Oguz in der Abenddämmerung",
+        "es": "Vista aérea de la cresta de arenisca roja de Jeti-Oguz al anochecer"
       }
     },
     {
       "key": "skazkaCanyon",
       "src": "/images/skazka-canyon.jpg",
-      "width": 1350,
-      "height": 2400,
+      "width": 1843,
+      "height": 2304,
       "alt": {
-        "en": "Aerial view of the red sandstone ridges of Skazka canyon",
-        "ru": "Вид с воздуха на красные песчаниковые гряды каньона Сказка",
-        "kg": "Жомок капчыгайынын кызыл кумдук кыркаларынын асмандан көрүнүшү",
-        "fr": "Vue aérienne des crêtes de grès rouge du canyon de Skazka",
-        "de": "Luftaufnahme der roten Sandsteinkämme des Skazka-Canyons",
-        "es": "Vista aérea de las crestas de arenisca roja del cañón de Skazka"
+        "en": "Aerial view of the red sandstone ridges and spires of Skazka canyon",
+        "ru": "Вид с воздуха на красные песчаниковые гряды и скалы-шпили каньона Сказка",
+        "kg": "Жомок капчыгайынын кызыл кумдук кыркаларынын жана учтуу аскаларынын асмандан көрүнүшү",
+        "fr": "Vue aérienne des crêtes et aiguilles de grès rouge du canyon de Skazka",
+        "de": "Luftaufnahme der roten Sandsteinkämme und Felsnadeln des Skazka-Canyons",
+        "es": "Vista aérea de las crestas y agujas de arenisca roja del cañón de Skazka"
       }
     },
     {
       "key": "altynArashan",
       "src": "/images/altyn-arashan.jpg",
-      "width": 2400,
-      "height": 1800,
+      "width": 1351,
+      "height": 2400,
       "alt": {
-        "en": "A glacial stream winding through spruce forest near Altyn-Arashan",
-        "ru": "Ледниковый ручей, петляющий по еловому лесу у Алтын-Арашана",
-        "kg": "Алтын-Арашандын жанындагы карагай токоюн кесип өткөн мөңгү суусу",
-        "fr": "Un ruisseau glaciaire serpentant dans la forêt d'épicéas près d'Altyn-Arachan",
-        "de": "Ein Gletscherbach schlängelt sich durch den Fichtenwald bei Altyn-Arashan",
-        "es": "Un arroyo glaciar serpentea por el bosque de abetos cerca de Altyn-Arashan"
+        "en": "Aerial view of a mountain stream cutting through dense spruce forest near Altyn-Arashan",
+        "ru": "Вид с воздуха на горный ручей, прорезающий густой еловый лес у Алтын-Арашана",
+        "kg": "Алтын-Арашандын жанындагы коюу карагай токоюн жарып өткөн тоо суусунун асмандан көрүнүшү",
+        "fr": "Vue aérienne d'un torrent de montagne traversant une dense forêt d'épicéas près d'Altyn-Arachan",
+        "de": "Luftaufnahme eines Gebirgsbachs, der sich durch dichten Fichtenwald bei Altyn-Arashan zieht",
+        "es": "Vista aérea de un arroyo de montaña que atraviesa un denso bosque de abetos cerca de Altyn-Arashan"
       }
     },
     {
       "key": "barskoonWaterfall",
       "src": "/images/barskoon-waterfall.jpg",
-      "width": 1920,
+      "width": 1350,
       "height": 2400,
       "alt": {
-        "en": "A waterfall dropping through the forested Barskoon valley",
-        "ru": "Водопад в лесистой Барскоонской долине",
-        "kg": "Токойлуу Барскоон өрөөнүндөгү шаркыратма",
-        "fr": "Une cascade dans la vallée boisée de Barskoon",
-        "de": "Ein Wasserfall stürzt durch das bewaldete Barskoon-Tal",
-        "es": "Una cascada cae por el boscoso valle de Barskoon"
+        "en": "A waterfall dropping through a spruce-lined gorge in the Barskoon valley",
+        "ru": "Водопад в еловом ущелье Барскоонской долины",
+        "kg": "Барскоон өрөөнүндөгү карагайлуу капчыгайдан куулап түшкөн шаркыратма",
+        "fr": "Une cascade tombant dans une gorge bordée d'épicéas dans la vallée de Barskoon",
+        "de": "Ein Wasserfall stürzt durch eine fichtengesäumte Schlucht im Barskoon-Tal",
+        "es": "Una cascada cae por una garganta bordeada de abetos en el valle de Barskoon"
       }
     },
     {
@@ -235,15 +235,15 @@
     {
       "key": "eagleHunterHorseback",
       "src": "/images/eagle-hunter-horseback.jpg",
-      "width": 1600,
-      "height": 2400,
+      "width": 1536,
+      "height": 2304,
       "alt": {
-        "en": "An eagle hunter on horseback holding his golden eagle",
-        "ru": "Беркутчи верхом на лошади держит своего беркута",
-        "kg": "Атчан бүркүтчү өзүнүн бүркүтүн кармап турат",
-        "fr": "Un chasseur à l'aigle à cheval tenant son aigle royal",
-        "de": "Ein Adlerjäger zu Pferd mit seinem Steinadler auf dem Arm",
-        "es": "Un cazador de águilas a caballo con su águila real en el brazo"
+        "en": "A rider in a fur hat on a white horse holding a golden eagle",
+        "ru": "На белой лошади — человек в меховой шапке с беркутом на руке",
+        "kg": "Түлкү тебетей кийген, ак атка минген адам колунда бүркүт кармап турат",
+        "fr": "Une personne coiffée d'un bonnet de fourrure, à cheval sur un cheval blanc, tient un aigle royal",
+        "de": "Eine Person mit Pelzmütze auf einem Schimmel hält einen Steinadler auf dem Arm",
+        "es": "Una persona con gorro de piel sobre un caballo blanco sostiene un águila real"
       }
     },
     {
@@ -315,6 +315,230 @@
         "de": "Der schneebedeckte Pik Lenin ragt über Steinmännern bei Atschik-Tasch auf",
         "es": "El pico Lenin nevado se alza sobre mojones de piedra en Achik-Tash"
       }
+    },
+    {
+      "key": "snowRangeRiver",
+      "src": "/images/snow-range-river.jpg",
+      "width": 2400,
+      "height": 1350,
+      "alt": {
+        "en": "A snow-capped mountain range above a golden valley and a braided river under a blue sky",
+        "ru": "Заснеженный горный хребет над золотистой долиной и разветвлённой рекой под синим небом",
+        "kg": "Көк асман астындагы алтын өрөөндүн жана бутактанган дарыянын үстүндөгү карлуу тоо кыркасы",
+        "fr": "Une chaîne de montagnes enneigée dominant une vallée dorée et une rivière tressée sous un ciel bleu",
+        "de": "Eine schneebedeckte Bergkette über einem goldenen Tal und einem verzweigten Fluss unter blauem Himmel",
+        "es": "Una cordillera nevada sobre un valle dorado y un río trenzado bajo un cielo azul"
+      }
+    },
+    {
+      "key": "songKolSunset",
+      "src": "/images/song-kol-sunset.jpg",
+      "width": 2400,
+      "height": 1350,
+      "alt": {
+        "en": "The sun setting over Song-Kol lake behind a long line of white yurts",
+        "ru": "Закат над озером Сон-Куль за длинным рядом белых юрт",
+        "kg": "Соң-Көлдүн үстүндө ак боз үйлөрдүн узун катарынын артында батып бараткан күн",
+        "fr": "Le soleil se couchant sur le lac Song-Kol derrière une longue rangée de yourtes blanches",
+        "de": "Die Sonne geht über dem Song-Kol-See hinter einer langen Reihe weißer Jurten unter",
+        "es": "El sol se pone sobre el lago Song-Kol tras una larga hilera de yurtas blancas"
+      }
+    },
+    {
+      "key": "songKolSwings",
+      "src": "/images/song-kol-swings.jpg",
+      "width": 2304,
+      "height": 1536,
+      "alt": {
+        "en": "Swings on the shore of Song-Kol lake at dusk, with grazing cattle and distant mountains",
+        "ru": "Качели на берегу озера Сон-Куль в сумерках, пасущийся скот и далёкие горы",
+        "kg": "Кечинде Соң-Көлдүн жээгиндеги селкинчектер, жайылып жүргөн мал жана алыстагы тоолор",
+        "fr": "Des balançoires au bord du lac Song-Kol au crépuscule, avec du bétail au pâturage et des montagnes au loin",
+        "de": "Schaukeln am Ufer des Song-Kol-Sees in der Dämmerung, mit weidenden Tieren und fernen Bergen",
+        "es": "Columpios a orillas del lago Song-Kol al anochecer, con ganado pastando y montañas a lo lejos"
+      }
+    },
+    {
+      "key": "yurtCampDusk",
+      "src": "/images/yurt-camp-dusk.jpg",
+      "width": 1350,
+      "height": 2400,
+      "alt": {
+        "en": "Aerial view of a yurt camp on a lake shore under a cloudy dusk sky",
+        "ru": "Вид с воздуха на юртовый лагерь на берегу озера под облачным вечерним небом",
+        "kg": "Булуттуу кечки асман астындагы көл жээгиндеги боз үй лагеринин асмандан көрүнүшү",
+        "fr": "Vue aérienne d'un camp de yourtes au bord d'un lac sous un ciel nuageux au crépuscule",
+        "de": "Luftaufnahme eines Jurtencamps am Seeufer unter bewölktem Abendhimmel",
+        "es": "Vista aérea de un campamento de yurtas a orillas de un lago bajo un cielo nublado al anochecer"
+      }
+    },
+    {
+      "key": "kelSuuRock",
+      "src": "/images/kel-suu-rock.jpg",
+      "width": 1350,
+      "height": 2400,
+      "alt": {
+        "en": "A rocky islet in turquoise Kel-Suu Lake with snowy cliffs rising behind",
+        "ru": "Скалистый островок на бирюзовом озере Кель-Суу на фоне заснеженных утёсов",
+        "kg": "Артында карлуу аскалар көтөрүлгөн көгүлтүр Кел-Суу көлүндөгү аска аралча",
+        "fr": "Un îlot rocheux sur le lac turquoise de Kel-Suu, adossé à des falaises enneigées",
+        "de": "Eine felsige Insel im türkisfarbenen Kel-Suu-See vor schneebedeckten Felswänden",
+        "es": "Un islote rocoso en el lago turquesa de Kel-Suu con acantilados nevados al fondo"
+      }
+    },
+    {
+      "key": "kelSuuBoat",
+      "src": "/images/kel-suu-boat.jpg",
+      "width": 1350,
+      "height": 2400,
+      "alt": {
+        "en": "A boat ride across turquoise water beneath rocky, snow-dusted peaks",
+        "ru": "Прогулка на лодке по бирюзовой воде под скалистыми заснеженными вершинами",
+        "kg": "Карлуу аскалуу чокулардын астындагы көгүлтүр сууда кайык менен сейилдөө",
+        "fr": "Une balade en bateau sur une eau turquoise au pied de sommets rocheux saupoudrés de neige",
+        "de": "Eine Bootsfahrt über türkisfarbenes Wasser unter felsigen, schneebestäubten Gipfeln",
+        "es": "Un paseo en barca sobre aguas turquesas bajo picos rocosos con nieve"
+      }
+    },
+    {
+      "key": "kelSuuBoatRest",
+      "src": "/images/kel-suu-boat-rest.jpg",
+      "width": 1350,
+      "height": 2400,
+      "alt": {
+        "en": "A relaxing break on a boat over turquoise water beneath rugged cliffs",
+        "ru": "Отдых в лодке на бирюзовой воде под скалистыми утёсами",
+        "kg": "Кыйма аскалардын астындагы көгүлтүр сууда кайыктагы эс алуу",
+        "fr": "Un moment de détente en bateau sur une eau turquoise au pied de falaises abruptes",
+        "de": "Entspannen im Boot auf türkisfarbenem Wasser unter schroffen Felswänden",
+        "es": "Un momento de descanso en una barca sobre aguas turquesas bajo acantilados escarpados"
+      }
+    },
+    {
+      "key": "trekkerMeadow",
+      "src": "/images/trekker-meadow.jpg",
+      "width": 1536,
+      "height": 2304,
+      "alt": {
+        "en": "A hiker with an orange backpack standing in a green mountain meadow",
+        "ru": "Поход: человек с оранжевым рюкзаком на зелёном горном лугу",
+        "kg": "Жашыл тоо шалбаасында кызгылт сары рюкзагы бар жөө жүргүнчү",
+        "fr": "Une personne en randonnée, sac à dos orange, debout dans une prairie de montagne verdoyante",
+        "de": "Eine wandernde Person mit orangefarbenem Rucksack steht auf einer grünen Bergwiese",
+        "es": "Una persona senderista con mochila naranja de pie en un prado de montaña verde"
+      }
+    },
+    {
+      "key": "alpenglowPeaks",
+      "src": "/images/alpenglow-peaks.jpg",
+      "width": 1350,
+      "height": 2400,
+      "alt": {
+        "en": "Rocky peaks glowing pink at dusk with a pale moon above",
+        "ru": "Скалистые вершины, окрашенные закатом в розовый цвет, и бледная луна над ними",
+        "kg": "Кечки нурдан кызгылтка боёлгон аскалуу чокулар жана алардын үстүндөгү купкуу ай",
+        "fr": "Des sommets rocheux teintés de rose au crépuscule sous une lune pâle",
+        "de": "Felsgipfel im rosa Abendlicht mit einem blassen Mond darüber",
+        "es": "Picos rocosos teñidos de rosa al anochecer con una luna pálida encima"
+      }
+    },
+    {
+      "key": "skazkaBadlands",
+      "src": "/images/skazka-badlands.jpg",
+      "width": 2400,
+      "height": 1350,
+      "alt": {
+        "en": "Aerial view of orange eroded badlands furrowed by countless gullies",
+        "ru": "Вид с воздуха на оранжевые эродированные бедленды, изрезанные бесчисленными оврагами",
+        "kg": "Сансыз сайлар тилген кызгылт сары, эрозияга учураган бедленддердин асмандан көрүнүшү",
+        "fr": "Vue aérienne de badlands orange érodés, sillonnés d'innombrables ravines",
+        "de": "Luftaufnahme orangefarbener, erodierter Badlands, von unzähligen Rinnen durchfurcht",
+        "es": "Vista aérea de tierras baldías erosionadas de color naranja, surcadas por innumerables cárcavas"
+      }
+    },
+    {
+      "key": "skazkaDonkeys",
+      "src": "/images/skazka-donkeys.jpg",
+      "width": 1350,
+      "height": 2400,
+      "alt": {
+        "en": "Two young travellers with their donkeys on a dusty trail among red sandstone hills",
+        "ru": "Двое юных путешественников с осликами на пыльной тропе среди красных песчаниковых холмов",
+        "kg": "Кызыл кумдук дөбөлөрдүн арасындагы чаңдуу жолдо эшектери менен турган эки жаш саякатчы",
+        "fr": "Deux jeunes voyageurs avec leurs ânes sur un sentier poussiéreux entre des collines de grès rouge",
+        "de": "Zwei junge Reisende mit ihren Eseln auf einem staubigen Pfad zwischen roten Sandsteinhügeln",
+        "es": "Dos jóvenes viajeros con sus burros en un sendero polvoriento entre colinas de arenisca roja"
+      }
+    },
+    {
+      "key": "barskoonFalls",
+      "src": "/images/barskoon-falls.jpg",
+      "width": 1350,
+      "height": 2400,
+      "alt": {
+        "en": "A tall waterfall tumbling down a rocky, forested mountain gorge",
+        "ru": "Высокий водопад, низвергающийся по скалистому лесистому горному ущелью",
+        "kg": "Токойлуу аскалуу тоо капчыгайынан куулап түшкөн бийик шаркыратма",
+        "fr": "Une haute cascade dévalant une gorge de montagne rocheuse et boisée",
+        "de": "Ein hoher Wasserfall stürzt durch eine felsige, bewaldete Bergschlucht",
+        "es": "Una alta cascada desciende por una garganta de montaña rocosa y boscosa"
+      }
+    },
+    {
+      "key": "taiganDog",
+      "src": "/images/taigan-dog.jpg",
+      "width": 1536,
+      "height": 2304,
+      "alt": {
+        "en": "A black hunting dog looking aside, with a second dog and its handler behind",
+        "ru": "Чёрная охотничья собака смотрит в сторону, за ней — вторая собака и хозяин",
+        "kg": "Капталга карап турган кара аңчы ит, анын артында экинчи ит жана анын ээси",
+        "fr": "Un chien de chasse noir regardant sur le côté, avec un second chien et son maître derrière lui",
+        "de": "Ein schwarzer Jagdhund blickt zur Seite, dahinter ein zweiter Hund und sein Besitzer",
+        "es": "Un perro de caza negro mira hacia un lado, con otro perro y su dueño detrás"
+      }
+    },
+    {
+      "key": "arashanValley",
+      "src": "/images/arashan-valley.jpg",
+      "width": 1350,
+      "height": 2400,
+      "alt": {
+        "en": "Aerial view of a green forested valley with a river and a small yurt camp under low clouds",
+        "ru": "Вид с воздуха на зелёную лесистую долину с рекой и небольшим юртовым лагерем под низкими облаками",
+        "kg": "Төмөнкү булуттардын астындагы дарыясы жана чакан боз үй лагери бар жашыл токойлуу өрөөндүн асмандан көрүнүшү",
+        "fr": "Vue aérienne d'une vallée verte et boisée avec une rivière et un petit camp de yourtes sous des nuages bas",
+        "de": "Luftaufnahme eines grünen, bewaldeten Tals mit Fluss und einem kleinen Jurtencamp unter tiefen Wolken",
+        "es": "Vista aérea de un valle verde y boscoso con un río y un pequeño campamento de yurtas bajo nubes bajas"
+      }
+    },
+    {
+      "key": "forestStreamAerial",
+      "src": "/images/forest-stream-aerial.jpg",
+      "width": 1351,
+      "height": 2400,
+      "alt": {
+        "en": "Aerial view of a mountain stream between a spruce forest and a pale rocky slope",
+        "ru": "Вид с воздуха на горный ручей между еловым лесом и светлым каменистым склоном",
+        "kg": "Карагай токою менен ачык түстөгү таштак беттин ортосундагы тоо суусунун асмандан көрүнүшү",
+        "fr": "Vue aérienne d'un torrent de montagne entre une forêt d'épicéas et un versant rocheux clair",
+        "de": "Luftaufnahme eines Gebirgsbachs zwischen Fichtenwald und einem hellen Geröllhang",
+        "es": "Vista aérea de un arroyo de montaña entre un bosque de abetos y una ladera rocosa clara"
+      }
+    },
+    {
+      "key": "valleyRiverAerial",
+      "src": "/images/valley-river-aerial.jpg",
+      "width": 1350,
+      "height": 2400,
+      "alt": {
+        "en": "Aerial view of a river winding through a deep forested valley toward snow-capped peaks",
+        "ru": "Вид с воздуха на реку, петляющую по глубокой лесистой долине к заснеженным вершинам",
+        "kg": "Карлуу чокуларга карай терең токойлуу өрөөндү аралап өткөн дарыянын асмандан көрүнүшү",
+        "fr": "Vue aérienne d'une rivière serpentant dans une profonde vallée boisée vers des sommets enneigés",
+        "de": "Luftaufnahme eines Flusses, der sich durch ein tiefes, bewaldetes Tal auf schneebedeckte Gipfel zuschlängelt",
+        "es": "Vista aérea de un río que serpentea por un profundo valle boscoso hacia cumbres nevadas"
+      }
     }
   ],
   "destinations": [
@@ -324,13 +548,16 @@
       "altitude_m": 3016,
       "drive_hours": 6,
       "best_months": "06-09",
-      "hero": "songKol",
+      "hero": "songKolSunset",
       "card": "songKol",
       "gallery": [
+        "songKolSunset",
         "songKol",
         "yurtsSunset",
         "yurtNight",
-        "kyzartHorses"
+        "kyzartHorses",
+        "yurtCampDusk",
+        "songKolSwings"
       ],
       "name": {
         "en": "Song-Kol",
@@ -439,7 +666,12 @@
         "kelSuu",
         "alpineLake",
         "kilemche",
-        "heroYurts"
+        "heroYurts",
+        "kelSuuRock",
+        "kelSuuBoat",
+        "snowRangeRiver",
+        "trekkerMeadow",
+        "kelSuuBoatRest"
       ],
       "name": {
         "en": "Kel-Suu",
@@ -548,7 +780,12 @@
         "issykKul",
         "skazkaCanyon",
         "bishkekSunset",
-        "kyzartHorses"
+        "kyzartHorses",
+        "skazkaBadlands",
+        "skazkaDonkeys",
+        "barskoonWaterfall",
+        "barskoonFalls",
+        "eagleHunterHorseback"
       ],
       "name": {
         "en": "Issyk-Kul",
@@ -657,7 +894,8 @@
         "jetiOguz",
         "skazkaCanyon",
         "kilemche",
-        "altynArashan"
+        "altynArashan",
+        "skazkaBadlands"
       ],
       "name": {
         "en": "Jeti-Oguz",
@@ -984,7 +1222,12 @@
         "alpineLake",
         "kilemche",
         "altynArashan",
-        "yurtNight"
+        "yurtNight",
+        "arashanValley",
+        "forestStreamAerial",
+        "valleyRiverAerial",
+        "trekkerMeadow",
+        "alpenglowPeaks"
       ],
       "name": {
         "en": "Ala-Kul & Altyn-Arashan",
@@ -1112,7 +1355,11 @@
         "issykKul",
         "songKol",
         "alpineLake",
-        "altynArashan"
+        "altynArashan",
+        "songKolSunset",
+        "kelSuuBoat",
+        "jetiOguz",
+        "skazkaBadlands"
       ],
       "departures": [
         {
@@ -1652,7 +1899,11 @@
         "kyzartHorses",
         "alpineLake",
         "yurtNight",
-        "heroYurts"
+        "heroYurts",
+        "songKolSunset",
+        "kelSuuRock",
+        "songKolSwings",
+        "snowRangeRiver"
       ],
       "departures": [
         {
@@ -2103,14 +2354,18 @@
       "old_price_eur": null,
       "rating": 4.8,
       "review_count": 94,
-      "hero": "songKol",
+      "hero": "songKolSunset",
       "card": "yurtsSunset",
       "gallery": [
+        "songKolSunset",
         "songKol",
         "yurtNight",
         "kyzartHorses",
         "yurtsSunset",
-        "kilemche"
+        "kilemche",
+        "yurtCampDusk",
+        "songKolSwings",
+        "heroYurts"
       ],
       "departures": [
         {
@@ -2524,7 +2779,11 @@
         "alpineLake",
         "yurtNight",
         "kilemche",
-        "heroYurts"
+        "heroYurts",
+        "kelSuuRock",
+        "kelSuuBoat",
+        "trekkerMeadow",
+        "snowRangeRiver"
       ],
       "departures": [
         {
@@ -2997,7 +3256,11 @@
         "kilemche",
         "songKol",
         "yurtsSunset",
-        "yurtNight"
+        "yurtNight",
+        "heroYurts",
+        "songKolSunset",
+        "yurtCampDusk",
+        "songKolSwings"
       ],
       "departures": [
         {
@@ -3428,7 +3691,11 @@
         "skazkaCanyon",
         "jetiOguz",
         "barskoonWaterfall",
-        "bishkekSunset"
+        "bishkekSunset",
+        "skazkaBadlands",
+        "skazkaDonkeys",
+        "barskoonFalls",
+        "altynArashan"
       ],
       "departures": [
         {
@@ -4370,7 +4637,8 @@
         "eagleHunterHorseback",
         "issykKul",
         "alpineLake",
-        "bishkekSunset"
+        "bishkekSunset",
+        "taiganDog"
       ],
       "departures": [
         {
@@ -5174,5 +5442,5 @@
     "/images/hero-yurts.jpg"
   ],
   "feature_image": "/images/kel-suu-lake.jpg",
-  "hero_image": "/images/hero-yurts.jpg"
+  "hero_image": "/images/snow-range-river.jpg"
 }
