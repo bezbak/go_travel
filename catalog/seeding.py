@@ -10,6 +10,7 @@ passes the historical `apps` registry so it stays valid as models evolve.
 """
 
 import datetime
+import hashlib
 import json
 from pathlib import Path
 
@@ -249,6 +250,121 @@ def apply_tour_order(apps=None, stdout=None):
     if stdout is not None:
         stdout.write(f"re-ordered {updated} tours")
     return updated
+
+
+def _stored_sha256(photo):
+    """Hash of the file a photo row points at, or None if it is gone."""
+    try:
+        with photo.image.open("rb") as handle:
+            return hashlib.sha256(handle.read()).hexdigest()
+    except (FileNotFoundError, ValueError):
+        return None
+
+
+def refresh_photos(apps=None, previous=None, stdout=None):
+    """
+    Bring an already seeded database up to the photos `seed.json` ships now.
+
+    `add_missing()` only creates rows, so replacing a seed image under the same
+    file name, or giving a tour a longer gallery, never reached a deployed site.
+    This closes that gap without overwriting an editor's work: `previous`
+    describes what the earlier seed shipped, and a value is only changed while
+    it still equals that earlier value.
+
+    `previous` keys (all optional):
+      - `files`: photo key -> sha256 of the image the earlier seed shipped
+      - `site_hero`: photo key the home page hero used to point at
+      - `tours` / `destinations`: slug -> {"hero", "card", "gallery"} as they
+        were, listing only the fields that have changed since
+    """
+    previous = previous or {}
+    data = load_seed()
+    images = {entry["key"]: entry for entry in data["images"]}
+
+    Photo = _resolve(apps, "Photo")
+    photos = {photo.key: photo for photo in Photo.objects.all()}
+
+    added = 0
+    for key, entry in images.items():
+        if key not in photos:
+            photos[key] = create_photo(Photo, entry)
+            added += 1
+
+    replaced = 0
+    for key, old_hash in previous.get("files", {}).items():
+        photo, entry = photos.get(key), images.get(key)
+        if not photo or not entry or _stored_sha256(photo) != old_hash:
+            continue
+
+        source = SEED_IMAGES / Path(entry["src"]).name
+        # The old file stays on disk under its old name: pages the site has
+        # cached keep working, and the new URL is what busts image caches.
+        with source.open("rb") as handle:
+            photo.image.save(source.name, File(handle), save=False)
+        # The old alt text describes a different picture.
+        _set_translations(photo, "alt", entry["alt"])
+        photo.save()
+        replaced += 1
+
+    relinked = 0
+
+    def repoint(obj, field, old_key, new_key):
+        nonlocal relinked
+        current = getattr(obj, field)
+        if (
+            old_key != new_key
+            and current is not None
+            and current.key == old_key
+            and new_key in photos
+        ):
+            setattr(obj, field, photos[new_key])
+            obj.save(update_fields=[field])
+            relinked += 1
+
+    def regallery(Through, owner_field, owner, old_keys, new_keys):
+        nonlocal relinked
+        rows = Through.objects.filter(**{owner_field: owner}).order_by("order", "id")
+        current = [row.photo.key for row in rows.select_related("photo")]
+        if current != old_keys or current == new_keys:
+            return
+        rows.delete()
+        for order, key in enumerate(new_keys):
+            Through.objects.create(
+                **{owner_field: owner, "photo": photos[key], "order": order}
+            )
+        relinked += 1
+
+    for section, model_name, through_name, owner_field in (
+        ("tours", "Tour", "TourPhoto", "tour"),
+        ("destinations", "Destination", "DestinationPhoto", "destination"),
+    ):
+        Model = _resolve(apps, model_name)
+        Through = _resolve(apps, through_name)
+        before = previous.get(section, {})
+        for entry in data[section]:
+            old = before.get(entry["slug"])
+            obj = Model.objects.filter(slug=entry["slug"]).first()
+            if not old or not obj:
+                continue
+            for name in ("hero", "card"):
+                if name in old:
+                    repoint(obj, f"{name}_photo", old[name], entry[name])
+            if "gallery" in old:
+                regallery(Through, owner_field, obj, old["gallery"], entry["gallery"])
+
+    if "site_hero" in previous:
+        src_to_key = {entry["src"]: key for key, entry in images.items()}
+        site = _resolve(apps, "SiteSettings").objects.filter(pk=1).first()
+        if site:
+            repoint(
+                site, "hero_photo", previous["site_hero"], src_to_key[data["hero_image"]]
+            )
+
+    if stdout is not None:
+        stdout.write(
+            f"photos: {added} added, {replaced} files replaced, {relinked} links updated"
+        )
+    return {"added": added, "replaced": replaced, "relinked": relinked}
 
 
 def _join(value):
